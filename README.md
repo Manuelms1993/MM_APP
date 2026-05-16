@@ -1,5 +1,4 @@
 # MM_APP
-
 Aplicacion Android en Compose que agrupa tres herramientas en una sola APK:
 
 - `Plantas`: seguimiento de cuidados, siembra e informacion de plantas.
