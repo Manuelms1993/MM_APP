@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "albahaca-001",
+    "nombre": "Albahaca",
+    "especie": "Ocimum basilicum",
+    "fechaInicio": "2026-04-28",
+    "activada": true,
+    "mesesSiembra": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "mesesRecoleccion": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 2,
+        "verano": 1,
+        "otono": 3,
+        "invierno": 7
+      },
+      "notas": [
+        "Riego medio",
+        "Solo humedecer"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "compost_suave_hierbas",
+          "cadaDias": 30,
+          "cantidad": "capa fina"
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_liquido_hierbas",
+          "cadaDias": 21,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": ""
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_parcial",
+    "interior": true,
+    "notas": [
+      "Pinzar flores",
+      "Sensibles al fr\u00edo"
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "pulgon",
+        "mosca_blanca",
+        "trips",
+        "arana_roja"
+      ],
+      "notas": [
+        "Revisar brotes tiernos y el envés de las hojas."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "pequena",
+      "tipoSustrato": "universal_aireado",
+      "prioridad": "alta"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_universal",
+          "porcentaje": 60
+        },
+        {
+          "material": "humus_lombriz",
+          "porcentaje": 20
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 20
+        }
+      ],
+      "notas": [
+        "Mezcla rica pero aireada.",
+        "La perlita mejora drenaje sin secar demasiado rapido."
+      ]
+    },
+    "mostrarEnSiembra": true,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/herbs/basil/grow-your-own",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/herbs/basil/grow-your-own",
+    "responsable": "L"
+  }
+}

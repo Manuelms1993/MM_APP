@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "perejil-001",
+    "nombre": "Perejil",
+    "especie": "Petroselinum crispum",
+    "fechaInicio": "2026-04-28",
+    "activada": true,
+    "mesesSiembra": [
+      2,
+      3,
+      4,
+      5,
+      9,
+      10
+    ],
+    "mesesRecoleccion": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 2,
+        "verano": 1,
+        "otono": 3,
+        "invierno": 5
+      },
+      "notas": [
+        "Riego ligero",
+        "Mantener humedo"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "compost_suave_hierbas",
+          "cadaDias": 30,
+          "cantidad": "capa fina"
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_liquido_hierbas",
+          "cadaDias": 30,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": ""
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_parcial",
+    "interior": false,
+    "notas": [
+      "Agradece semisombra con calor"
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "pulgon",
+        "mosca_blanca",
+        "caracoles"
+      ],
+      "notas": [
+        "Mirar brotes tiernos y hojas bajas."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "pequena",
+      "tipoSustrato": "universal_aireado",
+      "prioridad": "alta"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_universal",
+          "porcentaje": 60
+        },
+        {
+          "material": "humus_lombriz",
+          "porcentaje": 20
+        },
+        {
+          "material": "vermiculita",
+          "porcentaje": 20
+        }
+      ],
+      "notas": [
+        "La vermiculita ayuda a conservar humedad en hierbas de hoja."
+      ]
+    },
+    "mostrarEnSiembra": true,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/herbs/parsley/grow-your-own",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/herbs/parsley/grow-your-own",
+    "responsable": "L"
+  }
+}

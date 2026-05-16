@@ -1,0 +1,89 @@
+{
+   "city" : "Hong Kong",
+   "dayNumber" : 4,
+   "foodSuggestions" : [
+      "Pendiente de definir sitios concretos para comer.",
+      "Buscar opciones en Kowloon al mediodia y en Central / Soho por la tarde."
+   ],
+   "id" : "day-04",
+   "overnightHotelId" : "dorsett-mongkok",
+   "recommendations" : [
+      {
+         "links" : [
+            {
+               "label" : "Hong Kong Tourism Board - Star Ferry",
+               "url" : "https://www.discoverhongkong.com/us/explore/attractions/sailing-icon-hong-kong-s-star-ferry.html"
+            },
+            {
+               "label" : "Tripadvisor - Star Ferry",
+               "url" : "https://www.tripadvisor.com/Attraction_Review-g294217-d2228870-Reviews-Star_Ferry-Hong_Kong.html"
+            }
+         ],
+         "text" : "Si encaja por tiempos, cruza al menos una vez en Star Ferry entre Tsim Sha Tsui y Central: es barato, rapido y da una de las mejores vistas del skyline."
+      },
+      {
+         "links" : [
+            {
+               "label" : "Tripadvisor - One Dim Sum Tsim Sha Tsui",
+               "url" : "https://www.tripadvisor.co.uk/Restaurant_Review-g294217-d34257941-Reviews-One_Dim_Sum_Tsim_Sha_Tsui-Hong_Kong.html"
+            }
+         ],
+         "text" : "Para un dim sum rapido y bien valorado por la zona de Kowloon, deja guardado One Dim Sum Tsim Sha Tsui."
+      },
+      {
+         "links" : [
+            {
+               "label" : "Tripadvisor - restaurantes cerca de Soho",
+               "url" : "https://www.tripadvisor.com/RestaurantsNear-g294217-d593126-Soho-Hong_Kong.html"
+            }
+         ],
+         "text" : "Si al final cenas en Central, busca mesa por Soho cerca de Staunton Street o Elgin Street; concentran muchas opciones buenas sin desviarte de la ruta."
+      }
+   ],
+   "schemaVersion" : 1,
+   "segments" : [
+      {
+         "bullets" : [
+            "Parque Kowloon.",
+            "Torre del Reloj.",
+            "Paseo de la Fama.",
+            "Tsim Sha Tsui Promenade.",
+            "Ir a Mong Kok en metro linea roja desde Tsim Sha Tsui o andando.",
+            "Ladies Market abre a las 11:00.",
+            "Ver tiendas, comer y hacer tiempo."
+         ],
+         "references" : [
+            "RUTA MAPS (pendiente de sustituir por enlace real)"
+         ],
+         "timeLabel" : "08:00 -> comida",
+         "title" : "Parte 1 - Kowloon"
+      },
+      {
+         "bullets" : [
+            "Metro desde Mong Kok hacia Central.",
+            "Subir por las escaleras mecanicas de Mid-Levels.",
+            "Pasear por las calles alrededor de las escaleras.",
+            "Parar en Soho.",
+            "Parar en Hollywood Road.",
+            "Ver Templo Man Mo.",
+            "Hong Kong Park, mejor andando que solo usando las escaleras.",
+            "Peak Tram para subir a Victoria Peak.",
+            "Ver Sky Terrace y el show de luces de las 20:00.",
+            "Sobre las 21:00 bajar a Central y volver al hotel."
+         ],
+         "links" : [
+            {
+               "label" : "Peak Tram ticket",
+               "url" : "https://webstore.thepeak.com.hk/ticket-detail?id=1099&lang=en_us&_gl=1*ogu01u*_gcl_au*Mzg2Mzk1NjgzLjE3NzI5OTM4NTE.*_ga*NzY0MDM2ODMwLjE3NzI5OTM4NTE.*_ga_P77MVDNVNH*czE3NzI5OTM4NTEkbzEkZzAkdDE3NzI5OTM4NTEkajYwJGwwJGgw"
+            }
+         ],
+         "references" : [
+            "RUTA MAPS (pendiente de sustituir por enlace real)"
+         ],
+         "timeLabel" : "15:00 -> 21:00",
+         "title" : "Parte 2 - Central y Victoria Peak"
+      }
+   ],
+   "summary" : "Kowloon por la manana y Central + Peak Tram por la tarde.",
+   "title" : "Hong Kong - Kowloon, Mong Kok y Victoria Peak"
+}

@@ -1,0 +1,45 @@
+{
+   "city" : "Chengdu",
+   "dayNumber" : 14,
+   "id" : "day-14",
+   "overnightHotelId" : "wenjun-courtyard-chengdu",
+   "recommendations" : [
+      {
+         "links" : [
+            {
+               "label" : "Travel China Guide - Chengdu nightlife",
+               "url" : "https://www.travelchinaguide.com/cityguides/sichuan/chengdu/nightlife.htm"
+            }
+         ],
+         "text" : "Si ves que el centro comercial se te hace demasiado prescindible, cambia parte de esa tarde por mas tiempo en Kuanzhai o por Jinli al anochecer."
+      }
+   ],
+   "schemaVersion" : 1,
+   "segments" : [
+      {
+         "bullets" : [
+            "Ir en Didi al centro de conservacion de osos panda.",
+            "Comprar entrada y confirmar punto exacto de acceso.",
+            "Aprovechar la franja de la manana antes de comer."
+         ],
+         "links" : [
+            {
+               "label" : "Viajeros Callejeros - pandas Chengdu",
+               "url" : "https://www.viajeroscallejeros.com/centro-de-conservacion-de-osos-panda-en-chengdu/"
+            }
+         ],
+         "title" : "Manana - pandas"
+      },
+      {
+         "bullets" : [
+            "Taxi al New Century Global Center.",
+            "Comer alli.",
+            "Compras y paseo por el centro comercial.",
+            "Volver a Kuan Alley and Zhai Alley para pasear y cenar."
+         ],
+         "title" : "Tarde"
+      }
+   ],
+   "summary" : "Manana de osos panda y tarde de centro comercial + Kuanzhai.",
+   "title" : "Chengdu - pandas y tarde de compras"
+}

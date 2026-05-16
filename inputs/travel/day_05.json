@@ -1,0 +1,21 @@
+{
+   "city" : "Hong Kong",
+   "dayNumber" : 5,
+   "id" : "day-05",
+   "notes" : [
+      "Pendiente de detallar transporte exacto, horario de llegada y prioridades dentro del parque."
+   ],
+   "overnightHotelId" : "dorsett-mongkok",
+   "schemaVersion" : 1,
+   "segments" : [
+      {
+         "bullets" : [
+            "Dia completo en Disneyland Hong Kong.",
+            "Ir con margen para entrada, colas y vuelta."
+         ],
+         "title" : "Parque"
+      }
+   ],
+   "summary" : "Jornada completa dedicada a Disneyland Hong Kong.",
+   "title" : "Hong Kong Disneyland"
+}

@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "rucula-001",
+    "nombre": "Rucula",
+    "especie": "Eruca vesicaria",
+    "fechaInicio": "2026-05-15",
+    "activada": true,
+    "mesesSiembra": [
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+    ],
+    "mesesRecoleccion": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 2,
+        "verano": 1,
+        "otono": 2,
+        "invierno": 4
+      },
+      "notas": [
+        "Riego ligero",
+        "Mantener humedad regular sin encharcar"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "compost_suave_hierbas",
+          "cadaDias": 30,
+          "cantidad": "capa fina"
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_liquido_hierbas",
+          "cadaDias": 21,
+          "dosis": "fabricante_dividido_2"
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_parcial",
+    "interior": false,
+    "notas": [
+      "Cosechar hojas tiernas de forma continua.",
+      "Con calor fuerte conviene algo de semisombra."
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "pulgon",
+        "altica",
+        "babosas"
+      ],
+      "notas": [
+        "Mirar hojas tiernas y bordes mordidos."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "mediana",
+      "tipoSustrato": "horticola_aireado",
+      "prioridad": "alta"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_huerto",
+          "porcentaje": 60
+        },
+        {
+          "material": "humus_lombriz",
+          "porcentaje": 20
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 20
+        }
+      ],
+      "notas": [
+        "Mezcla fertil y aireada para crecimiento rapido de hoja."
+      ]
+    },
+    "mostrarEnSiembra": true,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/vegetables/rocket/grow-your-own",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/vegetables/rocket/grow-your-own",
+    "responsable": "L"
+  }
+}

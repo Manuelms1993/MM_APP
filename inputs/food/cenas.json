@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "planType": "cenas",
+  "fechaInicio": "2026-04-20",
+  "semanas": [
+    {
+      "numeroSemana": 1,
+      "dias": [
+        {
+          "diaSemana": "lunes",
+          "opciones": [
+            {
+              "nombre": "Libre",
+              "ingredientes": []
+            }
+          ]
+        },
+        {
+          "diaSemana": "martes",
+          "opciones": [
+            {
+              "nombre": "Sopa",
+              "ingredientes": ["Sopa"]
+            },
+            {
+              "nombre": "Ramen",
+              "ingredientes": ["Ramen"]
+            },
+            {
+              "nombre": "Yatekomo",
+              "ingredientes": ["Yatekomo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "miercoles",
+          "opciones": [
+            {
+              "nombre": "Tortilla de papas",
+              "ingredientes": ["Patata", "Huevo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "jueves",
+          "opciones": [
+            {
+              "nombre": "Tortilla de papas",
+              "ingredientes": ["Patata", "Huevo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "viernes",
+          "opciones": [
+            {
+              "nombre": "Pescado",
+              "ingredientes": ["Pescado"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "sabado",
+          "opciones": [
+            {
+              "nombre": "Cous Cous",
+              "ingredientes": ["Cous cous", "Verduras"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "domingo",
+          "opciones": [
+            {
+              "nombre": "Picar / Puerro / Batata",
+              "ingredientes": ["Puerro", "Batata"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "numeroSemana": 2,
+      "dias": [
+        {
+          "diaSemana": "lunes",
+          "opciones": [
+            {
+              "nombre": "Tostas / Aguacate / Queso",
+              "ingredientes": ["Pan tostado", "Aguacate", "Queso"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "martes",
+          "opciones": [
+            {
+              "nombre": "Tostas / Aguacate / Queso",
+              "ingredientes": ["Pan tostado", "Aguacate", "Queso"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "miercoles",
+          "opciones": [
+            {
+              "nombre": "Solomillo",
+              "ingredientes": ["Solomillo"]
+            },
+            {
+              "nombre": "Salchicha",
+              "ingredientes": ["Salchicha"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "jueves",
+          "opciones": [
+            {
+              "nombre": "Huevos rotos",
+              "ingredientes": ["Huevo", "Patata", "Jamón"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "viernes",
+          "opciones": [
+            {
+              "nombre": "Pescado",
+              "ingredientes": ["Pescado"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "sabado",
+          "opciones": [
+            {
+              "nombre": "Gyozas",
+              "ingredientes": ["Gyozas"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "domingo",
+          "opciones": [
+            {
+              "nombre": "Tacos",
+              "ingredientes": ["Tacos de maíz", "Carne", "Queso"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "numeroSemana": 3,
+      "dias": [
+        {
+          "diaSemana": "lunes",
+          "opciones": [
+            {
+              "nombre": "Tacos",
+              "ingredientes": ["Tacos de maíz", "Carne", "Queso"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "martes",
+          "opciones": [
+            {
+              "nombre": "Berenjenas jamón y queso",
+              "ingredientes": ["Berenjena", "Jamón", "Queso"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "miercoles",
+          "opciones": [
+            {
+              "nombre": "Tortilla de papas",
+              "ingredientes": ["Patata", "Huevo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "jueves",
+          "opciones": [
+            {
+              "nombre": "Tortilla de papas",
+              "ingredientes": ["Patata", "Huevo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "viernes",
+          "opciones": [
+            {
+              "nombre": "Pescado",
+              "ingredientes": ["Pescado"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "sabado",
+          "opciones": [
+            {
+              "nombre": "Kebab",
+              "ingredientes": ["Pan kebab", "Carne kebab", "Lechuga"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "domingo",
+          "opciones": [
+            {
+              "nombre": "Kebab",
+              "ingredientes": ["Pan kebab", "Carne kebab", "Lechuga"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "numeroSemana": 4,
+      "dias": [
+        {
+          "diaSemana": "lunes",
+          "opciones": [
+            {
+              "nombre": "Hervido verduras",
+              "ingredientes": ["Patata", "Judías verdes", "Zanahoria"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "martes",
+          "opciones": [
+            {
+              "nombre": "Pizza",
+              "ingredientes": ["Pizza"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "miercoles",
+          "opciones": [
+            {
+              "nombre": "Sopa",
+              "ingredientes": ["Sopa"]
+            },
+            {
+              "nombre": "Ramen",
+              "ingredientes": ["Ramen"]
+            },
+            {
+              "nombre": "Yatekomo",
+              "ingredientes": ["Yatekomo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "jueves",
+          "opciones": [
+            {
+              "nombre": "Solomillo",
+              "ingredientes": ["Solomillo"]
+            },
+            {
+              "nombre": "Salchicha",
+              "ingredientes": ["Salchicha"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "viernes",
+          "opciones": [
+            {
+              "nombre": "Pescado",
+              "ingredientes": ["Pescado"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "sabado",
+          "opciones": [
+            {
+              "nombre": "Libre",
+              "ingredientes": []
+            }
+          ]
+        },
+        {
+          "diaSemana": "domingo",
+          "opciones": [
+            {
+              "nombre": "Champiñón, chalota, green bean",
+              "ingredientes": ["Champiñón", "Chalota", "Green bean"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

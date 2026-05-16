@@ -1,0 +1,49 @@
+{
+   "city" : "Wulingyuan / Zhangjiajie",
+   "dayNumber" : 11,
+   "id" : "day-11",
+   "notes" : [
+      "Buses internos del parque incluidos."
+   ],
+   "overnightHotelId" : "yoba-boutique-zhangjiajie",
+   "recommendations" : [
+      {
+         "links" : [
+            {
+               "label" : "Travel China Guide - restaurantes en Zhangjiajie",
+               "url" : "https://www.travelchinaguide.com/cityguides/hunan/zhangjiajie/best-restaurants.htm"
+            }
+         ],
+         "text" : "Para la noche posterior al parque, Xibu Street es la zona mas clara para cenar en Wulingyuan sin complicarte y con bastante ambiente."
+      }
+   ],
+   "schemaVersion" : 1,
+   "segments" : [
+      {
+         "bullets" : [
+            "Salir temprano en tren bala desde Furongzhen Railway Station hacia Zhangjiajie West Railway Station.",
+            "Ir al hotel y dejar equipaje.",
+            "Desde Zhangjiajie West tocar ir por carretera hasta la zona de Wulingyuan y el hotel.",
+            "Pedir mapa antes de entrar al parque."
+         ],
+         "title" : "Traslado"
+      },
+      {
+         "bullets" : [
+            "Golden Whip Stream.",
+            "Caminata facil de unas 4 horas en total.",
+            "Rio, bosque y montanas vistas desde abajo.",
+            "No usar el ascensor Bailong este dia."
+         ],
+         "links" : [
+            {
+               "label" : "Viajeros Callejeros - dia 1",
+               "url" : "https://www.viajeroscallejeros.com/montanas-chinas-de-avatar/"
+            }
+         ],
+         "title" : "Parque - dia 1"
+      }
+   ],
+   "summary" : "Traslado temprano y tarde suave por Golden Whip Stream.",
+   "title" : "Furong -> Wulingyuan / Zhangjiajie"
+}

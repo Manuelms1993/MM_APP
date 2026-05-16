@@ -1,0 +1,67 @@
+{
+   "city" : "Yangshuo",
+   "dayNumber" : 7,
+   "id" : "day-07",
+   "overnightHotelId" : "yangshuo-tea-house",
+   "recommendations" : [
+      {
+         "links" : [
+            {
+               "label" : "Travel China Guide - Yangshuo dining",
+               "url" : "https://www.travelchinaguide.com/cityguides/guangxi/yangshuo/dining.htm"
+            },
+            {
+               "label" : "Tripadvisor - Liujie Beer Fish",
+               "url" : "https://www.tripadvisor.com/Restaurant_Review-g303712-d15097361-Reviews-Liujie_Beer_Fish_Ding_E_restaurant-Yangshuo_County_Guangxi.html"
+            }
+         ],
+         "text" : "En Yangshuo merece la pena pedir beer fish la primera noche; es el plato mas caracteristico de la zona."
+      },
+      {
+         "links" : [
+            {
+               "label" : "Travel China Guide - Yangshuo dining and streets",
+               "url" : "https://www.travelchinaguide.com/cityguides/guangxi/yangshuo/dining.htm"
+            }
+         ],
+         "text" : "Guarda un rato de luz al final del dia para caminar junto al rio o por el entorno de West Street antes de cenar; visualmente suele compensar mucho mas que meterte directo en tiendas."
+      }
+   ],
+   "schemaVersion" : 1,
+   "segments" : [
+      {
+         "bullets" : [
+            "Cruce principal del dia: Guilin -> Yangshuo en barco.",
+            "Comparar opciones y tickets antes de cerrar la compra."
+         ],
+         "links" : [
+            {
+               "label" : "Viajeros Callejeros - crucero Li River",
+               "url" : "https://www.viajeroscallejeros.com/crucero-por-el-rio-li-hasta-yangshuo/"
+            },
+            {
+               "label" : "Travel China Guide - Li River cruise",
+               "url" : "https://www.travelchinaguide.com/attraction/guangxi/guilin/4-star-li-river-cruise-tickets.htm"
+            },
+            {
+               "label" : "Civitatis - compra",
+               "url" : "https://www.civitatis.com/es/compra?cart=mBofoUqpDbf23HN1gHkjy8ADQvw&p=343728"
+            }
+         ],
+         "timeLabel" : "Manana / 4 horas",
+         "title" : "Crucero por el rio Li"
+      },
+      {
+         "bullets" : [
+            "Instalarse en el hotel y comer.",
+            "Pasear por West Street.",
+            "Ver el espectaculo de luces de las 19:30.",
+            "Buscar entradas del espectaculo.",
+            "Probar helado natural de mango y helado de mango frito."
+         ],
+         "title" : "Llegada a Yangshuo"
+      }
+   ],
+   "summary" : "Crucero por el Li, llegada a Yangshuo y noche en West Street.",
+   "title" : "Guilin -> Yangshuo"
+}

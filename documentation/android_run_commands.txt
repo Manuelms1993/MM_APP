@@ -1,0 +1,44 @@
+MM_APP Android - comandos rapidos
+
+cd /ruta/al/proyecto/MM_APP
+
+Compilar APK debug
+./gradlew assembleDebug
+
+APK generada
+app/build/outputs/apk/debug/app-debug.apk
+
+Ver dispositivos Android
+adb devices
+
+Instalar herramientas Android si faltan
+sdkmanager "platform-tools" "emulator" "platforms;android-34" "system-images;android-34;google_apis;x86_64"
+
+Crear emulador
+avdmanager create avd -n plant-reminder-emulator -k "system-images;android-34;google_apis;x86_64"
+
+Listar emuladores
+emulator -list-avds
+
+Arrancar emulador
+emulator -avd plant-reminder-emulator
+
+Instalar APK en emulador o movil
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+
+Abrir la app
+adb shell monkey -p com.example.mmapp -c android.intent.category.LAUNCHER 1
+
+Android fisico - activar modo desarrollador
+1. Ajustes > Acerca del telefono
+2. Pulsa 7 veces sobre Numero de compilacion
+3. Vuelve atras y entra en Opciones de desarrollador
+4. Activa Depuracion USB
+5. Conecta el movil por USB y acepta la huella RSA
+
+Si sale unauthorized en adb devices
+Desbloquea el movil y acepta el permiso de depuracion USB
+
+Si hay varios dispositivos conectados
+adb -s SERIAL install -r app/build/outputs/apk/debug/app-debug.apk
+adb -s SERIAL shell monkey -p com.example.mmapp -c android.intent.category.LAUNCHER 1

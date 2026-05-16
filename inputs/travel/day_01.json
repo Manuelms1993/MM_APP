@@ -1,0 +1,30 @@
+{
+   "city" : "Valencia / Estambul",
+   "dayNumber" : 1,
+   "id" : "day-01",
+   "notes" : [
+      "Dia de transito.",
+      "Conviene revisar con antelacion como resolver el traslado aeropuerto -> hotel."
+   ],
+   "overnightHotelId" : "dem-premium-istanbul-airport",
+   "schemaVersion" : 1,
+   "segments" : [
+      {
+         "bullets" : [
+            "Salida desde Valencia a las 18:55.",
+            "Llegada a Estambul a las 23:40."
+         ],
+         "timeLabel" : "18:55 - 23:40",
+         "title" : "Vuelo"
+      },
+      {
+         "bullets" : [
+            "Ir al hotel directamente.",
+            "Prioridad: descanso y dejar todo listo para el dia siguiente."
+         ],
+         "title" : "Llegada"
+      }
+   ],
+   "summary" : "Vuelo por la tarde y llegada nocturna a Estambul.",
+   "title" : "Valencia -> Estambul"
+}
