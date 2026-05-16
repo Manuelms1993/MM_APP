@@ -1,0 +1,30 @@
+{
+   "city" : "Hong Kong",
+   "dayNumber" : 3,
+   "id" : "day-03",
+   "notes" : [
+      "No sobrecargar el dia por el viaje."
+   ],
+   "overnightHotelId" : "dorsett-mongkok",
+   "schemaVersion" : 1,
+   "segments" : [
+      {
+         "bullets" : [
+            "Llegada a Hong Kong a las 17:20.",
+            "Ir al hotel e instalarse."
+         ],
+         "timeLabel" : "17:20",
+         "title" : "Llegada"
+      },
+      {
+         "bullets" : [
+            "Dar una vuelta cerca del hotel.",
+            "Cenar por la zona.",
+            "Descansar."
+         ],
+         "title" : "Tarde-noche"
+      }
+   ],
+   "summary" : "Llegada a Hong Kong, instalacion en el hotel y paseo suave por la zona.",
+   "title" : "Estambul -> Hong Kong"
+}

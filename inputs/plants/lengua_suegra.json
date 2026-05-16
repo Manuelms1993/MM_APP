@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "lengua-suegra-001",
+    "nombre": "Lengua de Suegra",
+    "especie": "Dracaena trifasciata",
+    "fechaInicio": "2026-04-24",
+    "activada": true,
+    "mesesSiembra": [],
+    "mesesRecoleccion": [],
+    "riego": {
+      "cadaDias": {
+        "primavera": 14,
+        "verano": 10,
+        "otono": 21,
+        "invierno": 30
+      },
+      "notas": [
+        "Muy poco riego",
+        "Solo humedecer"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "fertilizante_cactus",
+          "cadaDias": 30,
+          "dosis": "normal",
+          "recordatorio": "dosis normal"
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_cactus",
+          "cadaDias": 30,
+          "dosis": "normal",
+          "recordatorio": "dosis normal"
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "luz_indirecta_media",
+    "interior": true,
+    "notas": [
+      "Mejor quedarse corto con agua"
+    ],
+    "plagas": {
+      "cadaDias": 14,
+      "problemasComunes": [
+        "cochinilla",
+        "arana_roja"
+      ],
+      "notas": [
+        "Revisar base de hojas y zonas pegadas al sustrato."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "mediana",
+      "tipoSustrato": "cactus_drenante",
+      "prioridad": "baja"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_cactus_suculentas",
+          "porcentaje": 60
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 20
+        },
+        {
+          "material": "grava_volcanica",
+          "porcentaje": 20
+        }
+      ],
+      "notas": [
+        "Sustrato muy drenante para evitar exceso de humedad en raiz."
+      ]
+    },
+    "mostrarEnSiembra": false,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/sansevieria/",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/sansevieria/",
+    "responsable": "R"
+  }
+}

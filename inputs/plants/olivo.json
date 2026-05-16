@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "olivo-001",
+    "nombre": "Olivo",
+    "especie": "Olea europaea",
+    "fechaInicio": "2026-04-28",
+    "activada": true,
+    "mesesSiembra": [],
+    "mesesRecoleccion": [
+      10,
+      11,
+      12
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 5,
+        "verano": 3,
+        "otono": 7,
+        "invierno": 14
+      },
+      "notas": [
+        "Riego profundo",
+        "Dejar secar parte del sustrato antes del siguiente riego"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "humus_lombriz",
+          "cadaDias": 45,
+          "cantidad": "capa fina superficial"
+        },
+        {
+          "tipo": "fertilizante_liquido_olivo_frutales",
+          "cadaDias": 30,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Aplicar con el sustrato ligeramente humedo."
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_liquido_olivo_frutales",
+          "cadaDias": 45,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Evitar abonar en ola de calor intensa."
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_directo",
+    "interior": false,
+    "notas": [
+      "Necesita mucha luz y drenaje alto.",
+      "Elevar la maceta ayuda a que no se acumule humedad."
+    ],
+    "plagas": {
+      "problemasComunes": [
+        "cochinilla",
+        "pulgon"
+      ],
+      "notas": [
+        "Mirar hojas tiernas y ramas interiores en primavera."
+      ]
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_mediterraneo",
+          "porcentaje": 70
+        },
+        {
+          "material": "grava_volcanica",
+          "porcentaje": 20
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 10
+        }
+      ],
+      "notas": [
+        "Inferido a partir de recomendacion de compost franco y muy drenante para olivo en contenedor."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "grande",
+      "tipoSustrato": "mediterraneo_muy_drenante",
+      "prioridad": "normal",
+      "techado": "true"
+    },
+    "mostrarEnSiembra": false,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/fruit/olives/grow-your-own",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/fruit/olives/grow-your-own",
+    "responsable": "R"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "romero-001",
+    "nombre": "Romero",
+    "especie": "Rosmarinus officinalis",
+    "fechaInicio": "2026-04-27",
+    "activada": true,
+    "mesesSiembra": [
+      3,
+      4,
+      5
+    ],
+    "mesesRecoleccion": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 5,
+        "verano": 3,
+        "otono": 7,
+        "invierno": 10
+      },
+      "notas": [
+        "Riego ligero",
+        "Poca agua"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "humus_lombriz",
+          "cadaDias": 45,
+          "cantidad": "superficie ligera"
+        },
+        {
+          "tipo": "fertilizante_liquido_mediterraneas",
+          "cadaDias": 30,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": ""
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_liquido_mediterraneas",
+          "cadaDias": 45,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": ""
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_directo",
+    "interior": false,
+    "notas": [
+      "Planta resistente a sequ\u00eda",
+      "Prefiere sustrato drenante",
+      "No tolera encharcamiento"
+    ],
+    "plagas": {
+      "problemasComunes": [
+        "pulgon",
+        "arana_roja"
+      ],
+      "notas": [
+        "Revisar puntas tiernas si el tiempo está muy seco."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "mediana",
+      "tipoSustrato": "drenante_mediterraneo",
+      "prioridad": "normal"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_mediterraneo",
+          "porcentaje": 75
+        },
+        {
+          "material": "grava_volcanica",
+          "porcentaje": 15
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 10
+        }
+      ],
+      "notas": [
+        "Inspirado en mezcla de hierbas mediterraneas con drenaje alto."
+      ]
+    },
+    "mostrarEnSiembra": true,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/herbs/rosemary/grow-your-own/",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/herbs/containers",
+    "responsable": "L"
+  }
+}

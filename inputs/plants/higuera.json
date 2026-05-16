@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "higuera-001",
+    "nombre": "Higuera",
+    "especie": "Ficus carica",
+    "fechaInicio": "2026-04-27",
+    "activada": true,
+    "mesesSiembra": [
+      2,
+      3,
+      10,
+      11
+    ],
+    "mesesRecoleccion": [
+      8,
+      9
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 3,
+        "verano": 2,
+        "otono": 4,
+        "invierno": 10
+      },
+      "notas": [
+        "Riego profundo",
+        "Regar y escurrir"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "fertilizante_frutales_potasico",
+          "cadaDias": 14,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": ""
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_frutales_potasico",
+          "cadaDias": 14,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": ""
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_directo",
+    "interior": false,
+    "notas": [
+      "Raiz restringida va bien en maceta"
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "pulgon",
+        "cochinilla",
+        "arana_roja"
+      ],
+      "notas": [
+        "Mirar hojas nuevas y el envés en tiempo seco."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "grande",
+      "tipoSustrato": "frutales_drenante",
+      "prioridad": "alta"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_frutales",
+          "porcentaje": 70
+        },
+        {
+          "material": "arena_gruesa",
+          "porcentaje": 20
+        },
+        {
+          "material": "humus_lombriz",
+          "porcentaje": 10
+        }
+      ],
+      "notas": [
+        "La higuera agradece drenaje y una base mineral estable."
+      ]
+    },
+    "mostrarEnSiembra": false,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/fruit/figs/grow-your-own",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/fruit/figs/grow-your-own",
+    "responsable": "L"
+  }
+}

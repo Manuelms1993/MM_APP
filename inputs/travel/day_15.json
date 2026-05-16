@@ -1,0 +1,52 @@
+{
+   "city" : "Chengdu / Leshan",
+   "dayNumber" : 15,
+   "id" : "day-15",
+   "overnightHotelId" : "wenjun-courtyard-chengdu",
+   "recommendations" : [
+      {
+         "links" : [
+            {
+               "label" : "Travel China Guide - Chengdu nightlife",
+               "url" : "https://www.travelchinaguide.com/cityguides/sichuan/chengdu/nightlife.htm"
+            }
+         ],
+         "text" : "Despues de Leshan no cargues mucho mas la tarde: mejor dejar margen para llegar con calma al show y cenar cerca, porque ese dia ya va bastante lleno."
+      }
+   ],
+   "schemaVersion" : 1,
+   "segments" : [
+      {
+         "bullets" : [
+            "Salir por la manana. El recinto abre de 07:30 a 18:30.",
+            "Tren bala Chengdu East Railway Station -> Leshan Railway Station.",
+            "Duracion: 50-60 minutos.",
+            "Llegada a Leshan Railway Station.",
+            "Taxi o Didi hasta el Gran Buda.",
+            "Entrada al recinto del Gran Buda.",
+            "Vuelta en taxi a la estacion y tren de regreso a Chengdu East Railway Station."
+         ],
+         "references" : [
+            "Ruta interna del recinto del Gran Buda pendiente de sustituir por enlace real"
+         ],
+         "timeLabel" : "Manana -> tarde",
+         "title" : "Excursion a Leshan"
+      },
+      {
+         "bullets" : [
+            "Paseo tranquilo por la tarde.",
+            "Show de mascaras.",
+            "Cena relajada despues del espectaculo."
+         ],
+         "links" : [
+            {
+               "label" : "Shu Feng Ya Yun",
+               "url" : "http://www.shufengyayun.com/s/1.html"
+            }
+         ],
+         "title" : "Tarde-noche en Chengdu"
+      }
+   ],
+   "summary" : "Excursion al Gran Buda de Leshan y show por la tarde-noche.",
+   "title" : "Chengdu - Leshan Grand Buddha + show de mascaras"
+}

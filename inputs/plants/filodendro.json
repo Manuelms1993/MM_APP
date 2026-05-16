@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "filodendro-001",
+    "nombre": "Filodendro",
+    "especie": "Philodendron hederaceum",
+    "fechaInicio": "2026-05-01",
+    "activada": true,
+    "mesesSiembra": [],
+    "mesesRecoleccion": [],
+    "riego": {
+      "cadaDias": {
+        "primavera": 7,
+        "verano": 5,
+        "otono": 10,
+        "invierno": 14
+      },
+      "notas": [
+        "Riego medio",
+        "Solo humedecer"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "fertilizante_plantas_verdes",
+          "cadaDias": 30,
+          "dosis": "normal",
+          "recordatorio": "dosis normal"
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_plantas_verdes",
+          "cadaDias": 30,
+          "dosis": "normal",
+          "recordatorio": "dosis normal"
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "luz_indirecta_brilante",
+    "interior": true,
+    "notas": [
+      "Agradece algo de humedad ambiental"
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "arana_roja",
+        "cochinilla",
+        "trips"
+      ],
+      "notas": [
+        "Inspeccionar envés, peciolos y brotes nuevos."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "mediana",
+      "tipoSustrato": "houseplant_aireado",
+      "prioridad": "normal"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_universal",
+          "porcentaje": 55
+        },
+        {
+          "material": "corteza_orquidea",
+          "porcentaje": 25
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 20
+        }
+      ],
+      "notas": [
+        "Mezcla suelta y drenante, pero con algo de retencion."
+      ]
+    },
+    "mostrarEnSiembra": false,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/philodendron/growing-guide",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/philodendron/growing-guide",
+    "responsable": "R"
+  }
+}

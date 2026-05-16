@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "ficus-microcarpa-001",
+    "nombre": "Ficus Microcarpa",
+    "especie": "Ficus microcarpa",
+    "fechaInicio": "2026-04-27",
+    "activada": true,
+    "mesesSiembra": [],
+    "mesesRecoleccion": [],
+    "riego": {
+      "cadaDias": {
+        "primavera": 5,
+        "verano": 4,
+        "otono": 7,
+        "invierno": 12
+      },
+      "notas": [
+        "Riego medio",
+        "Regar y escurrir"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "fertilizante_plantas_verdes",
+          "cadaDias": 30,
+          "dosis": "normal",
+          "recordatorio": "dosis normal"
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_plantas_verdes",
+          "cadaDias": 30,
+          "dosis": "normal",
+          "recordatorio": "dosis normal"
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "luz_indirecta_brilante",
+    "interior": true,
+    "notas": [
+      "No moverlo mucho"
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "arana_roja",
+        "cochinilla",
+        "trips"
+      ],
+      "notas": [
+        "Mirar el envés y los tallos tiernos."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "mediana",
+      "tipoSustrato": "houseplant_aireado",
+      "prioridad": "normal"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_universal",
+          "porcentaje": 60
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 20
+        },
+        {
+          "material": "corteza_orquidea",
+          "porcentaje": 20
+        }
+      ],
+      "notas": [
+        "Base aireada para raiz sana en interior."
+      ]
+    },
+    "mostrarEnSiembra": false,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/32855/i-ficus-microcarpa-i/details",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/32855/i-ficus-microcarpa-i/details",
+    "responsable": "L"
+  }
+}

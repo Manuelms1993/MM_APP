@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "bonsai-ficus-pequeno-001",
+    "nombre": "Bonsai Ficus pequeno",
+    "especie": "Ficus microcarpa",
+    "fechaInicio": "2026-04-28",
+    "activada": true,
+    "mesesSiembra": [],
+    "mesesRecoleccion": [],
+    "riego": {
+      "cadaDias": {
+        "primavera": 2,
+        "verano": 1,
+        "otono": 2,
+        "invierno": 4
+      },
+      "notas": [
+        "Riego ligero",
+        "Humedecer todo"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "fertilizante_bonsai",
+          "cadaDias": 14,
+          "dosis": "normal",
+          "recordatorio": "dosis normal"
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_bonsai",
+          "cadaDias": 14,
+          "dosis": "normal",
+          "recordatorio": "dosis normal"
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "luz_indirecta_brilante",
+    "interior": true,
+    "notas": [
+      "Maceta pequena seca rapido"
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "arana_roja",
+        "cochinilla",
+        "trips"
+      ],
+      "notas": [
+        "Mirar envés, nudos y base de las hojas."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "pequena",
+      "tipoSustrato": "bonsai_drenante",
+      "prioridad": "alta"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_bonsai",
+          "porcentaje": 40
+        },
+        {
+          "material": "grava_volcanica",
+          "porcentaje": 30
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 20
+        },
+        {
+          "material": "humus_lombriz",
+          "porcentaje": 10
+        }
+      ],
+      "notas": [
+        "Mezcla muy drenante para evitar compactacion en maceta baja."
+      ]
+    },
+    "mostrarEnSiembra": false,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/types/trees/bonsai",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/types/trees/bonsai",
+    "responsable": "L"
+  }
+}

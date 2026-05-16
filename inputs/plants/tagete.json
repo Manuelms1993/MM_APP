@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "tagete-001",
+    "nombre": "Tagete",
+    "especie": "Tagetes patula",
+    "fechaInicio": "2026-04-28",
+    "activada": true,
+    "mesesSiembra": [
+      3,
+      4,
+      5
+    ],
+    "mesesRecoleccion": [],
+    "riego": {
+      "cadaDias": {
+        "primavera": 2,
+        "verano": 1,
+        "otono": 2,
+        "invierno": 7
+      },
+      "notas": [
+        "Riego medio",
+        "Solo humedecer"
+      ]
+    },
+    "abono": {
+      "primavera": [],
+      "verano": [
+        {
+          "tipo": "fertilizante_floracion",
+          "cadaDias": 21,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": ""
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_directo",
+    "interior": false,
+    "notas": [
+      "Retirar flores secas"
+    ],
+    "plagas": {
+      "problemasComunes": [
+        "pulgon",
+        "arana_roja",
+        "caracoles"
+      ],
+      "notas": [
+        "Revisar hojas nuevas y pétalos dañados."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "mediana",
+      "tipoSustrato": "universal_drenante",
+      "prioridad": "normal"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_universal",
+          "porcentaje": 65
+        },
+        {
+          "material": "humus_lombriz",
+          "porcentaje": 15
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 20
+        }
+      ],
+      "notas": [
+        "Base aireada con algo mas de fertilidad para floracion en maceta."
+      ]
+    },
+    "mostrarEnSiembra": true,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/105531/tagetes-patula-french-marigold-spreading-tagetes/details",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/105531/tagetes-patula-french-marigold-spreading-tagetes/details",
+    "responsable": "L"
+  }
+}

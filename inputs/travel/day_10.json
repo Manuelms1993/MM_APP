@@ -1,0 +1,70 @@
+{
+   "city" : "Fenghuang / Furong",
+   "dayNumber" : 10,
+   "id" : "day-10",
+   "notes" : [
+      "Mirar horarios del espectaculo nocturno de la cascada e ir con margen.",
+      "Fenghuang Ancient Town Railway Station no esta dentro del casco antiguo, asi que deja margen real para el traslado hasta la estacion."
+   ],
+   "overnightHotelId" : "huaqianshu-furong",
+   "schemaVersion" : 1,
+   "segments" : [
+      {
+         "bullets" : [
+            "East Gate Tower.",
+            "Murallas / City Wall.",
+            "Tuojiang Riverside Walk.",
+            "Jumping Rock.",
+            "Hong Bridge (Rainbow Bridge).",
+            "North Gate Tower.",
+            "Wanming Pagoda.",
+            "Former Residence of Shen Congwen.",
+            "Yang Family Ancestral Hall.",
+            "Paseo nocturno por el casco antiguo si algo quedo pendiente de la noche anterior."
+         ],
+         "references" : [
+            "RUTA Fenghuang pendiente de sustituir por enlace real"
+         ],
+         "title" : "Manana en Fenghuang"
+      },
+      {
+         "bullets" : [
+            "Salir hacia Furong sobre las 11:00.",
+            "Comprar tren bala desde Fenghuang Ancient Town Railway Station hasta Furongzhen Railway Station.",
+            "Trayecto de alta velocidad de unos 40 minutos.",
+            "Llegada a Furongzhen Railway Station, a unos 5 km del pueblo antiguo.",
+            "Coger Didi hasta el alojamiento.",
+            "Comprar el ticket de acceso en la taquilla oficial y evitar intermediarios."
+         ],
+         "links" : [
+            {
+               "label" : "Guia Furong",
+               "url" : "https://www.organizotuviaje.com/china/que-ver-en-furong/"
+            }
+         ],
+         "timeLabel" : "Salida sobre las 11:00",
+         "title" : "Traslado a Furong"
+      },
+      {
+         "bullets" : [
+            "Tuwang Bridge.",
+            "Yinan Plaza.",
+            "Copper Pillar Park.",
+            "Baishoutang Plaza.",
+            "Hand-Waving Hall.",
+            "Wuli Slate Street.",
+            "Hibiscus Town Guanyin Pavilion.",
+            "Stone Street.",
+            "Furong Town Tower.",
+            "Youshui Gallery.",
+            "Chu-Chu Waterway Trading.",
+            "Cascada de Furong.",
+            "Miradores y pasarelas flotantes sobre el rio.",
+            "Por la noche, farolillos, espectaculos y vistas nocturnas de la cascada."
+         ],
+         "title" : "Furong - tarde y noche"
+      }
+   ],
+   "summary" : "Manana de Fenghuang y tarde-noche completa en Furong.",
+   "title" : "Fenghuang -> Furong"
+}
