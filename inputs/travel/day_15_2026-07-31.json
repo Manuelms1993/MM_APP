@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "day-15",
+  "dayNumber": 15,
+  "date": "2026-07-31",
+  "title": "Chengdu - Leshan Grand Buddha + show de mascaras",
+  "city": "Chengdu / Leshan",
+  "summary": "Excursion al Gran Buda de Leshan y show por la tarde-noche.",
+  "overnightHotelId": "wenjun-courtyard-chengdu",
+  "segments": [
+    {
+      "title": "Excursion a Leshan",
+      "timeLabel": "Manana -> tarde",
+      "bullets": [
+        "Salir por la manana. El recinto abre de 07:30 a 18:30.",
+        "Tren bala Chengdu East Railway Station -> Leshan Railway Station.",
+        "Duracion: 50-60 minutos.",
+        "Precio 2a clase: aprox. 54 CNY = 6,75 EUR.",
+        "Llegada a Leshan Railway Station.",
+        "Taxi o Didi hasta el Gran Buda: aprox. 25-35 CNY = 3,10-4,40 EUR.",
+        "Entrada recinto Gran Buda a pie: 80 CNY = 10 EUR.",
+        "Vuelta en taxi a la estacion y tren de regreso a Chengdu East Railway Station."
+      ],
+      "references": [
+        "Ruta interna del recinto del Gran Buda pendiente de sustituir por enlace real"
+      ]
+    },
+    {
+      "title": "Coste estimado por persona",
+      "bullets": [
+        "Trenes ida/vuelta: 13,50 EUR.",
+        "Taxis ida/vuelta: 6,20-8,80 EUR.",
+        "Entrada: 10 EUR.",
+        "Total recomendado: 29,70-32,30 EUR."
+      ]
+    },
+    {
+      "title": "Tarde-noche en Chengdu",
+      "bullets": [
+        "Paseo tranquilo por la tarde.",
+        "Show de mascaras.",
+        "Cena relajada despues del espectaculo."
+      ],
+      "links": [
+        {
+          "label": "Shu Feng Ya Yun",
+          "url": "http://www.shufengyayun.com/s/1.html"
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "text": "Despues de Leshan no cargues mucho mas la tarde: mejor dejar margen para llegar con calma al show y cenar cerca, porque ese dia ya va bastante lleno.",
+      "links": [
+        {
+          "label": "Travel China Guide - Chengdu nightlife",
+          "url": "https://www.travelchinaguide.com/cityguides/sichuan/chengdu/nightlife.htm"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "day-13",
+  "dayNumber": 13,
+  "date": "2026-07-29",
+  "title": "Zhangjiajie -> Chengdu",
+  "city": "Chengdu",
+  "summary": "Tren bala a Chengdu, comida, parque y paseo por la zona del hotel.",
+  "overnightHotelId": "wenjun-courtyard-chengdu",
+  "segments": [
+    {
+      "title": "Traslado",
+      "bullets": [
+        "Tren bala temprano desde Zhangjiajie West Railway Station.",
+        "Llegada prevista a Chengdu East Railway Station.",
+        "Duracion aproximada: 5 horas.",
+        "Llegada para comer."
+      ]
+    },
+    {
+      "title": "Comida",
+      "bullets": [
+        "Opcion recomendada: Long Sen Yuan."
+      ],
+      "links": [
+        {
+          "label": "Michelin - Long Sen Yuan",
+          "url": "https://guide.michelin.com/en/chengdu-municipality/chengdu/restaurant/long-sen-yuan"
+        }
+      ]
+    },
+    {
+      "title": "Tarde en Chengdu",
+      "bullets": [
+        "Ruta cerca del hotel.",
+        "Tomar te por la tarde en Heming Tea House, en People's Park.",
+        "Cenar en Chunxi Road o en la zona del hotel."
+      ],
+      "references": [
+        "RUTA cerca del hotel pendiente de sustituir por enlace real"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "text": "Si te queda una franja al atardecer o despues de cenar, Jinli Street es una buena bala extra por ambiente y luces, sobre todo si la empalmas con Wuhou Temple.",
+      "links": [
+        {
+          "label": "Travel China Guide - Jinli Street",
+          "url": "https://www.travelchinaguide.com/attraction/sichuan/chengdu/jinli-street.htm"
+        },
+        {
+          "label": "Travel China Guide - Wuhou Temple",
+          "url": "https://www.travelchinaguide.com/attraction/sichuan/chengdu/wuhou_temple.htm"
+        }
+      ]
+    }
+  ]
+}

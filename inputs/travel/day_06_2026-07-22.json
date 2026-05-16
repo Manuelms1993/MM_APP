@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "day-06",
+  "dayNumber": 6,
+  "date": "2026-07-22",
+  "title": "Hong Kong -> Guilin",
+  "city": "Guilin",
+  "summary": "Traslado en tren y primera toma de contacto con Guilin.",
+  "overnightHotelId": "guilin-flowers-inn",
+  "segments": [
+    {
+      "title": "Tren",
+      "timeLabel": "10:00-11:00 -> 13:00-15:00",
+      "bullets": [
+        "Salida prevista desde Hong Kong West Kowloon Railway Station.",
+        "Llegada prevista a Guilin West Railway Station.",
+        "Llegada estimada a Guilin entre las 13:00 y las 15:00.",
+        "Conviene confirmar el numero exacto de tren y la estacion final al comprar, pero la referencia base para buscar es West Kowloon -> Guilin West."
+      ]
+    },
+    {
+      "title": "Tarde en Guilin",
+      "bullets": [
+        "Ver las pagodas gigantes.",
+        "Ir al mercado nocturno.",
+        "Parque opcional si queda tiempo y energia."
+      ],
+      "references": [
+        "Ruta pendiente de sustituir por enlace real"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "text": "Nada mas dejar equipaje, intenta cenar un bol de Guilin rice noodles; es la comida local mas tipica y te encaja muy bien en un dia corto de llegada.",
+      "links": [
+        {
+          "label": "Travel China Guide - Guilin rice noodles",
+          "url": "https://www.travelchinaguide.com/cityguides/guangxi/guilin-rice-noodles.htm"
+        }
+      ]
+    },
+    {
+      "text": "Si aun tienes energia por la noche, prioriza el paseo junto a las Sun and Moon Pagodas iluminadas antes que meter otro parque.",
+      "links": [
+        {
+          "label": "Tripadvisor - Sun and Moon Pagodas",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g298556-d12148927-Reviews-Sun_and_Moon_Pagodas-Guilin_Guangxi.html"
+        }
+      ]
+    },
+    {
+      "text": "Para cenar o picar despues del paseo, Zhengyang Pedestrian Street es la zona mas practica para juntar ambiente, comida y paseo nocturno.",
+      "links": [
+        {
+          "label": "Tripadvisor - Zhengyang Pedestrian Street",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g298556-d5117106-Reviews-Guilin_Zhengyang_Road_Pedestrian_Street-Guilin_Guangxi.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "day-08",
+  "dayNumber": 8,
+  "date": "2026-07-24",
+  "title": "Yangshuo - Yulong River, bici y Moon Hill",
+  "city": "Yangshuo",
+  "summary": "Dia activo en bici por Yulong River, Ten-Mile Gallery y Moon Hill.",
+  "overnightHotelId": "yangshuo-tea-house",
+  "segments": [
+    {
+      "title": "Manana",
+      "bullets": [
+        "Alquilar bici temprano.",
+        "Hacer ruta por Yulong River.",
+        "Valorar paseo en barca de bambu por el tramo entre Jinlong Bridge y Jiuxian."
+      ]
+    },
+    {
+      "title": "Tarde",
+      "bullets": [
+        "Comer.",
+        "Ten-Mile Gallery.",
+        "Moon Hill."
+      ]
+    },
+    {
+      "title": "Noche",
+      "bullets": [
+        "West Street y cena."
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "text": "Si el dia sale muy cargado, prioriza Yulong River + Moon Hill y deja Ten-Mile Gallery como pieza flexible; el tramo natural suele ser lo mas especial.",
+      "links": [
+        {
+          "label": "Travel China Guide - Yangshuo dining",
+          "url": "https://www.travelchinaguide.com/cityguides/guangxi/yangshuo/dining.htm"
+        }
+      ]
+    },
+    {
+      "text": "Para la cena, repite beer fish o prueba platos niang locales en torno a West Street en vez de cenar demasiado pronto dentro de la ruta en bici.",
+      "links": [
+        {
+          "label": "Tripadvisor - Meijie Lijiang Beer Fish",
+          "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g303712-d3682204-Reviews-Meijie_Lijiang_Beer_Fish-Yangshuo_County_Guangxi.html"
+        }
+      ]
+    }
+  ]
+}

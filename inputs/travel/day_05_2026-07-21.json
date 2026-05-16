@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "day-05",
+  "dayNumber": 5,
+  "date": "2026-07-21",
+  "title": "Hong Kong Disneyland",
+  "city": "Hong Kong",
+  "summary": "Jornada completa dedicada a Disneyland Hong Kong.",
+  "overnightHotelId": "dorsett-mongkok",
+  "segments": [
+    {
+      "title": "Parque",
+      "bullets": [
+        "Dia completo en Disneyland Hong Kong.",
+        "Ir con margen para entrada, colas y vuelta."
+      ]
+    }
+  ],
+  "notes": [
+    "Pendiente de detallar transporte exacto, horario de llegada y prioridades dentro del parque."
+  ]
+}

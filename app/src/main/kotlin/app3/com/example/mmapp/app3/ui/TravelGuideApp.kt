@@ -1,0 +1,21 @@
+package com.example.mmapp.app3.ui
+
+import androidx.compose.runtime.Composable
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.mmapp.app3.AppContainer
+import com.example.mmapp.app3.ui.screens.HomeScreen
+import com.example.mmapp.app3.ui.theme.TravelGuideTheme
+
+@Composable
+fun TravelGuideApp(
+    container: AppContainer,
+    viewModelKey: String,
+) {
+    TravelGuideTheme {
+        val viewModel: HomeViewModel = viewModel(
+            key = viewModelKey,
+            factory = HomeViewModel.factory(container),
+        )
+        HomeScreen(viewModel = viewModel)
+    }
+}

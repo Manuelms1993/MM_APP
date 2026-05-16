@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "day-12",
+  "dayNumber": 12,
+  "date": "2026-07-28",
+  "title": "Zhangjiajie National Forest Park",
+  "city": "Wulingyuan / Zhangjiajie",
+  "summary": "Dia fuerte en el parque con Bailong, Yuanjiajie, Avatar y Tianzi.",
+  "overnightHotelId": "yoba-boutique-zhangjiajie",
+  "segments": [
+    {
+      "title": "Parque - dia 2",
+      "timeLabel": "Muy temprano -> tarde",
+      "bullets": [
+        "Entrar muy temprano.",
+        "Madrugar de verdad para evitar colas fuertes en el ascensor Bailong.",
+        "Subir con ascensor Bailong.",
+        "Ver Yuanjiajie.",
+        "Ver la montana Avatar.",
+        "Ver Tianzi Mountain.",
+        "Encadenar miradores con buses internos y caminatas cortas.",
+        "Prever 7-9 horas dentro del parque."
+      ],
+      "links": [
+        {
+          "label": "Viajeros Callejeros - parque nacional",
+          "url": "https://www.viajeroscallejeros.com/parque-nacional-de-zhanjiajie/"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Pedir mapa antes de entrar.",
+    "Mejor madrugar mucho.",
+    "No hace falta bici."
+  ],
+  "recommendations": [
+    {
+      "text": "Ese dia entra con snacks y agua ya comprados fuera del parque; te da mas margen para aguantar arriba sin cortar el recorrido bueno.",
+      "links": [
+        {
+          "label": "Travel China Guide - Wulingyuan",
+          "url": "https://www.travelchinaguide.com/attraction/hunan/zhangjiajie/wulingyuan.htm"
+        }
+      ]
+    }
+  ]
+}

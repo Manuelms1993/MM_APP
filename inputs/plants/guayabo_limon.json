@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "guayabo-limon-001",
+    "nombre": "Guayabo-limon",
+    "especie": "Psidium cattleianum var. lucidum",
+    "fechaInicio": "2026-04-27",
+    "activada": true,
+    "mesesSiembra": [
+      4,
+      5,
+      6
+    ],
+    "mesesRecoleccion": [
+      9,
+      10,
+      11
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 3,
+        "verano": 2,
+        "otono": 4,
+        "invierno": 8
+      },
+      "notas": [
+        "Riego medio",
+        "Regar y escurrir"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "fertilizante_frutales",
+          "cadaDias": 30,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": ""
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_frutales",
+          "cadaDias": 30,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": ""
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_directo",
+    "interior": false,
+    "notas": [
+      "Proteger del frio"
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "pulgon",
+        "cochinilla",
+        "mosca_blanca"
+      ],
+      "notas": [
+        "Revisar brotes nuevos, hojas tiernas y tallos."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "grande",
+      "tipoSustrato": "frutales_aireado",
+      "prioridad": "normal"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_frutales",
+          "porcentaje": 70
+        },
+        {
+          "material": "arena_gruesa",
+          "porcentaje": 20
+        },
+        {
+          "material": "humus_lombriz",
+          "porcentaje": 10
+        }
+      ],
+      "notas": [
+        "Base nutritiva con drenaje reforzado para frutal en maceta."
+      ]
+    },
+    "mostrarEnSiembra": false,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/81174/i-psidium-cattleyanum-i/details",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/81174/i-psidium-cattleyanum-i/details",
+    "responsable": "L"
+  }
+}

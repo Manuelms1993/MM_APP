@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "day-09",
+  "dayNumber": 9,
+  "date": "2026-07-25",
+  "title": "Yangshuo -> Fenghuang",
+  "city": "Fenghuang",
+  "summary": "Traslado pendiente de cerrar y primera noche en Fenghuang.",
+  "overnightHotelId": "hemu-house-fenghuang",
+  "segments": [
+    {
+      "title": "Traslado",
+      "bullets": [
+        "Falta cerrar el transporte Yangshuo -> Fenghuang."
+      ]
+    },
+    {
+      "title": "Llegada a Fenghuang",
+      "bullets": [
+        "Repartir lo mas importante del casco antiguo en una sola noche.",
+        "Priorizar paseo nocturno si la hora de llegada acompana."
+      ]
+    }
+  ],
+  "notes": [
+    "Dia todavia incompleto a nivel logistico."
+  ]
+}

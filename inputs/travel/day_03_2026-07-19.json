@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "day-03",
+  "dayNumber": 3,
+  "date": "2026-07-19",
+  "title": "Estambul -> Hong Kong",
+  "city": "Hong Kong",
+  "summary": "Llegada a Hong Kong, check-in y paseo suave por la zona.",
+  "overnightHotelId": "dorsett-mongkok",
+  "segments": [
+    {
+      "title": "Llegada",
+      "timeLabel": "17:20",
+      "bullets": [
+        "Llegada a Hong Kong a las 17:20.",
+        "Ir al hotel y hacer check-in."
+      ]
+    },
+    {
+      "title": "Tarde-noche",
+      "bullets": [
+        "Dar una vuelta cerca del hotel.",
+        "Cenar por la zona.",
+        "Descansar."
+      ]
+    }
+  ],
+  "notes": [
+    "No sobrecargar el dia por el viaje."
+  ]
+}

@@ -1,0 +1,122 @@
+name: Android CI
+
+on:
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android build tools
+        run: sdkmanager "build-tools;34.0.0"
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x gradlew
+
+      - name: Run unit tests
+        run: ./gradlew test
+
+      - name: Prepare release signing
+        id: signing
+        shell: bash
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          required_vars=(
+            ANDROID_KEYSTORE_BASE64
+            ANDROID_KEYSTORE_PASSWORD
+            ANDROID_KEY_ALIAS
+            ANDROID_KEY_PASSWORD
+          )
+
+          for var_name in "${required_vars[@]}"; do
+            if [[ -z "${!var_name}" ]]; then
+              echo "Missing required signing secret: ${var_name}" >&2
+              exit 1
+            fi
+          done
+
+          keystore_path="${RUNNER_TEMP}/release.keystore"
+          echo "${ANDROID_KEYSTORE_BASE64}" | base64 --decode > "${keystore_path}"
+          echo "keystore_path=${keystore_path}" >> "${GITHUB_OUTPUT}"
+
+      - name: Assemble unsigned release APK
+        run: ./gradlew clean assembleRelease -PappVersionName=pr-${{ github.event.pull_request.number || github.run_number }} -PappVersionCode=${{ github.run_number }}
+
+      - name: Build installable release APK
+        id: installable_apk
+        shell: bash
+        env:
+          KEYSTORE_PATH: ${{ steps.signing.outputs.keystore_path }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+
+          build_tools_dir="${ANDROID_SDK_ROOT}/build-tools/34.0.0"
+          zipalign_bin="${build_tools_dir}/zipalign"
+          apksigner_bin="${build_tools_dir}/apksigner"
+          unsigned_apk="$(find app/build/outputs/apk/release -type f -name '*-unsigned.apk' -print -quit)"
+
+          if [[ -z "${unsigned_apk}" ]]; then
+            echo "Unsigned release APK not found under app/build/outputs/apk/release" >&2
+            find app/build/outputs/apk/release -maxdepth 2 -type f | sort
+            exit 1
+          fi
+
+          mkdir -p releases
+          aligned_apk="${RUNNER_TEMP}/app-release-aligned.apk"
+          final_apk="releases/app-release-pr-${{ github.event.pull_request.number || github.run_number }}-installable.apk"
+
+          "${zipalign_bin}" -f -p 4 "${unsigned_apk}" "${aligned_apk}"
+          "${apksigner_bin}" sign \
+            --ks "${KEYSTORE_PATH}" \
+            --ks-key-alias "${ANDROID_KEY_ALIAS}" \
+            --ks-pass "pass:${ANDROID_KEYSTORE_PASSWORD}" \
+            --key-pass "pass:${ANDROID_KEY_PASSWORD}" \
+            --out "${final_apk}" \
+            "${aligned_apk}"
+
+          echo "Final APK path: ${final_apk}"
+          echo "Final APK size:"
+          ls -lh "${final_apk}"
+          echo "Final APK file type:"
+          file "${final_apk}"
+          echo "APK zip integrity:"
+          unzip -t "${final_apk}"
+          echo "APK zipalign check:"
+          "${zipalign_bin}" -c -p -v 4 "${final_apk}"
+          echo "APK signature verification:"
+          "${apksigner_bin}" verify --verbose --print-certs "${final_apk}"
+          echo "APK SHA256:"
+          sha256sum "${final_apk}"
+
+          echo "final_apk=${final_apk}" >> "${GITHUB_OUTPUT}"
+
+      - name: Upload installable release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release-installable-apk-pr-${{ github.event.pull_request.number || github.run_number }}
+          path: ${{ steps.installable_apk.outputs.final_apk }}

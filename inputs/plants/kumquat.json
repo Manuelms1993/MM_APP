@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "kumquat-001",
+    "nombre": "Kumquat",
+    "especie": "Citrus japonica",
+    "fechaInicio": "2026-04-27",
+    "activada": true,
+    "mesesSiembra": [
+      3,
+      4,
+      5
+    ],
+    "mesesRecoleccion": [
+      1,
+      2,
+      3,
+      12
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 3,
+        "verano": 2,
+        "otono": 4,
+        "invierno": 10
+      },
+      "notas": [
+        "Riego medio",
+        "Mantener humedo"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "fertilizante_citricos",
+          "cadaDias": 21,
+          "dosis": "normal",
+          "recordatorio": "dosis normal"
+        }
+      ],
+      "verano": [
+        {
+          "tipo": "fertilizante_citricos",
+          "cadaDias": 21,
+          "dosis": "normal",
+          "recordatorio": "dosis normal"
+        }
+      ],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_directo",
+    "interior": false,
+    "notas": [
+      "Revisar humedad a diario en verano"
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "cochinilla",
+        "pulgon",
+        "arana_roja",
+        "mosca_blanca"
+      ],
+      "notas": [
+        "Mirar brotes, nervios de hojas y tallos."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "grande",
+      "tipoSustrato": "citricos_drenante",
+      "prioridad": "alta"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_citricos",
+          "porcentaje": 70
+        },
+        {
+          "material": "arena_gruesa",
+          "porcentaje": 20
+        },
+        {
+          "material": "humus_lombriz",
+          "porcentaje": 10
+        }
+      ],
+      "notas": [
+        "Basado en compost nutritivo con arena o grit para drenaje."
+      ]
+    },
+    "mostrarEnSiembra": false,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/citrus/growing-guide/",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/citrus/growing-guide/",
+    "responsable": "L"
+  }
+}

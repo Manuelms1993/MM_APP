@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "tomillo-001",
+    "nombre": "Tomillo",
+    "especie": "Thymus vulgaris",
+    "fechaInicio": "2026-04-27",
+    "activada": true,
+    "mesesSiembra": [
+      3,
+      4,
+      5
+    ],
+    "mesesRecoleccion": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 5,
+        "verano": 4,
+        "otono": 7,
+        "invierno": 12
+      },
+      "notas": [
+        "Riego ligero",
+        "Poca agua"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "humus_lombriz",
+          "cadaDias": 60,
+          "cantidad": "capa fina"
+        }
+      ],
+      "verano": [],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_directo",
+    "interior": false,
+    "notas": [
+      "Prefiere sustrato drenante"
+    ],
+    "plagas": {
+      "problemasComunes": [
+        "pulgon",
+        "arana_roja"
+      ],
+      "notas": [
+        "Vigilar puntas tiernas en calor seco."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "pequena",
+      "tipoSustrato": "drenante_arenoso",
+      "prioridad": "normal"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_mediterraneo",
+          "porcentaje": 75
+        },
+        {
+          "material": "grava_volcanica",
+          "porcentaje": 15
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 10
+        }
+      ],
+      "notas": [
+        "Tomillo en maceta funciona mejor con mezcla seca y mineral."
+      ]
+    },
+    "mostrarEnSiembra": true,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/herbs/thyme/grow-your-own",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/herbs/thyme/grow-your-own",
+    "responsable": "L"
+  }
+}

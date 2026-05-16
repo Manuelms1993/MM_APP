@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "ajo-001",
+    "nombre": "Ajo",
+    "especie": "Allium sativum",
+    "fechaInicio": "2026-05-13",
+    "activada": true,
+    "mesesSiembra": [
+      10,
+      11,
+      12,
+      1
+    ],
+    "mesesRecoleccion": [
+      5,
+      6,
+      7
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 4,
+        "verano": 3,
+        "otono": 5,
+        "invierno": 7
+      },
+      "notas": [
+        "Riego ligero",
+        "Mantener sustrato apenas humedo sin encharcar"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "humus_lombriz",
+          "cadaDias": 45,
+          "cantidad": "capa fina superficial"
+        }
+      ],
+      "verano": [],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_directo",
+    "interior": false,
+    "notas": [
+      "Evitar mojar demasiado el follaje.",
+      "Dejar de regar cuando el bulbo ya esté formado y las hojas empiecen a amarillear."
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "minador_del_allium",
+        "trips",
+        "babosas"
+      ],
+      "notas": [
+        "Mirar hojas con galerías, plateado o mordidas bajas."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "mediana",
+      "tipoSustrato": "horticola_drenante",
+      "prioridad": "normal"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_huerto",
+          "porcentaje": 70
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 20
+        },
+        {
+          "material": "humus_lombriz",
+          "porcentaje": 10
+        }
+      ],
+      "notas": [
+        "Mezcla suelta y drenante para evitar exceso de humedad alrededor del bulbo."
+      ]
+    },
+    "mostrarEnSiembra": true,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/vegetables/garlic/grow-your-own",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/vegetables/garlic/grow-your-own",
+    "responsable": "L"
+  }
+}

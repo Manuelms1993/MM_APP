@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "day-02",
+  "dayNumber": 2,
+  "date": "2026-07-18",
+  "title": "Estambul",
+  "city": "Estambul",
+  "summary": "Ruta por Estambul pendiente de rematar con mapas y tips de aeropuerto.",
+  "segments": [
+    {
+      "title": "Ruta parte 1",
+      "bullets": [
+        "Recorrido previsto por Estambul."
+      ],
+      "references": [
+        "ruta_parte1 (enlace pendiente en el documento origen)"
+      ]
+    },
+    {
+      "title": "Ruta parte 2",
+      "bullets": [
+        "Segunda parte del recorrido previsto."
+      ],
+      "references": [
+        "ruta_parte2 (enlace pendiente en el documento origen)"
+      ]
+    },
+    {
+      "title": "Tips logistica",
+      "bullets": [
+        "Recoger aqui las notas de como ir desde el aeropuerto y otros tips practicos."
+      ],
+      "references": [
+        "TIPS (enlace pendiente en el documento origen)"
+      ]
+    }
+  ],
+  "notes": [
+    "Cuando tengas los enlaces reales del documento, sustituir las referencias pendientes."
+  ]
+}

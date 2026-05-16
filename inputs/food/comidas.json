@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "planType": "comidas",
+  "fechaInicio": "2026-04-20",
+  "semanas": [
+    {
+      "numeroSemana": 1,
+      "dias": [
+        {
+          "diaSemana": "lunes",
+          "opciones": [
+            {
+              "nombre": "Curry",
+              "ingredientes": ["Pimiento verde", "Pimiento rojo", "Pechuga de pollo", "Curry"]
+            },
+            {
+              "nombre": "Fajitas",
+              "ingredientes": ["Pimiento verde", "Pimiento rojo", "Pechuga de pollo", "Tacos de maíz"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "martes",
+          "opciones": [
+            {
+              "nombre": "Pescado en salsa",
+              "ingredientes": ["Caldo de pescado", "Pescado congelado", "Perejil", "Ajo", "Cebolla"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "miercoles",
+          "opciones": [
+            {
+              "nombre": "Pasta",
+              "ingredientes": ["Pasta", "Salsa pasta"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "jueves",
+          "opciones": [
+            {
+              "nombre": "Cuchara + carne",
+              "ingredientes": ["Lomo de cerdo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "viernes",
+          "opciones": [
+            {
+              "nombre": "Dar salida",
+              "ingredientes": []
+            }
+          ]
+        },
+        {
+          "diaSemana": "sabado",
+          "opciones": [
+            {
+              "nombre": "Pollo Crunchy",
+              "ingredientes": ["Pechuga de pollo", "Pan rallado crunchy", "Salsa pollo crunchy"]
+            },
+            {
+              "nombre": "Costillas",
+              "ingredientes": ["Costillas", "Salsa barbacoa", "Batata"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "domingo",
+          "opciones": [
+            {
+              "nombre": "Thermomix",
+              "ingredientes": []
+            },
+            {
+              "nombre": "Arroz",
+              "ingredientes": ["Arroz paella"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "numeroSemana": 2,
+      "dias": [
+        {
+          "diaSemana": "lunes",
+          "opciones": [
+            {
+              "nombre": "Arroz",
+              "ingredientes": ["Arroz paella"]
+            },
+            {
+              "nombre": "Empanadillas",
+              "ingredientes": ["Masa de empanadillas", "Relleno empanadillas"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "martes",
+          "opciones": [
+            {
+              "nombre": "Carne roja + puré de papa",
+              "ingredientes": ["Puré de papa", "Mantequilla", "Carne roja"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "miercoles",
+          "opciones": [
+            {
+              "nombre": "Pasta",
+              "ingredientes": ["Pasta", "Salsa pasta"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "jueves",
+          "opciones": [
+            {
+              "nombre": "Cuchara + carne",
+              "ingredientes": ["Lomo de cerdo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "viernes",
+          "opciones": [
+            {
+              "nombre": "Dar salida",
+              "ingredientes": []
+            }
+          ]
+        },
+        {
+          "diaSemana": "sabado",
+          "opciones": [
+            {
+              "nombre": "Thermomix",
+              "ingredientes": []
+            },
+            {
+              "nombre": "Pimiento relleno",
+              "ingredientes": ["Pimiento", "Carne picada", "Arroz"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "domingo",
+          "opciones": [
+            {
+              "nombre": "Guisantes",
+              "ingredientes": ["Guisantes", "Bacon", "Pimiento rojo", "Pimiento verde", "Cebolla"]
+            },
+            {
+              "nombre": "Solomillo Strogonoff",
+              "ingredientes": ["Nata", "Champiñones", "Solomillo", "Mostaza Dijon"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "numeroSemana": 3,
+      "dias": [
+        {
+          "diaSemana": "lunes",
+          "opciones": [
+            {
+              "nombre": "Guisantes",
+              "ingredientes": ["Guisantes", "Bacon", "Pimiento rojo", "Pimiento verde", "Cebolla"]
+            },
+            {
+              "nombre": "Solomillo Strogonoff",
+              "ingredientes": ["Nata", "Champiñones", "Solomillo", "Mostaza Dijon"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "martes",
+          "opciones": [
+            {
+              "nombre": "Pescado en salsa",
+              "ingredientes": ["Caldo de pescado", "Pescado congelado", "Perejil", "Ajo", "Cebolla"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "miercoles",
+          "opciones": [
+            {
+              "nombre": "Pasta",
+              "ingredientes": ["Pasta", "Salsa pasta"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "jueves",
+          "opciones": [
+            {
+              "nombre": "Cuchara + carne",
+              "ingredientes": ["Lomo de cerdo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "viernes",
+          "opciones": [
+            {
+              "nombre": "Dar salida",
+              "ingredientes": []
+            }
+          ]
+        },
+        {
+          "diaSemana": "sabado",
+          "opciones": [
+            {
+              "nombre": "Pasta Especial",
+              "ingredientes": ["Pasta especial"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "domingo",
+          "opciones": [
+            {
+              "nombre": "Thermomix",
+              "ingredientes": []
+            },
+            {
+              "nombre": "Arroz",
+              "ingredientes": ["Arroz paella"]
+            },
+            {
+              "nombre": "Gazpacho Manchego",
+              "ingredientes": ["Torta cenceña", "Pollo", "Conejo"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "numeroSemana": 4,
+      "dias": [
+        {
+          "diaSemana": "lunes",
+          "opciones": [
+            {
+              "nombre": "Arroz",
+              "ingredientes": ["Arroz paella"]
+            },
+            {
+              "nombre": "Gazpacho Manchego",
+              "ingredientes": ["Torta cenceña", "Pollo", "Conejo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "martes",
+          "opciones": [
+            {
+              "nombre": "Hamburguesa + puré de papa",
+              "ingredientes": ["Hamburguesa", "Puré de patata"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "miercoles",
+          "opciones": [
+            {
+              "nombre": "Pasta",
+              "ingredientes": ["Pasta", "Salsa pasta"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "jueves",
+          "opciones": [
+            {
+              "nombre": "Cuchara + carne",
+              "ingredientes": ["Lomo de cerdo"]
+            }
+          ]
+        },
+        {
+          "diaSemana": "viernes",
+          "opciones": [
+            {
+              "nombre": "Dar salida",
+              "ingredientes": []
+            }
+          ]
+        },
+        {
+          "diaSemana": "sabado",
+          "opciones": [
+            {
+              "nombre": "Libre",
+              "ingredientes": []
+            }
+          ]
+        },
+        {
+          "diaSemana": "domingo",
+          "opciones": [
+            {
+              "nombre": "Curry",
+              "ingredientes": ["Pimiento verde", "Pimiento rojo", "Pechuga de pollo", "Curry"]
+            },
+            {
+              "nombre": "Fajitas",
+              "ingredientes": ["Pimiento verde", "Pimiento rojo", "Pechuga de pollo", "Tacos de maíz"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

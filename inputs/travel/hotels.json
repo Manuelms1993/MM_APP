@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "hotels": [
+    {
+      "id": "dem-premium-istanbul-airport",
+      "name": "Dem Premium Hotel - Round Trip Airport Service - Istanbul International Airport",
+      "city": "Arnavutkoy, Estambul",
+      "checkIn": "2026-07-17",
+      "checkOut": "2026-07-18",
+      "address": "Sukru Sk. 3, Arnavutkoy, Istanbul 34275, Turquia",
+      "status": "Confirmada",
+      "priceLabel": "30,60 EUR",
+      "notes": [
+        "Noche de aeropuerto para llegada tardia.",
+        "Conviene resolver traslado desde IST antes de salir."
+      ],
+      "sourceUrl": "https://www.expedia.com/Istanbul-Hotels-Dem-Hotel-Premium-New-Istanbul-Airport.h99768648.Hotel-Information"
+    },
+    {
+      "id": "dorsett-mongkok",
+      "name": "Dorsett Mongkok, Hong Kong",
+      "city": "Kowloon, Hong Kong",
+      "checkIn": "2026-07-19",
+      "checkOut": "2026-07-22",
+      "address": "88 Tai Kok Tsui Road, Kowloon, Hong Kong",
+      "status": "Confirmada",
+      "priceLabel": "236 EUR",
+      "notes": [
+        "Buena base para Kowloon, Mong Kok y conexiones de metro.",
+        "A unos 7 minutos andando de Olympic MTR."
+      ],
+      "sourceUrl": "https://www.dorsetthotels.com/dorsett-mongkok/location/"
+    },
+    {
+      "id": "guilin-flowers-inn",
+      "name": "Guilin Flowers Inn",
+      "city": "Guilin",
+      "checkIn": "2026-07-22",
+      "checkOut": "2026-07-23",
+      "address": "No.12 Jiugangling Road, Guilin, China",
+      "status": "Confirmada",
+      "priceLabel": "15 EUR",
+      "notes": [
+        "Noche de transicion antes del crucero por el Li."
+      ],
+      "sourceUrl": "https://www.hotels21.com/china/guilin/guilin-flowers-inn"
+    },
+    {
+      "id": "yangshuo-tea-house",
+      "name": "Yangshuo Tea House Inn - By West Street and Li River",
+      "city": "Yangshuo",
+      "checkIn": "2026-07-23",
+      "checkOut": "2026-07-25",
+      "address": "12 Lianfeng Alley, 541900 Yangshuo, China",
+      "status": "Confirmada",
+      "priceLabel": "66 EUR",
+      "notes": [
+        "Ubicacion muy centrica y tranquila cerca de West Street."
+      ],
+      "sourceUrl": "https://www.booking.com/reviews/cn/hotel/yi-xin-ke-zhan.html"
+    },
+    {
+      "id": "hemu-house-fenghuang",
+      "name": "Hemu House",
+      "city": "Fenghuang",
+      "checkIn": "2026-07-25",
+      "checkOut": "2026-07-26",
+      "address": "No 28 Wen xin Street, Fenghuang Old Town, Fenghuang, China",
+      "status": "Confirmada",
+      "priceLabel": "28 EUR",
+      "notes": [
+        "Base para una noche en el casco antiguo de Fenghuang."
+      ],
+      "sourceUrl": "https://www.directhotels.com/Fenghuang/Hemu_House"
+    },
+    {
+      "id": "huaqianshu-furong",
+      "name": "Huaqianshu Theme Inn 高铁免费接站或送站一次",
+      "city": "Wangcun / Furong",
+      "checkIn": "2026-07-26",
+      "checkOut": "2026-07-27",
+      "address": "No. 14, Zoumaping, New District Community, Furong Town, Yongshun County, Xiangxi, Hunan 416707, China",
+      "status": "Confirmada",
+      "priceLabel": "54 EUR",
+      "notes": [
+        "Incluye recogida o traslado gratis una vez desde o hacia la estacion de alta velocidad."
+      ],
+      "sourceUrl": "https://www.booking.com/hotel/cn/hua-qian-shu-zhu-ti-ke-zhan-hu-nan-sheng-yong-shun-xian-fu-rong-zhen.es-mx.html"
+    },
+    {
+      "id": "yoba-boutique-zhangjiajie",
+      "name": "Yoba Boutique Hotel",
+      "city": "Wulingyuan / Zhangjiajie",
+      "checkIn": "2026-07-27",
+      "checkOut": "2026-07-29",
+      "address": "No.03-2 Group 8 Wujiayu, Wulingyuan District, Zhangjiajie 427000, China",
+      "status": "Confirmada",
+      "priceLabel": "90 EUR",
+      "notes": [
+        "Cerca de la entrada principal de Wulingyuan.",
+        "Buena base para las dos jornadas del parque."
+      ],
+      "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g494933-d17761177-Reviews-Yoba_Boutique_Hotel-Zhangjiajie_Hunan.html"
+    },
+    {
+      "id": "wenjun-courtyard-chengdu",
+      "name": "Wenjun Courtyard Hotel Chengdu",
+      "city": "Chengdu",
+      "checkIn": "2026-07-29",
+      "checkOut": "2026-08-01",
+      "address": "No.180 Qintai Road, Qingyang District, Chengdu, Sichuan, China 610072",
+      "status": "Confirmada",
+      "priceLabel": "167 EUR",
+      "notes": [
+        "Muy bien situada para People's Park, Kuanzhai y el show de mascaras."
+      ],
+      "sourceUrl": "https://www.tripoffice.com/china/chengdu-cn/wenjun-courtyard-hotel-chengdu-kuanzhai-branch"
+    }
+  ]
+}

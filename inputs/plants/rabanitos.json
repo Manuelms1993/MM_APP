@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "rabanitos-001",
+    "nombre": "Rabanitos",
+    "especie": "Raphanus sativus",
+    "fechaInicio": "2026-05-15",
+    "activada": true,
+    "mesesSiembra": [
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11
+    ],
+    "mesesRecoleccion": [
+      3,
+      4,
+      5,
+      6,
+      10,
+      11,
+      12
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 2,
+        "verano": 1,
+        "otono": 3,
+        "invierno": 5
+      },
+      "notas": [
+        "Riego ligero",
+        "Evitar altibajos fuertes de humedad para que no piquen ni se ahuequen"
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "compost_suave_huerto",
+          "cadaDias": 35,
+          "cantidad": "capa fina"
+        }
+      ],
+      "verano": [],
+      "otono": [],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_parcial",
+    "interior": false,
+    "notas": [
+      "Variedad de extraccion rapida.",
+      "Recoger jovenes para mantener buen sabor y textura."
+    ],
+    "plagas": {
+      "cadaDias": 7,
+      "problemasComunes": [
+        "altica",
+        "babosas",
+        "pulgon"
+      ],
+      "notas": [
+        "Vigilar hojas perforadas y ataques en plantulas."
+      ]
+    },
+    "metadata": {
+      "tamanoMaceta": "mediana",
+      "tipoSustrato": "horticola_suelto",
+      "prioridad": "alta"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_huerto",
+          "porcentaje": 65
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 20
+        },
+        {
+          "material": "humus_lombriz",
+          "porcentaje": 15
+        }
+      ],
+      "notas": [
+        "Sustrato suelto para que la raiz engorde recta y sin compactacion."
+      ]
+    },
+    "mostrarEnSiembra": true,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/vegetables/radishes/grow-your-own",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/vegetables/radishes/grow-your-own",
+    "responsable": "L"
+  }
+}
