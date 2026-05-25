@@ -21,7 +21,6 @@ data class PlantDefinition(
     val composicionMaceta: PottingMix?,
     val fuenteInformacionUrl: String?,
     val fuenteSustratoUrl: String?,
-    val plagas: PestMonitoringRule?,
     val metadata: Map<String, String>,
     val rawPayload: String?,
 )

@@ -42,16 +42,6 @@
     "notas": [
       "Retirar flores secas"
     ],
-    "plagas": {
-      "problemasComunes": [
-        "pulgon",
-        "arana_roja",
-        "caracoles"
-      ],
-      "notas": [
-        "Revisar hojas nuevas y pétalos dañados."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "mediana",
       "tipoSustrato": "universal_drenante",

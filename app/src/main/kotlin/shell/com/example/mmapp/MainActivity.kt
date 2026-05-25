@@ -8,15 +8,18 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import com.example.mmapp.app2.notifications.MenuNotificationScheduler
+import androidx.lifecycle.lifecycleScope
 import com.example.mmapp.ui.MMApp
+import com.example.mmapp.settings.NotificationSettingsCoordinator
+import com.example.mmapp.settings.ProcessSettingsCoordinator
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     private val notificationsPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission(),
     ) { granted ->
         if (granted) {
-            MenuNotificationScheduler(this).scheduleDailyNotifications()
+            applyNotificationSettings()
         }
     }
 
@@ -30,16 +33,50 @@ class MainActivity : ComponentActivity() {
                 plantsContainer = application.plantsContainer,
                 foodContainer = application.foodContainer,
                 travelContainer = application.travelContainer,
+                scriptingContainer = application.scriptingContainer,
+                settingsContainer = application.settingsContainer,
+                onNotificationSettingsChanged = ::applyNotificationSettings,
+                onProcessSettingsChanged = ::applyProcessSettings,
             )
         }
     }
 
     private fun requestNotificationsPermissionIfNeeded() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) return
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
-            MenuNotificationScheduler(this).scheduleDailyNotifications()
-            return
+        lifecycleScope.launch {
+            val application = application as MMAppApplication
+            val settings = application.settingsContainer.appSettingsRepository.getNotificationSettings()
+            if (settings.anyEnabled) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+                    ContextCompat.checkSelfPermission(this@MainActivity, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
+                ) {
+                    notificationsPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                    return@launch
+                }
+            }
+            applyNotificationSettings()
         }
-        notificationsPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+    }
+
+    private fun applyNotificationSettings() {
+        lifecycleScope.launch {
+            val application = application as MMAppApplication
+            val settings = application.settingsContainer.appSettingsRepository.getNotificationSettings()
+            if (settings.anyEnabled &&
+                Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+                ContextCompat.checkSelfPermission(this@MainActivity, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
+            ) {
+                notificationsPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                return@launch
+            }
+            NotificationSettingsCoordinator(this@MainActivity).apply(settings)
+        }
+    }
+
+    private fun applyProcessSettings() {
+        lifecycleScope.launch {
+            val application = application as MMAppApplication
+            val settings = application.settingsContainer.appSettingsRepository.getProcessSettings()
+            ProcessSettingsCoordinator(this@MainActivity).apply(settings)
+        }
     }
 }

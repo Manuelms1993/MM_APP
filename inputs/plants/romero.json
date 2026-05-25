@@ -69,15 +69,6 @@
       "Prefiere sustrato drenante",
       "No tolera encharcamiento"
     ],
-    "plagas": {
-      "problemasComunes": [
-        "pulgon",
-        "arana_roja"
-      ],
-      "notas": [
-        "Revisar puntas tiernas si el tiempo está muy seco."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "mediana",
       "tipoSustrato": "drenante_mediterraneo",

@@ -119,11 +119,11 @@ Se pueden definir en `gradle.properties` local o por linea de comandos con `-P`.
 Ejemplo:
 
 ```properties
-plantsInputsRepositoryTreeUrl=https://github.com/example/mm-app-inputs/tree/main/inputs/plants
-foodInputsRepositoryTreeUrl=https://github.com/example/mm-app-inputs/tree/main/inputs/food
+plantsInputsRepositoryTreeUrl=https://github.com/Manuelms1993/MM_APP/tree/master/inputs/plants
+foodInputsRepositoryTreeUrl=https://github.com/Manuelms1993/MM_APP/tree/master/inputs/food
 ```
 
-Si no se configuran, el build usa placeholders genericos. En ese caso la app sigue funcionando con los assets embebidos, pero la sincronizacion remota no sera util hasta apuntar a un repositorio real.
+Si no se configuran, el build usa por defecto este mismo repositorio en la rama `master`. Se pueden sobrescribir si en algún momento quieres apuntar a otro repositorio o rama.
 
 ## Compilar y ejecutar
 

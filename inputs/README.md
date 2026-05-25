@@ -34,8 +34,8 @@ inputs/
 Propiedades de configuracion remota:
 
 ```properties
-plantsInputsRepositoryTreeUrl=https://github.com/example/mm-app-inputs/tree/main/inputs/plants
-foodInputsRepositoryTreeUrl=https://github.com/example/mm-app-inputs/tree/main/inputs/food
+plantsInputsRepositoryTreeUrl=https://github.com/Manuelms1993/MM_APP/tree/master/inputs/plants
+foodInputsRepositoryTreeUrl=https://github.com/Manuelms1993/MM_APP/tree/master/inputs/food
 ```
 
 ## Notas de formato

@@ -506,10 +506,6 @@ private fun InfoTab(
                                 label = "Abono",
                                 lines = displayFormatter.fertilizerLines(plant.abono),
                             )
-                            PlantInfoMultilineSection(
-                                label = "Plagas",
-                                lines = displayFormatter.pestMonitoringLines(plant.plagas),
-                            )
                             PlantInfoLine("Prioridad", displayFormatter.readableValue(plant.metadata["prioridad"]))
                             PlantInfoLine("Siembra", displayFormatter.monthSummary(plant.mesesSiembra))
                             PlantInfoLine("Recolección", displayFormatter.monthSummary(plant.mesesRecoleccion))

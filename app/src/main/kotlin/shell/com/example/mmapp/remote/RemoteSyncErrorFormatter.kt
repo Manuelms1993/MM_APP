@@ -20,7 +20,7 @@ class RemoteSyncErrorFormatter {
                 "No se ha podido actualizar. No se han encontrado los JSON esperados en el repositorio remoto."
 
             is RemoteSyncException.InvalidRepositoryConfig ->
-                "No se ha podido actualizar. La configuración del repositorio remoto no es válida."
+                "No se ha podido actualizar. Configura una URL real en plantsInputsRepositoryTreeUrl o foodInputsRepositoryTreeUrl."
 
             else ->
                 "No se ha podido actualizar por un error inesperado."

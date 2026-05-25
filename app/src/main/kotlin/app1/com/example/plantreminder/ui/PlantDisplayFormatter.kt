@@ -3,7 +3,6 @@ package com.example.mmapp.app1.ui
 import com.example.mmapp.app1.domain.models.FertilizerDoseMode
 import com.example.mmapp.app1.domain.models.FertilizerRule
 import com.example.mmapp.app1.domain.models.PottingMix
-import com.example.mmapp.app1.domain.models.PestMonitoringRule
 import com.example.mmapp.app1.domain.models.Season
 import com.example.mmapp.app1.domain.models.WateringRule
 import java.time.Month
@@ -61,18 +60,6 @@ class PlantDisplayFormatter(
                 }
                 "• ${seasonLabel(season)}: ${readableValue(rule.tipo)} (${details.joinToString(", ")})"
             }
-        }
-        return if (lines.isEmpty()) listOf("-") else lines
-    }
-
-    fun pestMonitoringLines(rule: PestMonitoringRule?): List<String> {
-        if (rule == null) return listOf("-")
-        val lines = buildList {
-            rule.reviewEveryDays?.let { add("• Revisar cada $it días") }
-            if (rule.commonIssues.isNotEmpty()) {
-                add("• Vigilar: ${rule.commonIssues.joinToString(", ") { readableValue(it) }}")
-            }
-            addAll(rule.notes.map { "• $it" })
         }
         return if (lines.isEmpty()) listOf("-") else lines
     }

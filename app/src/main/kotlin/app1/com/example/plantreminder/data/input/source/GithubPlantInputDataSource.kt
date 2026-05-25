@@ -93,6 +93,11 @@ class GithubPlantInputDataSource(
 
     private fun String.toGithubContentsApiUrl(): String {
         try {
+            if (contains("/example/mm-app-inputs/")) {
+                throw RemoteSyncException.InvalidRepositoryConfig(
+                    message = "La URL del repositorio de plantas sigue con el placeholder de ejemplo.",
+                )
+            }
             val prefix = "https://github.com/"
             require(startsWith(prefix)) { "GitHub tree URL inválida: $this" }
             val segments = removePrefix(prefix).split("/")
@@ -102,6 +107,8 @@ class GithubPlantInputDataSource(
             val branch = segments[3]
             val path = segments.drop(4).joinToString("/")
             return "https://api.github.com/repos/$owner/$repo/contents/$path?ref=$branch"
+        } catch (exception: RemoteSyncException.InvalidRepositoryConfig) {
+            throw exception
         } catch (exception: IllegalArgumentException) {
             throw RemoteSyncException.InvalidRepositoryConfig(
                 message = "La URL del repositorio de plantas no es válida.",

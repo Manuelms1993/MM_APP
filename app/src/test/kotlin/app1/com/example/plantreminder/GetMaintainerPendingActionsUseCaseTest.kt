@@ -80,7 +80,6 @@ private fun maintainerPlant(
     composicionMaceta = null,
     fuenteInformacionUrl = null,
     fuenteSustratoUrl = null,
-    plagas = null,
     metadata = emptyMap(),
     rawPayload = "{}",
 )

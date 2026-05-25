@@ -11,8 +11,10 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import com.example.mmapp.MainActivity
+import com.example.mmapp.MMAppApplication
 import com.example.mmapp.app2.AppContainerFactory
 import com.example.mmapp.R
+import com.example.mmapp.settings.data.repositories.AppSettingsRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -21,10 +23,14 @@ class MenuNotificationReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val pendingResult = goAsync()
         CoroutineScope(Dispatchers.IO).launch {
+            val mealType = mealTypeFromIntent(intent)
             try {
-                val mealType = intent.getStringExtra(MenuNotificationScheduler.EXTRA_MEAL_TYPE)
-                    ?.let(MealType::valueOf)
-                    ?: MealType.LUNCH
+                val application = context.applicationContext as MMAppApplication
+                val settings = application.settingsContainer.appSettingsRepository.getNotificationSettings()
+                val foodSettings = settings.findById(notificationIdFor(mealType))
+                if (foodSettings?.enabled == false) {
+                    return@launch
+                }
                 val catalog = AppContainerFactory(context.applicationContext as android.app.Application)
                     .create()
                     .menuCatalogDataSource
@@ -65,7 +71,16 @@ class MenuNotificationReceiver : BroadcastReceiver() {
                     )
                 }
             } finally {
-                MenuNotificationScheduler(context).scheduleNotification(mealTypeFromIntent(intent))
+                val application = context.applicationContext as MMAppApplication
+                val settings = application.settingsContainer.appSettingsRepository.getNotificationSettings()
+                val foodSettings = settings.findById(notificationIdFor(mealType))
+                if (foodSettings?.enabled != false) {
+                    MenuNotificationScheduler(context).scheduleNotification(
+                        mealType = mealType,
+                        intervalDays = foodSettings?.intervalDays ?: 1,
+                        hourOfDay = foodSettings?.hourOfDay ?: MenuNotificationScheduler.defaultHourOfDay(mealType),
+                    )
+                }
                 pendingResult.finish()
             }
         }
@@ -74,4 +89,9 @@ class MenuNotificationReceiver : BroadcastReceiver() {
     private fun mealTypeFromIntent(intent: Intent): MealType = intent.getStringExtra(
         MenuNotificationScheduler.EXTRA_MEAL_TYPE,
     )?.let(MealType::valueOf) ?: MealType.LUNCH
+
+    private fun notificationIdFor(mealType: MealType): String = when (mealType) {
+        MealType.LUNCH -> AppSettingsRepository.FOOD_LUNCH_NOTIFICATION_ID
+        MealType.DINNER -> AppSettingsRepository.FOOD_DINNER_NOTIFICATION_ID
+    }
 }

@@ -29,14 +29,6 @@ class MessageBuilder {
                     }
                 }
 
-                val pestActions = plantActions.filter { it.actionType == PlantActionType.INSPECT_PESTS }
-                if (pestActions.isNotEmpty()) {
-                    add("  - Revisar plagas")
-                    pestActions.flatMap { it.details }.forEach { detail ->
-                        add("    · $detail")
-                    }
-                }
-
                 val fertilizerActions = plantActions.filter { it.actionType == PlantActionType.FERTILIZE }
                 if (fertilizerActions.isNotEmpty()) {
                     add("  - Abono")

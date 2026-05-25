@@ -56,18 +56,6 @@
       "Pinzar flores",
       "Sensibles al fr\u00edo"
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "pulgon",
-        "mosca_blanca",
-        "trips",
-        "arana_roja"
-      ],
-      "notas": [
-        "Revisar brotes tiernos y el envés de las hojas."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "pequena",
       "tipoSustrato": "universal_aireado",

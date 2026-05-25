@@ -27,6 +27,22 @@ class SyncPlantInputsUseCaseTest {
         assertThat(result).isEqualTo("No se ha podido actualizar. No hay conexión con GitHub o con Internet.")
     }
 
+    @Test
+    fun `devuelve mensaje claro cuando falta configurar el repositorio remoto`() = runTest {
+        val dataSource = FakePlantCatalogDataSource(
+            syncError = RemoteSyncException.InvalidRepositoryConfig("placeholder"),
+        )
+
+        val result = SyncPlantInputsUseCase(
+            plantCatalogDataSource = dataSource,
+            messageFormatter = HomeOperationMessageFormatter(),
+        )()
+
+        assertThat(result).isEqualTo(
+            "No se ha podido actualizar. Configura una URL real en plantsInputsRepositoryTreeUrl o foodInputsRepositoryTreeUrl.",
+        )
+    }
+
     private class FakePlantCatalogDataSource(
         private val syncError: Throwable? = null,
     ) : PlantCatalogDataSource {

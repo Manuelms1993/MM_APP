@@ -11,9 +11,12 @@ import java.util.concurrent.TimeUnit
 class DailyReminderScheduler(
     private val context: Context,
 ) {
-    fun schedule() {
-        val request = PeriodicWorkRequestBuilder<DailyReminderWorker>(1, TimeUnit.DAYS)
-            .setInitialDelay(initialDelayToNextRun())
+    fun schedule(
+        intervalDays: Int = 1,
+        hourOfDay: Int = 9,
+    ) {
+        val request = PeriodicWorkRequestBuilder<DailyReminderWorker>(intervalDays.toLong(), TimeUnit.DAYS)
+            .setInitialDelay(initialDelayToNextRun(hourOfDay, intervalDays))
             .build()
 
         WorkManager.getInstance(context).enqueueUniquePeriodicWork(
@@ -23,10 +26,24 @@ class DailyReminderScheduler(
         )
     }
 
-    private fun initialDelayToNextRun(): Duration {
+    fun cancel() {
+        WorkManager.getInstance(context).cancelUniqueWork(UNIQUE_WORK_NAME)
+    }
+
+    fun sync(
+        enabled: Boolean,
+        intervalDays: Int = 1,
+        hourOfDay: Int = 9,
+    ) {
+        if (enabled) schedule(intervalDays, hourOfDay) else cancel()
+    }
+
+    private fun initialDelayToNextRun(hourOfDay: Int, intervalDays: Int): Duration {
         val now = ZonedDateTime.now(MADRID_ZONE)
-        val nextRun = now.withHour(9).withMinute(0).withSecond(0).withNano(0).let { scheduled ->
-            if (now >= scheduled) scheduled.plusDays(1) else scheduled
+        val normalizedHour = hourOfDay.coerceIn(0, 23)
+        val normalizedIntervalDays = intervalDays.coerceIn(1, 30)
+        val nextRun = now.withHour(normalizedHour).withMinute(0).withSecond(0).withNano(0).let { scheduled ->
+            if (now >= scheduled) scheduled.plusDays(normalizedIntervalDays.toLong()) else scheduled
         }
         return Duration.between(now, nextRun)
     }
