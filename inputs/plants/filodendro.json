@@ -45,17 +45,6 @@
     "notas": [
       "Agradece algo de humedad ambiental"
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "arana_roja",
-        "cochinilla",
-        "trips"
-      ],
-      "notas": [
-        "Inspeccionar envés, peciolos y brotes nuevos."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "mediana",
       "tipoSustrato": "houseplant_aireado",

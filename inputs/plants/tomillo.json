@@ -49,15 +49,6 @@
     "notas": [
       "Prefiere sustrato drenante"
     ],
-    "plagas": {
-      "problemasComunes": [
-        "pulgon",
-        "arana_roja"
-      ],
-      "notas": [
-        "Vigilar puntas tiernas en calor seco."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "pequena",
       "tipoSustrato": "drenante_arenoso",

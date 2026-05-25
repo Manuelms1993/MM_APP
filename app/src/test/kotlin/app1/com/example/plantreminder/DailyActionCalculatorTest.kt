@@ -7,7 +7,6 @@ import com.example.mmapp.app1.domain.models.PlantActionType
 import com.example.mmapp.app1.domain.models.PlantDefinition
 import com.example.mmapp.app1.domain.models.Season
 import com.example.mmapp.app1.domain.models.SeasonalFrequency
-import com.example.mmapp.app1.domain.models.PestMonitoringRule
 import com.example.mmapp.app1.domain.models.WateringRule
 import com.example.mmapp.app1.domain.models.WeatherDay
 import com.google.common.truth.Truth.assertThat
@@ -239,24 +238,6 @@ class DailyActionCalculatorTest {
         assertThat(result.map { it.actionType }).containsExactly(PlantActionType.WATER)
     }
 
-    @Test
-    fun triggersPestInspectionForConfiguredPlants() {
-        val plant = plantDefinition(
-            nombre = "Ficus",
-            start = LocalDate.parse("2026-05-01"),
-            pestMonitoring = PestMonitoringRule(
-                reviewEveryDays = 7,
-                commonIssues = listOf("arana_roja", "cochinilla"),
-                notes = listOf("Mirar envés y brotes nuevos"),
-            ),
-        )
-
-        val noMatch = calculator.calculate(LocalDate.parse("2026-05-07"), listOf(plant))
-        val match = calculator.calculate(LocalDate.parse("2026-05-08"), listOf(plant))
-
-        assertThat(noMatch.none { it.actionType == PlantActionType.INSPECT_PESTS }).isTrue()
-        assertThat(match.map { it.actionType }).contains(PlantActionType.INSPECT_PESTS)
-    }
 }
 
 private fun plantDefinition(
@@ -267,7 +248,6 @@ private fun plantDefinition(
     fertilizerBySeason: Map<Season, List<FertilizerRule>> = emptyMap(),
     interior: Boolean = false,
     metadata: Map<String, String> = emptyMap(),
-    pestMonitoring: PestMonitoringRule? = null,
 ): PlantDefinition = PlantDefinition(
     id = nombre.lowercase(),
     nombre = nombre,
@@ -287,7 +267,6 @@ private fun plantDefinition(
     composicionMaceta = null,
     fuenteInformacionUrl = null,
     fuenteSustratoUrl = null,
-    plagas = pestMonitoring,
     metadata = metadata,
     rawPayload = "{}",
 )

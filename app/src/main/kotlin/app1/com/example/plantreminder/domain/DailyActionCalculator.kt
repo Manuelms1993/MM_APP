@@ -43,20 +43,6 @@ class DailyActionCalculator(
                         )
                     }
 
-                    plant.plagas?.reviewEveryDays?.takeIf { shouldTrigger(daysSinceStart, it) }?.let {
-                        yield(
-                            DailyPlantAction(
-                                date = date,
-                                plantId = plant.id,
-                                plantName = plant.nombre,
-                                actionType = PlantActionType.INSPECT_PESTS,
-                                title = plantActionTextFactory.pestInspectionTitle(),
-                                details = plantActionTextFactory.pestInspectionDetails(plant.plagas),
-                                rawPayload = plant.rawPayload,
-                            ),
-                        )
-                    }
-
                     plant.abono[season].orEmpty().forEach { rule ->
                         if (shouldTrigger(daysSinceStart, rule.cadaDias)) {
                             yield(

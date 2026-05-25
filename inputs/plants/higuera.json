@@ -53,17 +53,6 @@
     "notas": [
       "Raiz restringida va bien en maceta"
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "pulgon",
-        "cochinilla",
-        "arana_roja"
-      ],
-      "notas": [
-        "Mirar hojas nuevas y el envés en tiempo seco."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "grande",
       "tipoSustrato": "frutales_drenante",

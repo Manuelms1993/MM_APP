@@ -25,6 +25,10 @@ import com.example.mmapp.app2.AppContainer as FoodAppContainer
 import com.example.mmapp.app2.ui.MMFoodApp
 import com.example.mmapp.app3.AppContainer as TravelAppContainer
 import com.example.mmapp.app3.ui.TravelGuideApp
+import com.example.mmapp.app4.AppContainer as ScriptingAppContainer
+import com.example.mmapp.app4.ui.ScriptingApp
+import com.example.mmapp.settings.AppContainer as SettingsAppContainer
+import com.example.mmapp.settings.ui.SettingsApp
 
 private enum class AppSection(
     val label: String,
@@ -32,6 +36,8 @@ private enum class AppSection(
     Plants("Plantas"),
     Food("Comida"),
     Travel("China"),
+    Scripting("Procesos"),
+    Settings("Configuración"),
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -40,12 +46,18 @@ fun MMApp(
     plantsContainer: PlantsAppContainer,
     foodContainer: FoodAppContainer,
     travelContainer: TravelAppContainer,
+    scriptingContainer: ScriptingAppContainer,
+    settingsContainer: SettingsAppContainer,
+    onNotificationSettingsChanged: () -> Unit,
+    onProcessSettingsChanged: () -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
     var selectedSection by rememberSaveable { mutableStateOf(AppSection.Plants) }
     var plantsReloadVersion by rememberSaveable { mutableIntStateOf(0) }
     var foodReloadVersion by rememberSaveable { mutableIntStateOf(0) }
     var travelReloadVersion by rememberSaveable { mutableIntStateOf(0) }
+    var scriptingReloadVersion by rememberSaveable { mutableIntStateOf(0) }
+    var settingsReloadVersion by rememberSaveable { mutableIntStateOf(0) }
 
     Scaffold(
         topBar = {
@@ -69,6 +81,8 @@ fun MMApp(
                                                 AppSection.Plants -> plantsReloadVersion++
                                                 AppSection.Food -> foodReloadVersion++
                                                 AppSection.Travel -> travelReloadVersion++
+                                                AppSection.Scripting -> scriptingReloadVersion++
+                                                AppSection.Settings -> settingsReloadVersion++
                                             }
                                         }
                                         selectedSection = section
@@ -106,6 +120,22 @@ fun MMApp(
                     TravelGuideApp(
                         container = travelContainer,
                         viewModelKey = "travel-$travelReloadVersion",
+                    )
+                }
+
+                AppSection.Scripting -> key("scripting-$scriptingReloadVersion") {
+                    ScriptingApp(
+                        container = scriptingContainer,
+                        viewModelKey = "scripting-$scriptingReloadVersion",
+                    )
+                }
+
+                AppSection.Settings -> key("settings-$settingsReloadVersion") {
+                    SettingsApp(
+                        container = settingsContainer,
+                        viewModelKey = "settings-$settingsReloadVersion",
+                        onNotificationSettingsChanged = onNotificationSettingsChanged,
+                        onProcessSettingsChanged = onProcessSettingsChanged,
                     )
                 }
             }

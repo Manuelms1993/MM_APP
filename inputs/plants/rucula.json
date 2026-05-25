@@ -61,17 +61,6 @@
       "Cosechar hojas tiernas de forma continua.",
       "Con calor fuerte conviene algo de semisombra."
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "pulgon",
-        "altica",
-        "babosas"
-      ],
-      "notas": [
-        "Mirar hojas tiernas y bordes mordidos."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "mediana",
       "tipoSustrato": "horticola_aireado",

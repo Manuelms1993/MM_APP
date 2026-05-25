@@ -13,10 +13,10 @@ android {
     compileSdk = 34
 
     val plantsInputsRepositoryTreeUrl = providers.gradleProperty("plantsInputsRepositoryTreeUrl")
-        .orElse("https://github.com/example/mm-app-inputs/tree/main/inputs/plants")
+        .orElse("https://github.com/Manuelms1993/MM_APP/tree/master/inputs/plants")
         .get()
     val foodInputsRepositoryTreeUrl = providers.gradleProperty("foodInputsRepositoryTreeUrl")
-        .orElse("https://github.com/example/mm-app-inputs/tree/main/inputs/food")
+        .orElse("https://github.com/Manuelms1993/MM_APP/tree/master/inputs/food")
         .get()
 
     val signingPropertiesFile = rootProject.file("signing/release-keystore.properties")

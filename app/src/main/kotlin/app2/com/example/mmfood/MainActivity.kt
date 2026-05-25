@@ -8,6 +8,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.content.ContextCompat
+import com.example.mmapp.app2.notifications.MealType
 import com.example.mmapp.app2.notifications.MenuNotificationScheduler
 import com.example.mmapp.app2.ui.MMFoodApp
 
@@ -16,7 +17,7 @@ class MainActivity : ComponentActivity() {
         ActivityResultContracts.RequestPermission(),
     ) { granted ->
         if (granted) {
-            MenuNotificationScheduler(this).scheduleDailyNotifications()
+            scheduleDefaultNotifications()
         }
     }
 
@@ -35,9 +36,16 @@ class MainActivity : ComponentActivity() {
     private fun requestNotificationsPermissionIfNeeded() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) return
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
-            MenuNotificationScheduler(this).scheduleDailyNotifications()
+            scheduleDefaultNotifications()
             return
         }
         notificationsPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+    }
+
+    private fun scheduleDefaultNotifications() {
+        MenuNotificationScheduler(this).apply {
+            syncNotification(MealType.LUNCH, enabled = true)
+            syncNotification(MealType.DINNER, enabled = true)
+        }
     }
 }

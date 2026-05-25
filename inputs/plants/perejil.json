@@ -62,17 +62,6 @@
     "notas": [
       "Agradece semisombra con calor"
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "pulgon",
-        "mosca_blanca",
-        "caracoles"
-      ],
-      "notas": [
-        "Mirar brotes tiernos y hojas bajas."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "pequena",
       "tipoSustrato": "universal_aireado",

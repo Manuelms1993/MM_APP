@@ -47,17 +47,6 @@
       "Evitar mojar demasiado el follaje.",
       "Dejar de regar cuando el bulbo ya esté formado y las hojas empiecen a amarillear."
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "minador_del_allium",
-        "trips",
-        "babosas"
-      ],
-      "notas": [
-        "Mirar hojas con galerías, plateado o mordidas bajas."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "mediana",
       "tipoSustrato": "horticola_drenante",

@@ -132,34 +132,6 @@ class FlexibleTaskParserTest {
     }
 
     @Test
-    fun parserMapsPestMonitoringRule() {
-        val rawJson = """
-            {
-              "schemaVersion": 1,
-              "planta": {
-                "id": "ficus-001",
-                "nombre": "Ficus",
-                "fechaInicio": "2026-05-06",
-                "plagas": {
-                  "cadaDias": 7,
-                  "problemasComunes": ["arana_roja", "cochinilla"],
-                  "notas": ["Mirar envés y nudos"]
-                }
-              }
-            }
-        """.trimIndent()
-
-        val result = parser.parse(rawJson, "ficus.json")
-        val plant = result.plantDefinition!!
-        val plagas = plant.plagas!!
-
-        assertThat(plant.plagas).isNotNull()
-        assertThat(plagas.reviewEveryDays).isEqualTo(7)
-        assertThat(plagas.commonIssues).containsExactly("arana_roja", "cochinilla")
-        assertThat(plagas.notes).containsExactly("Mirar envés y nudos")
-    }
-
-    @Test
     fun parserMapsPottingMixComposition() {
         val rawJson = """
             {

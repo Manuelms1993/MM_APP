@@ -1,6 +1,7 @@
 package com.example.mmapp.app2
 
 import android.app.Application
+import com.example.mmapp.app2.notifications.MealType
 import com.example.mmapp.app2.notifications.MenuNotificationScheduler
 
 class MMFoodApplication : Application() {
@@ -10,7 +11,10 @@ class MMFoodApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        MenuNotificationScheduler(this).ensureChannels()
-        MenuNotificationScheduler(this).scheduleDailyNotifications()
+        MenuNotificationScheduler(this).apply {
+            ensureChannels()
+            syncNotification(MealType.LUNCH, enabled = true)
+            syncNotification(MealType.DINNER, enabled = true)
+        }
     }
 }

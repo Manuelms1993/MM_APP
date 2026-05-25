@@ -15,5 +15,4 @@ data class DailyPlantAction(
 enum class PlantActionType {
     WATER,
     FERTILIZE,
-    INSPECT_PESTS,
 }

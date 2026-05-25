@@ -25,7 +25,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import com.example.mmapp.app1.domain.models.ConversationMessage
 import com.example.mmapp.app1.domain.models.MessageStatus
@@ -97,9 +100,23 @@ fun MessageBubble(
                             horizontalArrangement = Arrangement.SpaceBetween,
                         ) {
                             Text(
-                                text = section.plantName,
+                                text = buildAnnotatedString {
+                                    withStyle(SpanStyle(fontWeight = FontWeight.SemiBold)) {
+                                        append(section.plantName)
+                                    }
+                                    section.actionSummary?.let { summary ->
+                                        append(" ")
+                                        withStyle(
+                                            SpanStyle(
+                                                fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                            ),
+                                        ) {
+                                            append("($summary)")
+                                        }
+                                    }
+                                },
                                 style = MaterialTheme.typography.titleSmall,
-                                fontWeight = FontWeight.SemiBold,
                             )
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
@@ -177,6 +194,7 @@ private fun parsePlantSections(text: String): List<PlantMessageSection> {
         sections += PlantMessageSection(
             plantName = plantName,
             rawLines = currentRawLines.toList(),
+            actionSummary = summarizeActions(currentRawLines),
         )
         currentPlant = null
         currentRawLines.clear()
@@ -265,7 +283,19 @@ private data class PlantSectionStyle(
 private data class PlantMessageSection(
     val plantName: String,
     val rawLines: List<String>,
+    val actionSummary: String?,
 )
+
+private fun summarizeActions(rawLines: List<String>): String? {
+    val hasWater = rawLines.any { it.trimStart() == "- Regar" }
+    val hasFertilizer = rawLines.any { it.trimStart() == "- Abono" }
+    return when {
+        hasWater && hasFertilizer -> "regar / abonar"
+        hasWater -> "regar"
+        hasFertilizer -> "abonar"
+        else -> null
+    }
+}
 
 @Composable
 private fun SectionContent(

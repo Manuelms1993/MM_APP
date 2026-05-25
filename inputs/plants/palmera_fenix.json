@@ -45,16 +45,6 @@
     "notas": [
       "Agua moderada en crecimiento"
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "arana_roja",
-        "cochinilla"
-      ],
-      "notas": [
-        "Revisar envés y puntos de inserción de las hojas."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "grande",
       "tipoSustrato": "palmeras_drenante",

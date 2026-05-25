@@ -8,15 +8,6 @@ class PlantActionTextFactory {
 
     fun fertilizerTitle(rule: FertilizerRule): String = "aplicar ${rule.tipo.toReadableLabel()}"
 
-    fun pestInspectionTitle(): String = "revisar plagas"
-
-    fun pestInspectionDetails(rule: com.example.mmapp.app1.domain.models.PestMonitoringRule): List<String> = buildList {
-        if (rule.commonIssues.isNotEmpty()) {
-            add("Vigilar: ${rule.commonIssues.joinToString(", ") { it.toReadableLabel() }}")
-        }
-        addAll(rule.notes)
-    }
-
     fun fertilizerDetails(rule: FertilizerRule): List<String> = buildList {
         rule.cantidad?.takeIf { it.isNotBlank() }?.let { add("cantidad: $it") }
         when (rule.dosis) {

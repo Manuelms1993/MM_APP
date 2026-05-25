@@ -45,17 +45,6 @@
     "notas": [
       "Maceta pequena seca rapido"
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "arana_roja",
-        "cochinilla",
-        "trips"
-      ],
-      "notas": [
-        "Mirar envés, nudos y base de las hojas."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "pequena",
       "tipoSustrato": "bonsai_drenante",

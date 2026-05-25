@@ -27,6 +27,22 @@ class SyncMenuInputsUseCaseTest {
         assertThat(result).isEqualTo("No se ha podido actualizar. GitHub devolvió un error (503).")
     }
 
+    @Test
+    fun `devuelve mensaje claro cuando falta configurar el repositorio remoto`() = runTest {
+        val dataSource = FakeMenuCatalogDataSource(
+            syncError = RemoteSyncException.InvalidRepositoryConfig("placeholder"),
+        )
+
+        val result = SyncMenuInputsUseCase(
+            menuCatalogDataSource = dataSource,
+            messageFormatter = HomeOperationMessageFormatter(),
+        )()
+
+        assertThat(result).isEqualTo(
+            "No se ha podido actualizar. Configura una URL real en plantsInputsRepositoryTreeUrl o foodInputsRepositoryTreeUrl.",
+        )
+    }
+
     private class FakeMenuCatalogDataSource(
         private val syncError: Throwable? = null,
     ) : MenuCatalogDataSource {

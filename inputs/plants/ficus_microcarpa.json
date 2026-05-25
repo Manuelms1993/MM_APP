@@ -45,17 +45,6 @@
     "notas": [
       "No moverlo mucho"
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "arana_roja",
-        "cochinilla",
-        "trips"
-      ],
-      "notas": [
-        "Mirar el envés y los tallos tiernos."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "mediana",
       "tipoSustrato": "houseplant_aireado",

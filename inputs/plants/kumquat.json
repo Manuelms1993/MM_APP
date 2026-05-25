@@ -54,18 +54,6 @@
     "notas": [
       "Revisar humedad a diario en verano"
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "cochinilla",
-        "pulgon",
-        "arana_roja",
-        "mosca_blanca"
-      ],
-      "notas": [
-        "Mirar brotes, nervios de hojas y tallos."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "grande",
       "tipoSustrato": "citricos_drenante",

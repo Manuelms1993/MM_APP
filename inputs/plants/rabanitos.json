@@ -54,17 +54,6 @@
       "Variedad de extraccion rapida.",
       "Recoger jovenes para mantener buen sabor y textura."
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "altica",
-        "babosas",
-        "pulgon"
-      ],
-      "notas": [
-        "Vigilar hojas perforadas y ataques en plantulas."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "mediana",
       "tipoSustrato": "horticola_suelto",

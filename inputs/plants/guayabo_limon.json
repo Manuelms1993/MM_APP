@@ -53,17 +53,6 @@
     "notas": [
       "Proteger del frio"
     ],
-    "plagas": {
-      "cadaDias": 7,
-      "problemasComunes": [
-        "pulgon",
-        "cochinilla",
-        "mosca_blanca"
-      ],
-      "notas": [
-        "Revisar brotes nuevos, hojas tiernas y tallos."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "grande",
       "tipoSustrato": "frutales_aireado",

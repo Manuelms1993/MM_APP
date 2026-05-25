@@ -45,16 +45,6 @@
     "notas": [
       "Mejor quedarse corto con agua"
     ],
-    "plagas": {
-      "cadaDias": 14,
-      "problemasComunes": [
-        "cochinilla",
-        "arana_roja"
-      ],
-      "notas": [
-        "Revisar base de hojas y zonas pegadas al sustrato."
-      ]
-    },
     "metadata": {
       "tamanoMaceta": "mediana",
       "tipoSustrato": "cactus_drenante",

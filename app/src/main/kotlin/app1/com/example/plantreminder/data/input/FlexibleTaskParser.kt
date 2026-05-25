@@ -5,7 +5,6 @@ import com.example.mmapp.app1.data.input.validation.PlantDefinitionFactoryResult
 import com.example.mmapp.app1.domain.models.FertilizerDoseMode
 import com.example.mmapp.app1.domain.models.FertilizerRule
 import com.example.mmapp.app1.domain.models.PlantDefinition
-import com.example.mmapp.app1.domain.models.PestMonitoringRule
 import com.example.mmapp.app1.domain.models.PottingMix
 import com.example.mmapp.app1.domain.models.PottingMixComponent
 import com.example.mmapp.app1.domain.models.Season
@@ -86,7 +85,6 @@ class FlexibleTaskParser(
             composicionMaceta = parsePottingMix(plant["composicionMaceta"], warnings, sourceName),
             fuenteInformacionUrl = plant.string("fuenteInformacionUrl"),
             fuenteSustratoUrl = plant.string("fuenteSustratoUrl"),
-            plagas = parsePestMonitoringRule(plant["plagas"], warnings, sourceName),
             metadata = plant.stringMap("metadata"),
             rawPayload = rawJson,
         )
@@ -187,27 +185,6 @@ class FlexibleTaskParser(
         return PottingMix(
             components = components,
             notes = obj.stringList("notas"),
-        )
-    }
-
-    private fun parsePestMonitoringRule(
-        element: JsonElement?,
-        warnings: MutableList<String>,
-        sourceName: String,
-    ): PestMonitoringRule? {
-        val obj = element as? JsonObject ?: return null
-        val reviewEveryDays = obj["cadaDias"]?.jsonPrimitive?.intOrNull?.also { value ->
-            if (value <= 0) warnings += "Frecuencia de revision de plagas invalida en $sourceName."
-        }?.takeIf { it > 0 }
-
-        val commonIssues = obj.stringList("problemasComunes")
-        val notes = obj.stringList("notas")
-        if (reviewEveryDays == null && commonIssues.isEmpty() && notes.isEmpty()) return null
-
-        return PestMonitoringRule(
-            reviewEveryDays = reviewEveryDays,
-            commonIssues = commonIssues,
-            notes = notes,
         )
     }
 
