@@ -1,40 +1,112 @@
 {
-   "city" : "Estambul",
-   "dayNumber" : 2,
-   "id" : "day-02",
-   "notes" : [
+   "city": "Estambul",
+   "dayNumber": 2,
+   "foodSuggestions": [],
+   "id": "day-02",
+   "notes": [
       "Cuando tengas los enlaces reales del documento, sustituir las referencias pendientes."
    ],
-   "schemaVersion" : 1,
-   "segments" : [
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Calor de verano: maxima habitual cercana a 28-30 C.",
+                  "Menos extremo que China, pero puede hacerse pesado al sol."
+               ],
+               "title": "Clima"
+            },
+            {
+               "bullets": [
+                  "Sultanahmet concentra colas: Santa Sofia, Mezquita Azul, Cisterna y Topkapi pueden saturarse.",
+                  "Topkapi puede comerse media jornada; si se entra, reducir el resto.",
+                  "Mezquitas: cierres parciales durante oraciones."
+               ],
+               "title": "Colas y tiempos"
+            },
+            {
+               "bullets": [
+                  "Cuidado con taxis, restaurantes con precios inflados y ayudas no solicitadas."
+               ],
+               "title": "Zonas turisticas"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Zona muy turistica, pero buena para clasicos otomanos, kebabs, meze y postres turcos."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Iskender kebap: carne doner con yogur, tomate y mantequilla.",
+                  "Lahmacun: masa fina con carne especiada, tipo pizza turca.",
+                  "Kunefe: postre caliente de queso, kadayif y almibar."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Istanbul Kebab Cafe & Restaurant: Sultanahmet, turco/mediterraneo, $$-$$$.",
+                  "Green Hill Cafe Restaurant: Sultanahmet, cerca de la zona monumental, $$-$$$.",
+                  "Garden 1897 Restaurant: Sultanahmet, turco/mediterraneo, $$-$$$."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "Recorrido previsto por Estambul."
          ],
-         "references" : [
+         "references": [
             "ruta_parte1 (enlace pendiente en el documento origen)"
          ],
-         "title" : "Ruta parte 1"
+         "title": "Ruta parte 1"
       },
       {
-         "bullets" : [
+         "bullets": [
             "Segunda parte del recorrido previsto."
          ],
-         "references" : [
+         "references": [
             "ruta_parte2 (enlace pendiente en el documento origen)"
          ],
-         "title" : "Ruta parte 2"
+         "title": "Ruta parte 2"
       },
       {
-         "bullets" : [
-            "Recoger aqui las notas de como ir desde el aeropuerto y otros tips practicos."
-         ],
-         "references" : [
+         "bullets": [],
+         "references": [
             "TIPS (enlace pendiente en el documento origen)"
          ],
-         "title" : "Tips logistica"
+         "title": "Tips logistica",
+         "topics": [
+            {
+               "bullets": [
+                  "Recoger aqui el transporte definitivo desde aeropuerto hasta alojamiento."
+               ],
+               "title": "Aeropuerto -> ciudad"
+            },
+            {
+               "bullets": [
+                  "Guardar aqui notas de transporte publico, taxis y zonas a evitar."
+               ],
+               "title": "Moverse por Estambul"
+            },
+            {
+               "bullets": [
+                  "Guardar aqui reservas, horarios y prioridades de visitas."
+               ],
+               "title": "Entradas y colas"
+            }
+         ]
       }
    ],
-   "summary" : "Ruta por Estambul pendiente de rematar con mapas y tips de aeropuerto.",
-   "title" : "Estambul"
+   "summary": "Ruta por Estambul pendiente de rematar con mapas y tips de aeropuerto.",
+   "title": "Estambul"
 }

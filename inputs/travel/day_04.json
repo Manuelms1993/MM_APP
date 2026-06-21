@@ -1,49 +1,117 @@
 {
-   "city" : "Hong Kong",
-   "dayNumber" : 4,
-   "foodSuggestions" : [
-      "Pendiente de definir sitios concretos para comer.",
-      "Buscar opciones en Kowloon al mediodia y en Central / Soho por la tarde."
-   ],
-   "id" : "day-04",
-   "overnightHotelId" : "dorsett-mongkok",
-   "recommendations" : [
+   "city": "Hong Kong",
+   "dayNumber": 4,
+   "foodSuggestions": [],
+   "id": "day-04",
+   "overnightHotelId": "dorsett-mongkok",
+   "recommendations": [
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Hong Kong Tourism Board - Star Ferry",
-               "url" : "https://www.discoverhongkong.com/us/explore/attractions/sailing-icon-hong-kong-s-star-ferry.html"
+               "label": "Hong Kong Tourism Board - Star Ferry",
+               "url": "https://www.discoverhongkong.com/us/explore/attractions/sailing-icon-hong-kong-s-star-ferry.html"
             },
             {
-               "label" : "Tripadvisor - Star Ferry",
-               "url" : "https://www.tripadvisor.com/Attraction_Review-g294217-d2228870-Reviews-Star_Ferry-Hong_Kong.html"
+               "label": "Tripadvisor - Star Ferry",
+               "url": "https://www.tripadvisor.com/Attraction_Review-g294217-d2228870-Reviews-Star_Ferry-Hong_Kong.html"
             }
          ],
-         "text" : "Si encaja por tiempos, cruza al menos una vez en Star Ferry entre Tsim Sha Tsui y Central: es barato, rapido y da una de las mejores vistas del skyline."
+         "text": "Si encaja por tiempos, cruza al menos una vez en Star Ferry entre Tsim Sha Tsui y Central: es barato, rapido y da una de las mejores vistas del skyline."
       },
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Tripadvisor - One Dim Sum Tsim Sha Tsui",
-               "url" : "https://www.tripadvisor.co.uk/Restaurant_Review-g294217-d34257941-Reviews-One_Dim_Sum_Tsim_Sha_Tsui-Hong_Kong.html"
+               "label": "Tripadvisor - One Dim Sum Tsim Sha Tsui",
+               "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g294217-d34257941-Reviews-One_Dim_Sum_Tsim_Sha_Tsui-Hong_Kong.html"
             }
          ],
-         "text" : "Para un dim sum rapido y bien valorado por la zona de Kowloon, deja guardado One Dim Sum Tsim Sha Tsui."
+         "text": "Para un dim sum rapido y bien valorado por la zona de Kowloon, deja guardado One Dim Sum Tsim Sha Tsui."
       },
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Tripadvisor - restaurantes cerca de Soho",
-               "url" : "https://www.tripadvisor.com/RestaurantsNear-g294217-d593126-Soho-Hong_Kong.html"
+               "label": "Tripadvisor - restaurantes cerca de Soho",
+               "url": "https://www.tripadvisor.com/RestaurantsNear-g294217-d593126-Soho-Hong_Kong.html"
             }
          ],
-         "text" : "Si al final cenas en Central, busca mesa por Soho cerca de Staunton Street o Elgin Street; concentran muchas opciones buenas sin desviarte de la ruta."
+         "text": "Si al final cenas en Central, busca mesa por Soho cerca de Staunton Street o Elgin Street; concentran muchas opciones buenas sin desviarte de la ruta."
       }
    ],
-   "schemaVersion" : 1,
-   "segments" : [
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Dia demasiado cargado: Kowloon + Mong Kok + Central + Peak es mucho con humedad.",
+                  "Si el cuerpo no acompana, recortar Central o Peak antes de forzar el dia completo."
+               ],
+               "title": "Carga del dia"
+            },
+            {
+               "bullets": [
+                  "Calor humedo: la sensacion termica puede ser bastante superior a la temperatura real.",
+                  "Lluvias fuertes repentinas: llevar paraguas o poncho y plan indoor."
+               ],
+               "title": "Clima"
+            },
+            {
+               "bullets": [
+                  "Peak Tram puede tener colas fuertes por la tarde y al atardecer.",
+                  "Symphony of Lights desde Victoria Peak no es el mejor punto; si es prioridad, mejor Tsim Sha Tsui."
+               ],
+               "title": "Victoria Peak"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Dia ideal para comida cantonesa informal: dim sum, noodles, roast meats y puestos rapidos."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Pineapple bun: bollo dulce crujiente, normalmente sin pina.",
+                  "Egg tart: tartaleta de crema de huevo.",
+                  "Roast goose: oca asada cantonesa."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "One Dim Sum Chinese Restaurant: dim sum, $, Mong Kok.",
+                  "Mu Taiwan Noodles: taiwanes, $, Mong Kok.",
+                  "Dim Dim Sum Specialty Store - Mong Kok: dim sum, $.",
+                  "BreadTalk: panaderia util para desayunar."
+               ],
+               "title": "Mong Kok"
+            },
+            {
+               "bullets": [
+                  "Ding Dim 1968: dim sum, $, Central.",
+                  "Tsim Chai Kee Noodle Shop: noodles/wonton, $, Central.",
+                  "Motorino Soho: pizza/italiano, $$-$$$."
+               ],
+               "title": "Central / Soho"
+            },
+            {
+               "bullets": [
+                  "Confirmar vigencia, horarios y sede exacta antes de ir.",
+                  "Tim Ho Wan - Sham Shui Po: Bib Gourmand / Guia Michelin, 10-20 EUR aprox., dim sum barato.",
+                  "Tsim Chai Kee - Wellington Street: Bib Gourmand / Guia Michelin, 8-15 EUR aprox., noodles/wonton.",
+                  "Ho Hung Kee - Causeway Bay: 1 estrella Michelin, 12-20 EUR aprox., wonton noodles/congee."
+               ],
+               "title": "Michelin / Guia Michelin barato"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "Parque Kowloon.",
             "Torre del Reloj.",
             "Paseo de la Fama.",
@@ -52,14 +120,14 @@
             "Ladies Market abre a las 11:00.",
             "Ver tiendas, comer y hacer tiempo."
          ],
-         "references" : [
+         "references": [
             "RUTA MAPS (pendiente de sustituir por enlace real)"
          ],
-         "timeLabel" : "08:00 -> comida",
-         "title" : "Parte 1 - Kowloon"
+         "timeLabel": "08:00 -> comida",
+         "title": "Parte 1 - Kowloon"
       },
       {
-         "bullets" : [
+         "bullets": [
             "Metro desde Mong Kok hacia Central.",
             "Subir por las escaleras mecanicas de Mid-Levels.",
             "Pasear por las calles alrededor de las escaleras.",
@@ -71,19 +139,19 @@
             "Ver Sky Terrace y el show de luces de las 20:00.",
             "Sobre las 21:00 bajar a Central y volver al hotel."
          ],
-         "links" : [
+         "links": [
             {
-               "label" : "Peak Tram ticket",
-               "url" : "https://webstore.thepeak.com.hk/ticket-detail?id=1099&lang=en_us&_gl=1*ogu01u*_gcl_au*Mzg2Mzk1NjgzLjE3NzI5OTM4NTE.*_ga*NzY0MDM2ODMwLjE3NzI5OTM4NTE.*_ga_P77MVDNVNH*czE3NzI5OTM4NTEkbzEkZzAkdDE3NzI5OTM4NTEkajYwJGwwJGgw"
+               "label": "Peak Tram ticket",
+               "url": "https://webstore.thepeak.com.hk/ticket-detail?id=1099&lang=en_us&_gl=1*ogu01u*_gcl_au*Mzg2Mzk1NjgzLjE3NzI5OTM4NTE.*_ga*NzY0MDM2ODMwLjE3NzI5OTM4NTE.*_ga_P77MVDNVNH*czE3NzI5OTM4NTEkbzEkZzAkdDE3NzI5OTM4NTEkajYwJGwwJGgw"
             }
          ],
-         "references" : [
+         "references": [
             "RUTA MAPS (pendiente de sustituir por enlace real)"
          ],
-         "timeLabel" : "15:00 -> 21:00",
-         "title" : "Parte 2 - Central y Victoria Peak"
+         "timeLabel": "15:00 -> 21:00",
+         "title": "Parte 2 - Central y Victoria Peak"
       }
    ],
-   "summary" : "Kowloon por la manana y Central + Peak Tram por la tarde.",
-   "title" : "Hong Kong - Kowloon, Mong Kok y Victoria Peak"
+   "summary": "Kowloon por la manana y Central + Peak Tram por la tarde.",
+   "title": "Hong Kong - Kowloon, Mong Kok y Victoria Peak"
 }

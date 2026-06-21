@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -24,6 +25,7 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -70,26 +72,8 @@ fun SettingsScreen(
                     .fillMaxSize()
                     .padding(innerPadding),
                 settings = settings,
-                onNotificationEnabledChanged = { appId, enabled ->
-                    when (appId) {
-                        AppSettingsRepository.PLANTS_NOTIFICATION_ID -> viewModel.setPlantNotificationsEnabled(enabled, onSaved = onNotificationSettingsChanged)
-                        AppSettingsRepository.FOOD_LUNCH_NOTIFICATION_ID -> viewModel.setLunchNotificationsEnabled(enabled, onSaved = onNotificationSettingsChanged)
-                        AppSettingsRepository.FOOD_DINNER_NOTIFICATION_ID -> viewModel.setDinnerNotificationsEnabled(enabled, onSaved = onNotificationSettingsChanged)
-                    }
-                },
-                onIntervalDaysChanged = { appId, intervalDays ->
-                    when (appId) {
-                        AppSettingsRepository.PLANTS_NOTIFICATION_ID -> viewModel.setPlantNotificationIntervalDays(intervalDays, onSaved = onNotificationSettingsChanged)
-                        AppSettingsRepository.FOOD_LUNCH_NOTIFICATION_ID -> viewModel.setLunchNotificationIntervalDays(intervalDays, onSaved = onNotificationSettingsChanged)
-                        AppSettingsRepository.FOOD_DINNER_NOTIFICATION_ID -> viewModel.setDinnerNotificationIntervalDays(intervalDays, onSaved = onNotificationSettingsChanged)
-                    }
-                },
-                onHourOfDayChanged = { appId, hourOfDay ->
-                    when (appId) {
-                        AppSettingsRepository.PLANTS_NOTIFICATION_ID -> viewModel.setPlantNotificationHourOfDay(hourOfDay, onSaved = onNotificationSettingsChanged)
-                        AppSettingsRepository.FOOD_LUNCH_NOTIFICATION_ID -> viewModel.setLunchNotificationHourOfDay(hourOfDay, onSaved = onNotificationSettingsChanged)
-                        AppSettingsRepository.FOOD_DINNER_NOTIFICATION_ID -> viewModel.setDinnerNotificationHourOfDay(hourOfDay, onSaved = onNotificationSettingsChanged)
-                    }
+                onSaveSettings = { draftSettings ->
+                    viewModel.saveNotificationSettings(draftSettings, onSaved = onNotificationSettingsChanged)
                 },
             )
 
@@ -98,14 +82,8 @@ fun SettingsScreen(
                     .fillMaxSize()
                     .padding(innerPadding),
                 processSettings = processSettings,
-                onProcessEnabledChanged = { processId, enabled ->
-                    viewModel.setProcessEnabled(processId, enabled, onSaved = onProcessSettingsChanged)
-                },
-                onIntervalDaysChanged = { processId, intervalDays ->
-                    viewModel.setProcessIntervalDays(processId, intervalDays, onSaved = onProcessSettingsChanged)
-                },
-                onHourOfDayChanged = { processId, hourOfDay ->
-                    viewModel.setProcessHourOfDay(processId, hourOfDay, onSaved = onProcessSettingsChanged)
+                onSaveSettings = { draftSettings ->
+                    viewModel.saveProcessSettings(draftSettings, onSaved = onProcessSettingsChanged)
                 },
             )
         }
@@ -116,13 +94,27 @@ fun SettingsScreen(
 private fun NotificationsTab(
     modifier: Modifier,
     settings: List<NotificationSettingsUiState>,
-    onNotificationEnabledChanged: (String, Boolean) -> Unit,
-    onIntervalDaysChanged: (String, Int) -> Unit,
-    onHourOfDayChanged: (String, Int) -> Unit,
+    onSaveSettings: (List<NotificationSettingsUiState>) -> Unit,
 ) {
     val expandedStates = remember { mutableStateMapOf<String, Boolean>() }
-    val plantNotification = settings.firstOrNull { it.appId == AppSettingsRepository.PLANTS_NOTIFICATION_ID }
-    val foodNotifications = settings.filter {
+    var draftSettings by remember { mutableStateOf(settings) }
+    var hasPendingChanges by remember { mutableStateOf(false) }
+
+    LaunchedEffect(settings) {
+        if (!hasPendingChanges) {
+            draftSettings = settings
+        }
+    }
+
+    fun updateDraft(appId: String, transform: (NotificationSettingsUiState) -> NotificationSettingsUiState) {
+        draftSettings = draftSettings.map { notification ->
+            if (notification.appId == appId) transform(notification) else notification
+        }
+        hasPendingChanges = true
+    }
+
+    val plantNotification = draftSettings.firstOrNull { it.appId == AppSettingsRepository.PLANTS_NOTIFICATION_ID }
+    val foodNotifications = draftSettings.filter {
         it.appId == AppSettingsRepository.FOOD_LUNCH_NOTIFICATION_ID || it.appId == AppSettingsRepository.FOOD_DINNER_NOTIFICATION_ID
     }
 
@@ -132,6 +124,15 @@ private fun NotificationsTab(
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         item {
+            SaveSettingsRow(
+                hasPendingChanges = hasPendingChanges,
+                onSave = {
+                    onSaveSettings(draftSettings)
+                    hasPendingChanges = false
+                },
+            )
+        }
+        item {
             plantNotification?.let { notification ->
                 ExpandableSettingsBlock(
                     title = notification.title,
@@ -140,9 +141,15 @@ private fun NotificationsTab(
                 ) {
                     NotificationDetails(
                         notification = notification,
-                        onNotificationEnabledChanged = onNotificationEnabledChanged,
-                        onIntervalDaysChanged = onIntervalDaysChanged,
-                        onHourOfDayChanged = onHourOfDayChanged,
+                        onNotificationEnabledChanged = { appId, enabled ->
+                            updateDraft(appId) { it.copy(enabled = enabled) }
+                        },
+                        onIntervalDaysChanged = { appId, intervalDays ->
+                            updateDraft(appId) { it.copy(intervalDays = intervalDays) }
+                        },
+                        onHourOfDayChanged = { appId, hourOfDay ->
+                            updateDraft(appId) { it.copy(hourOfDay = hourOfDay) }
+                        },
                     )
                 }
             }
@@ -163,9 +170,15 @@ private fun NotificationsTab(
                         ) {
                             NotificationDetails(
                                 notification = notification,
-                                onNotificationEnabledChanged = onNotificationEnabledChanged,
-                                onIntervalDaysChanged = onIntervalDaysChanged,
-                                onHourOfDayChanged = onHourOfDayChanged,
+                                onNotificationEnabledChanged = { appId, enabled ->
+                                    updateDraft(appId) { it.copy(enabled = enabled) }
+                                },
+                                onIntervalDaysChanged = { appId, intervalDays ->
+                                    updateDraft(appId) { it.copy(intervalDays = intervalDays) }
+                                },
+                                onHourOfDayChanged = { appId, hourOfDay ->
+                                    updateDraft(appId) { it.copy(hourOfDay = hourOfDay) }
+                                },
                             )
                         }
                     }
@@ -179,19 +192,41 @@ private fun NotificationsTab(
 private fun ProcessesTab(
     modifier: Modifier,
     processSettings: List<ProcessSettingsUiState>,
-    onProcessEnabledChanged: (String, Boolean) -> Unit,
-    onIntervalDaysChanged: (String, Int) -> Unit,
-    onHourOfDayChanged: (String, Int) -> Unit,
+    onSaveSettings: (List<ProcessSettingsUiState>) -> Unit,
 ) {
     val expandedStates = remember { mutableStateMapOf<String, Boolean>() }
+    var draftSettings by remember { mutableStateOf(processSettings) }
+    var hasPendingChanges by remember { mutableStateOf(false) }
+
+    LaunchedEffect(processSettings) {
+        if (!hasPendingChanges) {
+            draftSettings = processSettings
+        }
+    }
+
+    fun updateDraft(processId: String, transform: (ProcessSettingsUiState) -> ProcessSettingsUiState) {
+        draftSettings = draftSettings.map { process ->
+            if (process.processId == processId) transform(process) else process
+        }
+        hasPendingChanges = true
+    }
 
     LazyColumn(
         modifier = modifier,
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        items(processSettings.size) { index ->
-            val process = processSettings[index]
+        item {
+            SaveSettingsRow(
+                hasPendingChanges = hasPendingChanges,
+                onSave = {
+                    onSaveSettings(draftSettings)
+                    hasPendingChanges = false
+                },
+            )
+        }
+        items(draftSettings.size) { index ->
+            val process = draftSettings[index]
             ExpandableSettingsBlock(
                 title = process.title,
                 expanded = expandedStates[process.processId] == true,
@@ -199,18 +234,24 @@ private fun ProcessesTab(
             ) {
                 ProcessEnabledRow(
                     enabled = process.enabled,
-                    onCheckedChange = { onProcessEnabledChanged(process.processId, it) },
+                    onCheckedChange = { enabled ->
+                        updateDraft(process.processId) { it.copy(enabled = enabled) }
+                    },
                 )
                 NumberSettingField(
                     label = "Cada cuántos días",
                     value = process.intervalDays,
-                    onValueConfirmed = { onIntervalDaysChanged(process.processId, it) },
+                    onValueChanged = { intervalDays ->
+                        updateDraft(process.processId) { it.copy(intervalDays = intervalDays) }
+                    },
                     range = 1..30,
                 )
                 NumberSettingField(
                     label = "Hora del día (0-23)",
                     value = process.hourOfDay,
-                    onValueConfirmed = { onHourOfDayChanged(process.processId, it) },
+                    onValueChanged = { hourOfDay ->
+                        updateDraft(process.processId) { it.copy(hourOfDay = hourOfDay) }
+                    },
                     range = 0..23,
                 )
             }
@@ -232,15 +273,47 @@ private fun NotificationDetails(
     NumberSettingField(
         label = "Cada cuántos días",
         value = notification.intervalDays,
-        onValueConfirmed = { onIntervalDaysChanged(notification.appId, it) },
+        onValueChanged = { onIntervalDaysChanged(notification.appId, it) },
         range = 1..30,
     )
     NumberSettingField(
         label = "Hora del día (0-23)",
         value = notification.hourOfDay,
-        onValueConfirmed = { onHourOfDayChanged(notification.appId, it) },
+        onValueChanged = { onHourOfDayChanged(notification.appId, it) },
         range = 0..23,
     )
+}
+
+@Composable
+private fun SaveSettingsRow(
+    hasPendingChanges: Boolean,
+    onSave: () -> Unit,
+) {
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        color = MaterialTheme.colorScheme.surface,
+        shape = RoundedCornerShape(8.dp),
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = if (hasPendingChanges) "Cambios pendientes" else "Configuración guardada",
+                style = MaterialTheme.typography.bodyMedium,
+                color = if (hasPendingChanges) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Button(
+                onClick = onSave,
+                enabled = hasPendingChanges,
+            ) {
+                Text("Guardar")
+            }
+        }
+    }
 }
 
 @Composable
@@ -254,7 +327,6 @@ private fun ExpandableSettingsBlock(
         modifier = Modifier.fillMaxWidth(),
         color = MaterialTheme.colorScheme.surfaceVariant,
         shape = MaterialTheme.shapes.small,
-        onClick = { onExpandedChange(!expanded) },
     ) {
         Column(
             modifier = Modifier
@@ -265,6 +337,7 @@ private fun ExpandableSettingsBlock(
                 ExpandableHeader(
                     title = title,
                     expanded = expanded,
+                    modifier = Modifier.clickable { onExpandedChange(!expanded) },
                 )
                 if (expanded) {
                     content()
@@ -285,7 +358,6 @@ private fun ExpandableSubBlock(
         modifier = Modifier.fillMaxWidth(),
         color = MaterialTheme.colorScheme.surface,
         shape = RoundedCornerShape(8.dp),
-        onClick = { onExpandedChange(!expanded) },
     ) {
         Column(
             modifier = Modifier
@@ -296,6 +368,7 @@ private fun ExpandableSubBlock(
             ExpandableHeader(
                 title = title,
                 expanded = expanded,
+                modifier = Modifier.clickable { onExpandedChange(!expanded) },
             )
             if (expanded) {
                 content()
@@ -308,9 +381,10 @@ private fun ExpandableSubBlock(
 private fun ExpandableHeader(
     title: String,
     expanded: Boolean,
+    modifier: Modifier = Modifier,
 ) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -359,7 +433,7 @@ private fun ProcessEnabledRow(
 private fun NumberSettingField(
     label: String,
     value: Int,
-    onValueConfirmed: (Int) -> Unit,
+    onValueChanged: (Int) -> Unit,
     range: IntRange,
 ) {
     var rawValue by remember(value) { mutableStateOf(value.toString()) }
@@ -369,7 +443,7 @@ private fun NumberSettingField(
         onValueChange = { newValue ->
             val digitsOnly = newValue.filter { it.isDigit() }
             rawValue = digitsOnly
-            digitsOnly.toIntOrNull()?.coerceIn(range.first, range.last)?.let(onValueConfirmed)
+            digitsOnly.toIntOrNull()?.coerceIn(range.first, range.last)?.let(onValueChanged)
         },
         modifier = Modifier.fillMaxWidth(),
         label = { Text(label) },

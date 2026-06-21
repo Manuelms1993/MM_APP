@@ -21,12 +21,13 @@
       "cadaDias": {
         "primavera": 3,
         "verano": 2,
-        "otono": 4,
-        "invierno": 10
+        "otono": 3,
+        "invierno": 8
       },
       "notas": [
         "Riego medio",
-        "Mantener humedo"
+        "Mantener humedo",
+        "Citrico en maceta en Valencia: evitar que se seque del todo en calor"
       ]
     },
     "abono": {

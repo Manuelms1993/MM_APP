@@ -1,21 +1,69 @@
 {
-   "city" : "Hong Kong",
-   "dayNumber" : 5,
-   "id" : "day-05",
-   "notes" : [
+   "city": "Hong Kong",
+   "dayNumber": 5,
+   "foodSuggestions": [],
+   "id": "day-05",
+   "notes": [
       "Pendiente de detallar transporte exacto, horario de llegada y prioridades dentro del parque."
    ],
-   "overnightHotelId" : "dorsett-mongkok",
-   "schemaVersion" : 1,
-   "segments" : [
+   "overnightHotelId": "dorsett-mongkok",
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Calor humedo y mucha exposicion al sol.",
+                  "Riesgo de acabar muy fundidos para el tren del dia siguiente."
+               ],
+               "title": "Calor y energia"
+            },
+            {
+               "bullets": [
+                  "Colas largas: usar app y priorizar atracciones clave.",
+                  "Tormentas pueden parar atracciones exteriores.",
+                  "Comida y bebida dentro pueden ser caras y con colas."
+               ],
+               "title": "Parque"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Dentro del parque no es comida local pura, pero se pueden buscar opciones asiaticas/cantonesas si no apetece hamburguesa o pizza."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Hainanese chicken rice: arroz con pollo estilo Hainan.",
+                  "BBQ pork rice: arroz con cerdo asado cantones.",
+                  "Milk tea: te negro con leche estilo Hong Kong."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Main Street Corner Cafe: dentro de Hong Kong Disneyland, opcion casual.",
+                  "Explorer's Club Restaurant: dentro del parque, cocina internacional/asiatica, versatil.",
+                  "Royal Banquet Hall: quick service practico sin salir del parque."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "Dia completo en Disneyland Hong Kong.",
             "Ir con margen para entrada, colas y vuelta."
          ],
-         "title" : "Parque"
+         "title": "Parque"
       }
    ],
-   "summary" : "Jornada completa dedicada a Disneyland Hong Kong.",
-   "title" : "Hong Kong Disneyland"
+   "summary": "Jornada completa dedicada a Disneyland Hong Kong.",
+   "title": "Hong Kong Disneyland"
 }

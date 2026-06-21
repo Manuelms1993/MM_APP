@@ -1,16 +1,64 @@
 {
-   "city" : "Fenghuang / Furong",
-   "dayNumber" : 10,
-   "id" : "day-10",
-   "notes" : [
+   "city": "Fenghuang / Furong",
+   "dayNumber": 10,
+   "foodSuggestions": [],
+   "id": "day-10",
+   "notes": [
       "Mirar horarios del espectaculo nocturno de la cascada e ir con margen.",
       "Fenghuang Ancient Town Railway Station no esta dentro del casco antiguo, asi que deja margen real para el traslado hasta la estacion."
    ],
-   "overnightHotelId" : "huaqianshu-furong",
-   "schemaVersion" : 1,
-   "segments" : [
+   "overnightHotelId": "huaqianshu-furong",
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Una manana corta solo da para visita exterior rapida.",
+                  "Para fotos buenas sin masas, salir muy temprano de verdad.",
+                  "Calles empedradas y escaleras: maletas incomodas."
+               ],
+               "title": "Fenghuang"
+            },
+            {
+               "bullets": [
+                  "Dejar margen para traslado a estacion.",
+                  "Furong desde media tarde da, pero hay que priorizar cascada, casco antiguo y noche."
+               ],
+               "title": "Traslado a Furong"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Zona de Xiangxi: sabores picantes y acidos, cerdo ahumado, tofu, arroz glutinoso y snacks de pueblo antiguo."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Xiangxi cured pork: cerdo ahumado tipico de Xiangxi.",
+                  "Rice tofu: tofu gelatinoso de arroz, servido frio o picante.",
+                  "Sour fish soup: sopa agria de pescado, estilo minorias del suroeste."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "LaoZhai Fen Guan: Fenghuang Ancient Town, 4.5.",
+                  "WanMu Zhai: Fenghuang, 4.2, Hunan/chino, $$-$$$.",
+                  "Miss Yang Restaurant: Fenghuang Ancient Town, 3.6, $$-$$$."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "East Gate Tower.",
             "Murallas / City Wall.",
             "Tuojiang Riverside Walk.",
@@ -22,13 +70,13 @@
             "Yang Family Ancestral Hall.",
             "Paseo nocturno por el casco antiguo si algo quedo pendiente de la noche anterior."
          ],
-         "references" : [
+         "references": [
             "RUTA Fenghuang pendiente de sustituir por enlace real"
          ],
-         "title" : "Manana en Fenghuang"
+         "title": "Manana en Fenghuang"
       },
       {
-         "bullets" : [
+         "bullets": [
             "Salir hacia Furong sobre las 11:00.",
             "Comprar tren bala desde Fenghuang Ancient Town Railway Station hasta Furongzhen Railway Station.",
             "Trayecto de alta velocidad de unos 40 minutos.",
@@ -36,17 +84,17 @@
             "Coger Didi hasta el alojamiento.",
             "Comprar el ticket de acceso en la taquilla oficial y evitar intermediarios."
          ],
-         "links" : [
+         "links": [
             {
-               "label" : "Guia Furong",
-               "url" : "https://www.organizotuviaje.com/china/que-ver-en-furong/"
+               "label": "Guia Furong",
+               "url": "https://www.organizotuviaje.com/china/que-ver-en-furong/"
             }
          ],
-         "timeLabel" : "Salida sobre las 11:00",
-         "title" : "Traslado a Furong"
+         "timeLabel": "Salida sobre las 11:00",
+         "title": "Traslado a Furong"
       },
       {
-         "bullets" : [
+         "bullets": [
             "Tuwang Bridge.",
             "Yinan Plaza.",
             "Copper Pillar Park.",
@@ -62,9 +110,9 @@
             "Miradores y pasarelas flotantes sobre el rio.",
             "Por la noche, farolillos, espectaculos y vistas nocturnas de la cascada."
          ],
-         "title" : "Furong - tarde y noche"
+         "title": "Furong - tarde y noche"
       }
    ],
-   "summary" : "Manana de Fenghuang y tarde-noche completa en Furong.",
-   "title" : "Fenghuang -> Furong"
+   "summary": "Manana de Fenghuang y tarde-noche completa en Furong.",
+   "title": "Fenghuang -> Furong"
 }

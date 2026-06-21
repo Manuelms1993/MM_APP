@@ -1,0 +1,95 @@
+{
+   "city": "Xian / Pekin",
+   "dayNumber": 18,
+   "foodSuggestions": [],
+   "id": "day-18",
+   "notes": [
+      "Salida desde Xi'an North Railway Station.",
+      "Llegada prevista a Beijing West Railway Station.",
+      "Trayecto estimado: 4-6 horas."
+   ],
+   "schemaVersion": 1,
+   "segments": [
+      {
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Confirmar estacion: Xian North -> Beijing West."
+               ],
+               "title": "Tren"
+            },
+            {
+               "bullets": [
+                  "Calor, humedad y tormentas de verano.",
+                  "Hutongs / Shichahai implican mucho paseo exterior; mejor al atardecer.",
+                  "Wangfujing es prescindible si hay cansancio.",
+                  "Metro y taxis en hora punta pueden ser lentos."
+               ],
+               "title": "Pekin"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Pekin destaca por pato laqueado, dumplings, noodles con salsa y snacks de hutong."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Peking duck: pato laqueado de Pekin.",
+                  "Zhajiangmian: fideos con salsa espesa de soja fermentada y carne.",
+                  "Jiaozi: dumplings chinos."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Mr. Shi's Dumplings: Nanluoguxiang/Hutongs, chino, EUR.",
+                  "Furongji: cerca Nanluoguxiang, chino/cantones, EUR-EUR EUR.",
+                  "BeiJing Haidilao Hot Pot - Wangfujing: hotpot, $$-$$$."
+               ],
+               "title": "Sitios"
+            },
+            {
+               "bullets": [
+                  "Confirmar vigencia, horarios y sede exacta antes de ir.",
+                  "Liu Ma Ma Dumplings - Chaoyang / 798: Bib Gourmand / Guia Michelin, 7-12 EUR aprox., dumplings.",
+                  "Fortune Long Beijing Bean Sauce Noodles - East Xinglong Street: Guia Michelin, 5-10 EUR aprox., zhajiangmian.",
+                  "Bao Yuan Dumplings: Bib Gourmand / Guia Michelin, 10-18 EUR aprox., dumplings.",
+                  "Fangzhuanchang No. 69 Zhajiangmian: Bib Gourmand / Guia Michelin, 5-10 EUR aprox., zhajiangmian."
+               ],
+               "title": "Michelin / Guia Michelin barato"
+            }
+         ]
+      },
+      {
+         "bullets": [
+            "Tren bala desde Xian a Pekin por la manana.",
+            "Ir al hotel y dejar equipaje.",
+            "Comer o descansar antes de la ruta de tarde."
+         ],
+         "timeLabel": "Manana -> comida",
+         "title": "Traslado"
+      },
+      {
+         "bullets": [
+            "Qianhai Lake.",
+            "Nanluogu Hutong.",
+            "Suoyi Hutong.",
+            "Wangfujing para zona de comida callejera."
+         ],
+         "references": [
+            "Ruta en Pekin pendiente de sustituir por enlace real"
+         ],
+         "timeLabel": "Tarde -> noche",
+         "title": "Primer paseo por Pekin"
+      }
+   ],
+   "summary": "Traslado a Pekin y paseo por Qianhai Lake, hutongs y Wangfujing.",
+   "title": "Xian -> Pekin"
+}

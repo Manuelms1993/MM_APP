@@ -1,45 +1,110 @@
 {
-   "city" : "Chengdu",
-   "dayNumber" : 14,
-   "id" : "day-14",
-   "overnightHotelId" : "wenjun-courtyard-chengdu",
-   "recommendations" : [
+   "city": "Chengdu",
+   "dayNumber": 14,
+   "foodSuggestions": [],
+   "id": "day-14",
+   "overnightHotelId": "wenjun-courtyard-chengdu",
+   "recommendations": [
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Travel China Guide - Chengdu nightlife",
-               "url" : "https://www.travelchinaguide.com/cityguides/sichuan/chengdu/nightlife.htm"
+               "label": "Travel China Guide - Chengdu nightlife",
+               "url": "https://www.travelchinaguide.com/cityguides/sichuan/chengdu/nightlife.htm"
             }
          ],
-         "text" : "Si ves que el centro comercial se te hace demasiado prescindible, cambia parte de esa tarde por mas tiempo en Kuanzhai o por Jinli al anochecer."
+         "text": "Si ves que el centro comercial se te hace demasiado prescindible, cambia parte de esa tarde por mas tiempo en Kuanzhai o por Jinli al anochecer."
       }
    ],
-   "schemaVersion" : 1,
-   "segments" : [
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Ir a apertura: los pandas estan mas activos temprano y luego duermen mas por calor.",
+                  "Entrada anticipada y pasaporte.",
+                  "La base es grande: se camina bastante mas de lo que parece.",
+                  "Mucha gente en zonas de pandas rojos y crias."
+               ],
+               "title": "Pandas"
+            },
+            {
+               "bullets": [
+                  "Global Center encaja bien despues, pero no subestimar el cansancio."
+               ],
+               "title": "Tarde"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Dia perfecto para probar hotpot, snacks de Chengdu, wontons y platos mala."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Long chaoshou: wontons de Chengdu en caldo o salsa picante.",
+                  "Kung pao chicken: pollo salteado con cacahuetes y chile.",
+                  "Chuan chuan: brochetas cocinadas en caldo picante."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "The Pier - InterContinental Chengdu Global Center: 5.0, opcion casual/rapida.",
+                  "Phoenix Pavilion - InterContinental Chengdu Global Center.",
+                  "Paradise Island Cafe."
+               ],
+               "title": "Comida en Global Center"
+            },
+            {
+               "bullets": [
+                  "Da Miao Hotpot - ZhaiXiangZi: hotpot.",
+                  "Ba Hang Tu Hot Pot: hotpot.",
+                  "Starbucks Kuan ZhaiXiangZi: solo cafe/parada, no cena."
+               ],
+               "title": "Cena en Kuanzhai Alley"
+            },
+            {
+               "bullets": [
+                  "Confirmar vigencia, horarios y sede exacta antes de ir.",
+                  "Ma's Kitchen / Ma Wang Zi - Jinjiang: 1 estrella Michelin, 13-20 EUR aprox., Sichuan clasico.",
+                  "Fu Rong Huang: 1 estrella Michelin, 15-20 EUR aprox., Sichuan tradicional.",
+                  "Wan San Mian Guan - Qinglongzheng Street: Bib Gourmand / Guia Michelin, 5-12 EUR aprox., noodles de Yibin."
+               ],
+               "title": "Michelin / Guia Michelin barato"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "Ir en Didi al centro de conservacion de osos panda.",
             "Comprar entrada y confirmar punto exacto de acceso.",
             "Aprovechar la franja de la manana antes de comer."
          ],
-         "links" : [
+         "links": [
             {
-               "label" : "Viajeros Callejeros - pandas Chengdu",
-               "url" : "https://www.viajeroscallejeros.com/centro-de-conservacion-de-osos-panda-en-chengdu/"
+               "label": "Viajeros Callejeros - pandas Chengdu",
+               "url": "https://www.viajeroscallejeros.com/centro-de-conservacion-de-osos-panda-en-chengdu/"
             }
          ],
-         "title" : "Manana - pandas"
+         "title": "Manana - pandas"
       },
       {
-         "bullets" : [
+         "bullets": [
             "Taxi al New Century Global Center.",
             "Comer alli.",
             "Compras y paseo por el centro comercial.",
             "Volver a Kuan Alley and Zhai Alley para pasear y cenar."
          ],
-         "title" : "Tarde"
+         "title": "Tarde"
       }
    ],
-   "summary" : "Manana de osos panda y tarde de centro comercial + Kuanzhai.",
-   "title" : "Chengdu - pandas y tarde de compras"
+   "summary": "Manana de osos panda y tarde de centro comercial + Kuanzhai.",
+   "title": "Chengdu - pandas y tarde de compras"
 }

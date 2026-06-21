@@ -133,6 +133,13 @@ class SettingsViewModel(
         }
     }
 
+    fun saveNotificationSettings(settings: List<NotificationSettingsUiState>, onSaved: () -> Unit = {}) {
+        viewModelScope.launch {
+            container.appSettingsRepository.saveNotificationSettings(settings.map { it.toDomain() })
+            onSaved()
+        }
+    }
+
     fun setProcessEnabled(processId: String, enabled: Boolean, onSaved: () -> Unit = {}) {
         viewModelScope.launch {
             container.appSettingsRepository.setProcessEnabled(processId, enabled)
@@ -154,6 +161,13 @@ class SettingsViewModel(
         }
     }
 
+    fun saveProcessSettings(settings: List<ProcessSettingsUiState>, onSaved: () -> Unit = {}) {
+        viewModelScope.launch {
+            container.appSettingsRepository.saveProcessSettings(settings.map { it.toDomain() })
+            onSaved()
+        }
+    }
+
     private fun AppNotificationSettings.toUiState(): NotificationSettingsUiState = NotificationSettingsUiState(
         appId = appId,
         title = title,
@@ -163,6 +177,22 @@ class SettingsViewModel(
     )
 
     private fun ProcessSettings.toUiState(): ProcessSettingsUiState = ProcessSettingsUiState(
+        processId = processId,
+        title = title,
+        enabled = enabled,
+        intervalDays = intervalDays,
+        hourOfDay = hourOfDay,
+    )
+
+    private fun NotificationSettingsUiState.toDomain(): AppNotificationSettings = AppNotificationSettings(
+        appId = appId,
+        title = title,
+        enabled = enabled,
+        intervalDays = intervalDays,
+        hourOfDay = hourOfDay,
+    )
+
+    private fun ProcessSettingsUiState.toDomain(): ProcessSettings = ProcessSettings(
         processId = processId,
         title = title,
         enabled = enabled,

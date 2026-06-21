@@ -100,6 +100,33 @@ class AppSettingsRepository(
         dao.upsert(current.copy(dinnerNotificationHourOfDay = hourOfDay.coerceIn(0, 23)))
     }
 
+    suspend fun saveNotificationSettings(settings: List<AppNotificationSettings>) {
+        val current = dao.get() ?: AppSettingsEntity()
+        val updated = settings.fold(current) { entity, setting ->
+            val intervalDays = setting.intervalDays.coerceIn(1, 30)
+            val hourOfDay = setting.hourOfDay.coerceIn(0, 23)
+            when (setting.appId) {
+                PLANTS_NOTIFICATION_ID -> entity.copy(
+                    plantNotificationsEnabled = setting.enabled,
+                    plantNotificationIntervalDays = intervalDays,
+                    plantNotificationHourOfDay = hourOfDay,
+                )
+                FOOD_LUNCH_NOTIFICATION_ID -> entity.copy(
+                    lunchNotificationsEnabled = setting.enabled,
+                    lunchNotificationIntervalDays = intervalDays,
+                    lunchNotificationHourOfDay = hourOfDay,
+                )
+                FOOD_DINNER_NOTIFICATION_ID -> entity.copy(
+                    dinnerNotificationsEnabled = setting.enabled,
+                    dinnerNotificationIntervalDays = intervalDays,
+                    dinnerNotificationHourOfDay = hourOfDay,
+                )
+                else -> entity
+            }
+        }
+        dao.upsert(updated)
+    }
+
     fun observeProcessSettings(): Flow<List<ProcessSettings>> = dao.observe().map { entity ->
         (entity ?: AppSettingsEntity()).toProcessSettings()
     }
@@ -137,6 +164,23 @@ class AppSettingsRepository(
                 else -> current
             },
         )
+    }
+
+    suspend fun saveProcessSettings(settings: List<ProcessSettings>) {
+        val current = dao.get() ?: AppSettingsEntity()
+        val updated = settings.fold(current) { entity, setting ->
+            val intervalDays = setting.intervalDays.coerceIn(1, 30)
+            val hourOfDay = setting.hourOfDay.coerceIn(0, 23)
+            when (setting.processId) {
+                LACUPONERA_PROCESS_ID -> entity.copy(
+                    lacuponeraProcessEnabled = setting.enabled,
+                    lacuponeraProcessIntervalDays = intervalDays,
+                    lacuponeraProcessHourOfDay = hourOfDay,
+                )
+                else -> entity
+            }
+        }
+        dao.upsert(updated)
     }
 
     private fun AppSettingsEntity.toNotificationSettings(): NotificationSettings = NotificationSettings(

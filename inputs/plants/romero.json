@@ -27,14 +27,15 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 5,
+        "primavera": 4,
         "verano": 3,
-        "otono": 7,
+        "otono": 6,
         "invierno": 10
       },
       "notas": [
         "Riego ligero",
-        "Poca agua"
+        "Poca agua",
+        "En maceta en Valencia regar profundo y dejar secar antes del siguiente"
       ]
     },
     "abono": {
@@ -65,7 +66,7 @@
     "exposicionSolar": "sol_directo",
     "interior": false,
     "notas": [
-      "Planta resistente a sequ\u00eda",
+      "Planta resistente a sequía",
       "Prefiere sustrato drenante",
       "No tolera encharcamiento"
     ],

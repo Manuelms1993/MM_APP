@@ -6,6 +6,7 @@ import com.example.mmapp.app3.domain.models.TravelGuide
 import com.example.mmapp.app3.domain.models.TravelHotel
 import com.example.mmapp.app3.domain.models.TravelLink
 import com.example.mmapp.app3.domain.models.TravelRecommendation
+import com.example.mmapp.app3.domain.models.TravelTopic
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -62,6 +63,7 @@ class TravelGuideParser(
                     title = segment.title,
                     timeLabel = segment.timeLabel,
                     bullets = segment.bullets,
+                    topics = segment.topics.map { it.toDomain() },
                     references = segment.references,
                     links = segment.links.map { TravelLink(it.label, it.url) },
                 )
@@ -77,6 +79,13 @@ class TravelGuideParser(
             links = dto.links.map { TravelLink(it.label, it.url) },
         )
     }
+
+    private fun TravelTopicDto.toDomain(): TravelTopic = TravelTopic(
+        title = title,
+        bullets = bullets,
+        topics = topics.map { it.toDomain() },
+        links = links.map { TravelLink(it.label, it.url) },
+    )
 }
 
 @Serializable
@@ -124,7 +133,16 @@ private data class TravelSegmentDto(
     val title: String,
     val timeLabel: String? = null,
     val bullets: List<String> = emptyList(),
+    val topics: List<TravelTopicDto> = emptyList(),
     val references: List<String> = emptyList(),
+    val links: List<TravelLinkDto> = emptyList(),
+)
+
+@Serializable
+private data class TravelTopicDto(
+    val title: String,
+    val bullets: List<String> = emptyList(),
+    val topics: List<TravelTopicDto> = emptyList(),
     val links: List<TravelLinkDto> = emptyList(),
 )
 

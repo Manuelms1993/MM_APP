@@ -1,49 +1,97 @@
 {
-   "city" : "Wulingyuan / Zhangjiajie",
-   "dayNumber" : 11,
-   "id" : "day-11",
-   "notes" : [
+   "city": "Wulingyuan / Zhangjiajie",
+   "dayNumber": 11,
+   "foodSuggestions": [],
+   "id": "day-11",
+   "notes": [
       "Buses internos del parque incluidos."
    ],
-   "overnightHotelId" : "yoba-boutique-zhangjiajie",
-   "recommendations" : [
+   "overnightHotelId": "yoba-boutique-zhangjiajie",
+   "recommendations": [
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Travel China Guide - restaurantes en Zhangjiajie",
-               "url" : "https://www.travelchinaguide.com/cityguides/hunan/zhangjiajie/best-restaurants.htm"
+               "label": "Travel China Guide - restaurantes en Zhangjiajie",
+               "url": "https://www.travelchinaguide.com/cityguides/hunan/zhangjiajie/best-restaurants.htm"
             }
          ],
-         "text" : "Para la noche posterior al parque, Xibu Street es la zona mas clara para cenar en Wulingyuan sin complicarte y con bastante ambiente."
+         "text": "Para la noche posterior al parque, Xibu Street es la zona mas clara para cenar en Wulingyuan sin complicarte y con bastante ambiente."
       }
    ],
-   "schemaVersion" : 1,
-   "segments" : [
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Tren corto, pero el traslado final a Wulingyuan puede llevar mas de lo esperado.",
+                  "Dormir lejos de la entrada resta mucha eficiencia."
+               ],
+               "title": "Traslado y base"
+            },
+            {
+               "bullets": [
+                  "Humedad, monos y suelo resbaladizo si llueve.",
+                  "Llevar agua y comida; dentro puede ser caro y limitado.",
+                  "Tormentas o lluvia pueden afectar senderos y visibilidad."
+               ],
+               "title": "Golden Whip Stream"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Zhangjiajie/Hunan: cocina picante, ahumados, setas, tofu y platos Tujia."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Tujia sanxiaguo: olla salteada Tujia con carnes, tofu y picante.",
+                  "Xiangxi cured pork: cerdo ahumado de la zona.",
+                  "Sour radish: rabano encurtido acido y picante."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Summer Mary: Wulingyuan, 5.0.",
+                  "Zhaizili Pot-boiled Dishes / Charming Xiangxi: Wulingyuan, 4.9, $$-$$$.",
+                  "Xiang Xi Diet Culture Museum: Wulingyuan, 4.9."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "Salir temprano en tren bala desde Furongzhen Railway Station hacia Zhangjiajie West Railway Station.",
             "Ir al hotel y dejar equipaje.",
             "Desde Zhangjiajie West tocar ir por carretera hasta la zona de Wulingyuan y el hotel.",
             "Pedir mapa antes de entrar al parque."
          ],
-         "title" : "Traslado"
+         "title": "Traslado"
       },
       {
-         "bullets" : [
+         "bullets": [
             "Golden Whip Stream.",
             "Caminata facil de unas 4 horas en total.",
             "Rio, bosque y montanas vistas desde abajo.",
             "No usar el ascensor Bailong este dia."
          ],
-         "links" : [
+         "links": [
             {
-               "label" : "Viajeros Callejeros - dia 1",
-               "url" : "https://www.viajeroscallejeros.com/montanas-chinas-de-avatar/"
+               "label": "Viajeros Callejeros - dia 1",
+               "url": "https://www.viajeroscallejeros.com/montanas-chinas-de-avatar/"
             }
          ],
-         "title" : "Parque - dia 1"
+         "title": "Parque - dia 1"
       }
    ],
-   "summary" : "Traslado temprano y tarde suave por Golden Whip Stream.",
-   "title" : "Furong -> Wulingyuan / Zhangjiajie"
+   "summary": "Traslado temprano y tarde suave por Golden Whip Stream.",
+   "title": "Furong -> Wulingyuan / Zhangjiajie"
 }

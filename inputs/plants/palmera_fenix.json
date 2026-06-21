@@ -10,14 +10,15 @@
     "mesesRecoleccion": [],
     "riego": {
       "cadaDias": {
-        "primavera": 4,
-        "verano": 3,
-        "otono": 7,
-        "invierno": 12
+        "primavera": 3,
+        "verano": 2,
+        "otono": 5,
+        "invierno": 10
       },
       "notas": [
         "Riego medio",
-        "Regar y escurrir"
+        "Regar y escurrir",
+        "En interior luminoso de Valencia revisar mas a menudo en verano"
       ]
     },
     "abono": {
