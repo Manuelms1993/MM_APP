@@ -3,6 +3,7 @@ package com.example.mmapp.app3.ui.screens
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -12,11 +13,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -24,12 +27,16 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -44,6 +51,7 @@ import com.example.mmapp.app3.domain.models.TravelGuide
 import com.example.mmapp.app3.domain.models.TravelHotel
 import com.example.mmapp.app3.domain.models.TravelLink
 import com.example.mmapp.app3.domain.models.TravelRecommendation
+import com.example.mmapp.app3.domain.models.TravelTopic
 import com.example.mmapp.app3.ui.HomeViewModel
 import com.example.mmapp.app3.ui.theme.DayCardGreen
 import com.example.mmapp.app3.ui.theme.SectionBlue
@@ -116,14 +124,53 @@ private fun DaysTab(
 ) {
     val expandedStates = remember { mutableStateMapOf<String, Boolean>() }
     val sectionExpandedStates = remember { mutableStateMapOf<String, Boolean>() }
+    var query by rememberSaveable { mutableStateOf("") }
+    var selectedFilter by rememberSaveable { mutableStateOf(DaySectionFilter.All) }
+    val filteredDays by remember(guide.days, guide.hotelsById, query, selectedFilter) {
+        derivedStateOf {
+            guide.days.filter { day ->
+                day.matchesQuery(query) &&
+                    (selectedFilter == DaySectionFilter.All || day.sectionKeys(guide.hotelsById, selectedFilter).isNotEmpty())
+            }
+        }
+    }
+    val allDaysExpanded = filteredDays.isNotEmpty() && filteredDays.all { expandedStates[it.id] == true }
+    val visibleSectionKeys = filteredDays.flatMap { it.sectionKeys(guide.hotelsById, selectedFilter) }
+    val allSectionsExpanded = visibleSectionKeys.isNotEmpty() && visibleSectionKeys.all { sectionExpandedStates[it] == true }
 
     LazyColumn(
         modifier = modifier,
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        items(guide.days, key = { it.id }) { day ->
+        item("travel_controls") {
+            TravelDayControls(
+                query = query,
+                onQueryChange = { query = it },
+                selectedFilter = selectedFilter,
+                onFilterChange = { selectedFilter = it },
+                allDaysExpanded = allDaysExpanded,
+                allSectionsExpanded = allSectionsExpanded,
+                onToggleAllDays = {
+                    filteredDays.forEach { day ->
+                        expandedStates[day.id] = !allDaysExpanded
+                    }
+                },
+                onToggleAllSections = {
+                    visibleSectionKeys.forEach { key ->
+                        sectionExpandedStates[key] = !allSectionsExpanded
+                    }
+                },
+                resultCount = filteredDays.size,
+                totalCount = guide.days.size,
+            )
+        }
+
+        items(filteredDays, key = { it.id }) { day ->
             val isExpanded = expandedStates[day.id] == true
+            val dayIndex = guide.days.indexOfFirst { it.id == day.id }
+            val previousDay = guide.days.getOrNull(dayIndex - 1)
+            val nextDay = guide.days.getOrNull(dayIndex + 1)
             OutlinedCard(
                 modifier = Modifier.fillMaxWidth(),
                 colors = CardDefaults.outlinedCardColors(
@@ -137,118 +184,264 @@ private fun DaysTab(
                         .padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
-                    Text(
-                        text = "Día ${day.dayNumber} · ${day.city}",
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.SemiBold,
-                    )
-                    Text(
-                        text = "Día ${day.dayNumber} · ${day.title}",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Column(
+                            modifier = Modifier.weight(1f),
+                            verticalArrangement = Arrangement.spacedBy(4.dp),
+                        ) {
+                            Text(
+                                text = "Día ${day.dayNumber} · ${day.city}",
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.SemiBold,
+                            )
+                            Text(
+                                text = day.title,
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                        Text(
+                            text = if (isExpanded) "⌃" else "⌄",
+                            style = MaterialTheme.typography.titleMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
                     Text(
                         text = day.summary,
                         style = MaterialTheme.typography.bodyLarge,
                     )
+                    SectionSummaryRow(
+                        sections = day.sectionsFor(guide.hotelsById, DaySectionFilter.All),
+                    )
+                    Text(
+                        text = "Toca para ${if (isExpanded) "cerrar" else "abrir"} el día",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
 
                     if (isExpanded) {
-                        day.overnightHotelId?.let { hotelId ->
-                            guide.hotelsById[hotelId]?.let { hotel ->
-                                HorizontalDivider()
-                                ExpandableSectionCard(
-                                    title = "Alojamiento",
-                                    containerColor = SectionSand,
-                                    sectionKey = "${day.id}-hotel",
-                                    expandedStates = sectionExpandedStates,
-                                ) {
-                                    DetailBlock(
-                                        title = "Alojamiento",
-                                        lines = listOf(
-                                            hotel.name,
-                                            hotel.address,
-                                            formatHotelDays(hotel.days),
-                                        ),
-                                        links = hotel.sourceUrl?.let { listOf(TravelLink("Ficha hotel", it)) }.orEmpty(),
-                                    )
-                                }
-                            }
-                        }
+                        DayNavigation(
+                            previousDay = previousDay,
+                            nextDay = nextDay,
+                            onSelectDay = { selectedDay ->
+                                expandedStates[day.id] = false
+                                expandedStates[selectedDay.id] = true
+                            },
+                        )
 
-                        day.segments.forEachIndexed { index, segment ->
+                        day.sectionsFor(guide.hotelsById, selectedFilter).forEach { section ->
                             HorizontalDivider()
                             ExpandableSectionCard(
-                                title = segment.title,
-                                containerColor = SectionGreen,
-                                sectionKey = "${day.id}-segment-$index",
+                                section = section,
                                 expandedStates = sectionExpandedStates,
                             ) {
-                                SegmentBlock(segment = segment)
-                            }
-                        }
-
-                        if (day.foodSuggestions.isNotEmpty()) {
-                            HorizontalDivider()
-                            ExpandableSectionCard(
-                                title = "Comida",
-                                containerColor = SectionPeach,
-                                sectionKey = "${day.id}-food",
-                                expandedStates = sectionExpandedStates,
-                            ) {
-                                DetailBlock(
-                                    title = "Comida",
-                                    lines = day.foodSuggestions,
-                                )
-                            }
-                        }
-
-                        if (day.notes.isNotEmpty()) {
-                            HorizontalDivider()
-                            ExpandableSectionCard(
-                                title = "Notas",
-                                containerColor = SectionBlue,
-                                sectionKey = "${day.id}-notes",
-                                expandedStates = sectionExpandedStates,
-                            ) {
-                                DetailBlock(
-                                    title = "Notas",
-                                    lines = day.notes,
-                                )
-                            }
-                        }
-
-                        if (day.recommendations.isNotEmpty()) {
-                            HorizontalDivider()
-                            ExpandableSectionCard(
-                                title = "Recomendaciones",
-                                containerColor = SectionLilac,
-                                sectionKey = "${day.id}-recommendations",
-                                expandedStates = sectionExpandedStates,
-                            ) {
-                                RecommendationsBlock(
-                                    recommendations = day.recommendations,
-                                )
-                            }
-                        }
-
-                        if (day.links.isNotEmpty()) {
-                            HorizontalDivider()
-                            ExpandableSectionCard(
-                                title = "Enlaces generales",
-                                containerColor = SectionLilac,
-                                sectionKey = "${day.id}-links",
-                                expandedStates = sectionExpandedStates,
-                            ) {
-                                LinksBlock(
-                                    title = "Enlaces generales",
-                                    links = day.links,
-                                )
+                                SectionContentBlock(section)
                             }
                         }
                     }
                 }
             }
         }
+
+        if (filteredDays.isEmpty()) {
+            item("no_days") {
+                Surface(
+                    color = SectionSand,
+                    shape = RoundedCornerShape(12.dp),
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Text(
+                        text = "No hay días que coincidan con la búsqueda.",
+                        modifier = Modifier.padding(16.dp),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun TravelDayControls(
+    query: String,
+    onQueryChange: (String) -> Unit,
+    selectedFilter: DaySectionFilter,
+    onFilterChange: (DaySectionFilter) -> Unit,
+    allDaysExpanded: Boolean,
+    allSectionsExpanded: Boolean,
+    onToggleAllDays: () -> Unit,
+    onToggleAllSections: () -> Unit,
+    resultCount: Int,
+    totalCount: Int,
+) {
+    Surface(
+        color = SectionSand,
+        shape = RoundedCornerShape(12.dp),
+        modifier = Modifier.fillMaxWidth(),
+    ) {
+        Column(
+            modifier = Modifier.padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            OutlinedTextField(
+                value = query,
+                onValueChange = onQueryChange,
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true,
+                label = { Text("Buscar") },
+            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                DaySectionFilter.entries.forEach { filter ->
+                    FilterPill(
+                        label = filter.label,
+                        selected = selectedFilter == filter,
+                        onClick = { onFilterChange(filter) },
+                    )
+                }
+            }
+            Text(
+                text = "$resultCount/$totalCount días",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
+            ) {
+                Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                    TextButton(onClick = onToggleAllDays) {
+                        Text(if (allDaysExpanded) "Cerrar días" else "Abrir días")
+                    }
+                    TextButton(onClick = onToggleAllSections) {
+                        Text(if (allSectionsExpanded) "Cerrar secciones" else "Abrir secciones")
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun FilterPill(
+    label: String,
+    selected: Boolean,
+    onClick: () -> Unit,
+) {
+    Surface(
+        color = if (selected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface,
+        shape = RoundedCornerShape(18.dp),
+        modifier = Modifier.clickable(onClick = onClick),
+    ) {
+        Text(
+            text = label,
+            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+            style = MaterialTheme.typography.bodySmall,
+            color = if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
+            fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Medium,
+        )
+    }
+}
+
+@Composable
+private fun SectionSummaryRow(
+    sections: List<DayUiSection>,
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        sections.groupBy { it.filter }.forEach { (filter, groupedSections) ->
+            Surface(
+                color = filter.color,
+                shape = RoundedCornerShape(14.dp),
+            ) {
+                Text(
+                    text = "${filter.label} ${groupedSections.sumOf { it.count }}",
+                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                    style = MaterialTheme.typography.bodySmall,
+                    fontWeight = FontWeight.Medium,
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun DayNavigation(
+    previousDay: TravelDay?,
+    nextDay: TravelDay?,
+    onSelectDay: (TravelDay) -> Unit,
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween,
+    ) {
+        TextButton(
+            enabled = previousDay != null,
+            onClick = { previousDay?.let(onSelectDay) },
+        ) {
+            Text(previousDay?.let { "‹ Día ${it.dayNumber}" } ?: "‹")
+        }
+        TextButton(
+            enabled = nextDay != null,
+            onClick = { nextDay?.let(onSelectDay) },
+        ) {
+            Text(nextDay?.let { "Día ${it.dayNumber} ›" } ?: "›")
+        }
+    }
+}
+
+@Composable
+private fun SectionContentBlock(
+    section: DayUiSection,
+) {
+    when (val content = section.content) {
+        is DaySectionContent.Hotel -> {
+            val hotel = content.hotel
+            DetailBlock(
+                title = "Alojamiento",
+                lines = listOf(
+                    hotel.name,
+                    hotel.address,
+                    formatHotelDays(hotel.days),
+                ),
+                links = hotel.sourceUrl?.let { listOf(TravelLink("Ficha hotel", it)) }.orEmpty(),
+            )
+        }
+
+        is DaySectionContent.Segment -> SegmentBlock(
+            segment = content.segment,
+            parentKey = section.key,
+        )
+
+        is DaySectionContent.Lines -> DetailBlock(
+            title = section.title,
+            lines = content.lines,
+        )
+
+        is DaySectionContent.Recommendations -> RecommendationsBlock(
+            recommendations = content.recommendations,
+        )
+
+        is DaySectionContent.Links -> LinksBlock(
+            title = section.title,
+            links = content.links,
+            modifier = Modifier.padding(12.dp),
+        )
     }
 }
 
@@ -310,6 +503,7 @@ private fun HotelsTab(
 @Composable
 private fun SegmentBlock(
     segment: DaySegment,
+    parentKey: String,
 ) {
     Column(
         modifier = Modifier
@@ -327,6 +521,12 @@ private fun SegmentBlock(
         segment.bullets.forEach { line ->
             Text(text = "• $line", style = MaterialTheme.typography.bodyMedium)
         }
+        if (segment.topics.isNotEmpty()) {
+            TopicList(
+                topics = segment.topics,
+                parentKey = parentKey,
+            )
+        }
         segment.references.forEach { reference ->
             Text(
                 text = "Ref: $reference",
@@ -339,6 +539,83 @@ private fun SegmentBlock(
                 title = "Enlaces",
                 links = segment.links,
             )
+        }
+    }
+}
+
+@Composable
+private fun TopicList(
+    topics: List<TravelTopic>,
+    parentKey: String,
+    depth: Int = 0,
+) {
+    val expandedStates = remember(parentKey) { mutableStateMapOf<String, Boolean>() }
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        topics.forEachIndexed { index, topic ->
+            TopicCard(
+                topic = topic,
+                topicKey = "$parentKey-$index-${topic.title}",
+                expandedStates = expandedStates,
+                depth = depth,
+            )
+        }
+    }
+}
+
+@Composable
+private fun TopicCard(
+    topic: TravelTopic,
+    topicKey: String,
+    expandedStates: MutableMap<String, Boolean>,
+    depth: Int,
+) {
+    val isExpanded = expandedStates[topicKey] == true
+    Surface(
+        color = MaterialTheme.colorScheme.surface.copy(alpha = if (depth == 0) 0.65f else 0.45f),
+        shape = RoundedCornerShape(8.dp),
+        modifier = Modifier.fillMaxWidth(),
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { expandedStates[topicKey] = !isExpanded }
+                .padding(10.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    text = topic.title,
+                    style = MaterialTheme.typography.bodyMedium,
+                    fontWeight = FontWeight.SemiBold,
+                )
+                Text(
+                    text = "${topic.itemCount()} ${if (isExpanded) "⌃" else "⌄"}",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            if (isExpanded) {
+                topic.bullets.forEach { line ->
+                    Text(text = "• $line", style = MaterialTheme.typography.bodyMedium)
+                }
+                if (topic.topics.isNotEmpty()) {
+                    TopicList(
+                        topics = topic.topics,
+                        parentKey = topicKey,
+                        depth = depth + 1,
+                    )
+                }
+                topic.links.forEach { link ->
+                    LinkLine(link = link)
+                }
+            }
         }
     }
 }
@@ -371,22 +648,20 @@ private fun DetailBlock(
 
 @Composable
 private fun ExpandableSectionCard(
-    title: String,
-    containerColor: Color,
-    sectionKey: String,
+    section: DayUiSection,
     expandedStates: MutableMap<String, Boolean>,
     content: @Composable () -> Unit,
 ) {
-    val isExpanded = expandedStates[sectionKey] == true
+    val isExpanded = expandedStates[section.key] == true
     Surface(
-        color = containerColor,
+        color = section.filter.color,
         shape = RoundedCornerShape(12.dp),
         modifier = Modifier.fillMaxWidth(),
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .clickable { expandedStates[sectionKey] = !isExpanded }
+                .clickable { expandedStates[section.key] = !isExpanded }
                 .padding(12.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
@@ -396,12 +671,13 @@ private fun ExpandableSectionCard(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = title,
+                    text = "${section.filter.marker} ${section.title}",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.weight(1f),
                 )
                 Text(
-                    text = if (isExpanded) "Ocultar" else "Ver",
+                    text = "${section.count} ${if (isExpanded) "⌃" else "⌄"}",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -503,6 +779,178 @@ private fun EmptyState(
         )
     }
 }
+
+private enum class DaySectionFilter(
+    val label: String,
+    val marker: String,
+    val color: Color,
+) {
+    All("Todo", "•", SectionLilac),
+    Warnings("Advertencias", "!", Color(0xFFFFF4D6)),
+    Food("Comida", "+", SectionPeach),
+    Route("Ruta", ">", SectionGreen),
+    Hotel("Hotel", "^", SectionSand),
+    Links("Enlaces", "@", SectionBlue),
+    Pending("Pendientes", "?", Color(0xFFF0F0F0)),
+}
+
+private data class DayUiSection(
+    val key: String,
+    val title: String,
+    val filter: DaySectionFilter,
+    val count: Int,
+    val content: DaySectionContent,
+)
+
+private sealed interface DaySectionContent {
+    data class Hotel(val hotel: TravelHotel) : DaySectionContent
+    data class Segment(val segment: DaySegment) : DaySectionContent
+    data class Lines(val lines: List<String>) : DaySectionContent
+    data class Recommendations(val recommendations: List<TravelRecommendation>) : DaySectionContent
+    data class Links(val links: List<TravelLink>) : DaySectionContent
+}
+
+private fun TravelDay.sectionsFor(
+    hotelsById: Map<String, TravelHotel>,
+    filter: DaySectionFilter,
+): List<DayUiSection> {
+    val sections = buildList {
+        overnightHotelId?.let(hotelsById::get)?.let { hotel ->
+            add(
+                DayUiSection(
+                    key = "$id-hotel",
+                    title = "Alojamiento",
+                    filter = DaySectionFilter.Hotel,
+                    count = 1,
+                    content = DaySectionContent.Hotel(hotel),
+                ),
+            )
+        }
+
+        segments.forEachIndexed { index, segment ->
+            val sectionFilter = segment.sectionFilter()
+            add(
+                DayUiSection(
+                    key = "$id-segment-$index",
+                    title = segment.title,
+                    filter = sectionFilter,
+                    count = segment.itemCount().coerceAtLeast(1),
+                    content = DaySectionContent.Segment(segment),
+                ),
+            )
+        }
+
+        if (foodSuggestions.isNotEmpty()) {
+            add(
+                DayUiSection(
+                    key = "$id-food",
+                    title = "Comida",
+                    filter = DaySectionFilter.Food,
+                    count = foodSuggestions.size,
+                    content = DaySectionContent.Lines(foodSuggestions),
+                ),
+            )
+        }
+
+        if (notes.isNotEmpty()) {
+            add(
+                DayUiSection(
+                    key = "$id-notes",
+                    title = "Notas",
+                    filter = if (notes.any { it.contains("pendiente", ignoreCase = true) }) DaySectionFilter.Pending else DaySectionFilter.Route,
+                    count = notes.size,
+                    content = DaySectionContent.Lines(notes),
+                ),
+            )
+        }
+
+        if (recommendations.isNotEmpty()) {
+            add(
+                DayUiSection(
+                    key = "$id-recommendations",
+                    title = "Recomendaciones",
+                    filter = DaySectionFilter.Route,
+                    count = recommendations.size,
+                    content = DaySectionContent.Recommendations(recommendations),
+                ),
+            )
+        }
+
+        if (links.isNotEmpty()) {
+            add(
+                DayUiSection(
+                    key = "$id-links",
+                    title = "Enlaces generales",
+                    filter = DaySectionFilter.Links,
+                    count = links.size,
+                    content = DaySectionContent.Links(links),
+                ),
+            )
+        }
+    }
+    return if (filter == DaySectionFilter.All) sections else sections.filter { it.filter == filter }
+}
+
+private fun TravelDay.sectionKeys(
+    hotelsById: Map<String, TravelHotel>,
+    filter: DaySectionFilter,
+): List<String> = sectionsFor(hotelsById, filter).map { it.key }
+
+private fun DaySegment.sectionFilter(): DaySectionFilter = when {
+    title.equals("Advertencias", ignoreCase = true) -> DaySectionFilter.Warnings
+    title.equals("Comida", ignoreCase = true) -> DaySectionFilter.Food
+    containsPendingText() -> DaySectionFilter.Pending
+    links.isNotEmpty() && bullets.isEmpty() && topics.isEmpty() -> DaySectionFilter.Links
+    else -> DaySectionFilter.Route
+}
+
+private fun DaySegment.containsPendingText(): Boolean =
+    title.contains("pendiente", ignoreCase = true) ||
+        bullets.any { it.contains("pendiente", ignoreCase = true) } ||
+        references.any { it.contains("pendiente", ignoreCase = true) } ||
+        topics.any { it.containsPendingText() }
+
+private fun TravelTopic.containsPendingText(): Boolean =
+    title.contains("pendiente", ignoreCase = true) ||
+        bullets.any { it.contains("pendiente", ignoreCase = true) } ||
+        topics.any { it.containsPendingText() }
+
+private fun DaySegment.itemCount(): Int =
+    bullets.size + topics.sumOf { it.itemCount() } + references.size + links.size
+
+private fun TravelTopic.itemCount(): Int =
+    bullets.size + topics.sumOf { it.itemCount() } + links.size
+
+private fun TravelDay.matchesQuery(query: String): Boolean {
+    val normalizedQuery = query.trim().lowercase()
+    if (normalizedQuery.isBlank()) return true
+    return listOf(id, title, city, summary).any { it.lowercase().contains(normalizedQuery) } ||
+        segments.any { it.matchesQuery(normalizedQuery) } ||
+        foodSuggestions.any { it.lowercase().contains(normalizedQuery) } ||
+        notes.any { it.lowercase().contains(normalizedQuery) } ||
+        recommendations.any { recommendation ->
+            recommendation.text.lowercase().contains(normalizedQuery) ||
+                recommendation.links.any { it.matchesQuery(normalizedQuery) }
+        } ||
+        links.any { it.matchesQuery(normalizedQuery) }
+}
+
+private fun DaySegment.matchesQuery(query: String): Boolean =
+    title.lowercase().contains(query) ||
+        timeLabel.orEmpty().lowercase().contains(query) ||
+        bullets.any { it.lowercase().contains(query) } ||
+        references.any { it.lowercase().contains(query) } ||
+        topics.any { it.matchesQuery(query) } ||
+        links.any { it.matchesQuery(query) }
+
+private fun TravelTopic.matchesQuery(query: String): Boolean =
+    title.lowercase().contains(query) ||
+        bullets.any { it.lowercase().contains(query) } ||
+        topics.any { it.matchesQuery(query) } ||
+        links.any { it.matchesQuery(query) }
+
+private fun TravelLink.matchesQuery(query: String): Boolean =
+    label.lowercase().contains(query) || url.lowercase().contains(query)
 
 private fun formatHotelDays(days: List<Int>): String {
     if (days.isEmpty()) return "Días no definidos"

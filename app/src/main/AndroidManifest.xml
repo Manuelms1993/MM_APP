@@ -26,6 +26,9 @@
             android:name="com.example.mmapp.app2.notifications.MenuNotificationReceiver"
             android:exported="false" />
         <receiver
+            android:name="com.example.mmapp.app1.work.DailyReminderReceiver"
+            android:exported="false" />
+        <receiver
             android:name="com.example.mmapp.app2.notifications.BootCompletedReceiver"
             android:enabled="true"
             android:exported="true">

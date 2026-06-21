@@ -20,12 +20,13 @@
       "cadaDias": {
         "primavera": 3,
         "verano": 2,
-        "otono": 4,
-        "invierno": 10
+        "otono": 3,
+        "invierno": 8
       },
       "notas": [
         "Riego profundo",
-        "Regar y escurrir"
+        "Regar y escurrir",
+        "En maceta grande en Valencia puede pedir riego extra en olas de calor"
       ]
     },
     "abono": {

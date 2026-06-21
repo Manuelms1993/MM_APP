@@ -19,14 +19,15 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 4,
-        "verano": 3,
-        "otono": 5,
+        "primavera": 3,
+        "verano": 2,
+        "otono": 4,
         "invierno": 7
       },
       "notas": [
         "Riego ligero",
-        "Mantener sustrato apenas humedo sin encharcar"
+        "Mantener sustrato apenas humedo sin encharcar",
+        "En maceta en Valencia revisar humedad a diario en verano"
       ]
     },
     "abono": {

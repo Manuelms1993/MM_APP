@@ -28,7 +28,7 @@ class ProcessScheduler(
             process.intervalDays.toLong(),
             TimeUnit.DAYS,
         )
-            .setInitialDelay(initialDelay(process.hourOfDay))
+            .setInitialDelay(initialDelay(process.hourOfDay, process.intervalDays))
             .setInputData(RunProcessWorker.inputData(process.processId))
             .build()
 
@@ -45,15 +45,21 @@ class ProcessScheduler(
 
     private fun uniqueWorkName(processId: String): String = "process_work_$processId"
 
-    private fun initialDelay(hourOfDay: Int): Duration {
-        val now = ZonedDateTime.now(MADRID_ZONE)
-        val nextRun = now.withHour(hourOfDay).withMinute(0).withSecond(0).withNano(0).let { scheduled ->
-            if (now >= scheduled) scheduled.plusDays(1) else scheduled
-        }
-        return Duration.between(now, nextRun)
-    }
-
     companion object {
         val MADRID_ZONE: ZoneId = ZoneId.of("Europe/Madrid")
+
+        internal fun initialDelay(
+            hourOfDay: Int,
+            intervalDays: Int,
+            now: ZonedDateTime = ZonedDateTime.now(MADRID_ZONE),
+        ): Duration {
+            val normalizedHour = hourOfDay.coerceIn(0, 23)
+            val normalizedIntervalDays = intervalDays.coerceIn(1, 30)
+            val madridNow = now.withZoneSameInstant(MADRID_ZONE)
+            val nextRun = madridNow.withHour(normalizedHour).withMinute(0).withSecond(0).withNano(0).let { scheduled ->
+                if (madridNow >= scheduled) scheduled.plusDays(normalizedIntervalDays.toLong()) else scheduled
+            }
+            return Duration.between(madridNow, nextRun)
+        }
     }
 }

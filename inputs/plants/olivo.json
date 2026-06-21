@@ -14,14 +14,15 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 5,
-        "verano": 3,
-        "otono": 7,
+        "primavera": 4,
+        "verano": 2,
+        "otono": 6,
         "invierno": 14
       },
       "notas": [
         "Riego profundo",
-        "Dejar secar parte del sustrato antes del siguiente riego"
+        "Dejar secar parte del sustrato antes del siguiente riego",
+        "En Valencia y bajo techo regar profundo cuando la parte alta este seca"
       ]
     },
     "abono": {

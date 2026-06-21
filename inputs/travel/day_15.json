@@ -1,23 +1,80 @@
 {
-   "city" : "Chengdu / Leshan",
-   "dayNumber" : 15,
-   "id" : "day-15",
-   "overnightHotelId" : "wenjun-courtyard-chengdu",
-   "recommendations" : [
+   "city": "Chengdu / Leshan",
+   "dayNumber": 15,
+   "foodSuggestions": [],
+   "id": "day-15",
+   "overnightHotelId": "wenjun-courtyard-chengdu",
+   "recommendations": [
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Travel China Guide - Chengdu nightlife",
-               "url" : "https://www.travelchinaguide.com/cityguides/sichuan/chengdu/nightlife.htm"
+               "label": "Travel China Guide - Chengdu nightlife",
+               "url": "https://www.travelchinaguide.com/cityguides/sichuan/chengdu/nightlife.htm"
             }
          ],
-         "text" : "Despues de Leshan no cargues mucho mas la tarde: mejor dejar margen para llegar con calma al show y cenar cerca, porque ese dia ya va bastante lleno."
+         "text": "Despues de Leshan no cargues mucho mas la tarde: mejor dejar margen para llegar con calma al show y cenar cerca, porque ese dia ya va bastante lleno."
       }
    ],
-   "schemaVersion" : 1,
-   "segments" : [
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Calor fuerte y humedad.",
+                  "Bajada a los pies del Buda puede tener cola larga y escaleras duras.",
+                  "Si hay saturacion, barco panoramico puede ser mejor que bajar."
+               ],
+               "title": "Leshan"
+            },
+            {
+               "bullets": [
+                  "Coordinar bien trenes ida/vuelta para no perder tarde.",
+                  "Show de mascaras: reservar; no dejar compra para ultima hora."
+               ],
+               "title": "Horarios"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Leshan es famosa por snacks picantes, tofu, pollo frio, brochetas y dulces locales."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Bobo chicken: brochetas frias en salsa picante.",
+                  "Leshan sweet-skin duck: pato lacado dulce tipico de Leshan.",
+                  "Doufu nao: tofu sedoso con salsa salada o picante."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "JiuMei FengZhua.",
+                  "FengWei Yu ZuiBa.",
+                  "Yan Fengxianshao."
+               ],
+               "title": "Sitios"
+            },
+            {
+               "bullets": [
+                  "Confirmar vigencia, horarios y sede exacta antes de ir.",
+                  "Ma's Kitchen / Ma Wang Zi - Jinjiang: 1 estrella Michelin, 13-20 EUR aprox., Sichuan clasico.",
+                  "Fu Rong Huang: 1 estrella Michelin, 15-20 EUR aprox., Sichuan tradicional.",
+                  "Wan San Mian Guan - Qinglongzheng Street: Bib Gourmand / Guia Michelin, 5-12 EUR aprox., noodles de Yibin."
+               ],
+               "title": "Michelin / Guia Michelin barato"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "Salir por la manana. El recinto abre de 07:30 a 18:30.",
             "Tren bala Chengdu East Railway Station -> Leshan Railway Station.",
             "Duracion: 50-60 minutos.",
@@ -26,27 +83,27 @@
             "Entrada al recinto del Gran Buda.",
             "Vuelta en taxi a la estacion y tren de regreso a Chengdu East Railway Station."
          ],
-         "references" : [
+         "references": [
             "Ruta interna del recinto del Gran Buda pendiente de sustituir por enlace real"
          ],
-         "timeLabel" : "Manana -> tarde",
-         "title" : "Excursion a Leshan"
+         "timeLabel": "Manana -> tarde",
+         "title": "Excursion a Leshan"
       },
       {
-         "bullets" : [
+         "bullets": [
             "Paseo tranquilo por la tarde.",
             "Show de mascaras.",
             "Cena relajada despues del espectaculo."
          ],
-         "links" : [
+         "links": [
             {
-               "label" : "Shu Feng Ya Yun",
-               "url" : "http://www.shufengyayun.com/s/1.html"
+               "label": "Shu Feng Ya Yun",
+               "url": "http://www.shufengyayun.com/s/1.html"
             }
          ],
-         "title" : "Tarde-noche en Chengdu"
+         "title": "Tarde-noche en Chengdu"
       }
    ],
-   "summary" : "Excursion al Gran Buda de Leshan y show por la tarde-noche.",
-   "title" : "Chengdu - Leshan Grand Buddha + show de mascaras"
+   "summary": "Excursion al Gran Buda de Leshan y show por la tarde-noche.",
+   "title": "Chengdu - Leshan Grand Buddha + show de mascaras"
 }

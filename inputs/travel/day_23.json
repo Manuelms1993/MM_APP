@@ -1,0 +1,81 @@
+{
+   "city": "Casablanca",
+   "dayNumber": 23,
+   "foodSuggestions": [],
+   "id": "day-23",
+   "notes": [
+      "Jornada corta y sensible a tiempos de traslado.",
+      "No se guardan datos de alojamiento en este fichero."
+   ],
+   "schemaVersion": 1,
+   "segments": [
+      {
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Confirmar horario oficial y llegar con margen.",
+                  "Agosto en Casablanca es mas moderado que China, pero hay sol fuerte en zonas abiertas."
+               ],
+               "title": "Hassan II"
+            },
+            {
+               "bullets": [
+                  "Plaza Mohammed V / centro art deco tiene menos interes si el tiempo va justo; recortable.",
+                  "Habous puede comerse tiempo si se compra o se entra en tiendas."
+               ],
+               "title": "Recortes"
+            },
+            {
+               "bullets": [
+                  "No retrasar la salida al aeropuerto; CMN puede ser lento en controles."
+               ],
+               "title": "Aeropuerto"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Habous es buena zona para dulces marroquies, pasteleria tradicional, te y comida marroqui sencilla."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Harira: sopa marroqui de tomate, legumbres y especias.",
+                  "Msemen: crepe o pan marroqui hojaldrado.",
+                  "Chebakia: dulce frito con miel y sesamo."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Patisserie Bennis Habous: Habous, pasteleria/snack, 4.5.",
+                  "Restaurant maQam: Habous, cocina marroqui.",
+                  "Cafe Imperial: Casablanca, barato, 4.5."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
+            "Desayuno y check-out.",
+            "Visita interior de la Mezquita Hassan II.",
+            "Taxi a Plaza Mohammed V.",
+            "Paseo breve por zona art deco / centro colonial.",
+            "Taxi al Quartier Habous.",
+            "Visita a Habous / Nueva Medina.",
+            "Comida rapida o cafe en Habous.",
+            "Recoger equipaje y salir hacia el aeropuerto con margen."
+         ],
+         "timeLabel": "Manana -> aeropuerto",
+         "title": "Visita breve antes del vuelo"
+      }
+   ],
+   "summary": "Visita breve a Casablanca antes de salir hacia el aeropuerto.",
+   "title": "Casablanca -> vuelo de salida"
+}

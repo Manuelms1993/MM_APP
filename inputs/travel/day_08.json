@@ -1,53 +1,101 @@
 {
-   "city" : "Yangshuo",
-   "dayNumber" : 8,
-   "id" : "day-08",
-   "overnightHotelId" : "yangshuo-tea-house",
-   "recommendations" : [
+   "city": "Yangshuo",
+   "dayNumber": 8,
+   "foodSuggestions": [],
+   "id": "day-08",
+   "overnightHotelId": "yangshuo-tea-house",
+   "recommendations": [
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Travel China Guide - Yangshuo dining",
-               "url" : "https://www.travelchinaguide.com/cityguides/guangxi/yangshuo/dining.htm"
+               "label": "Travel China Guide - Yangshuo dining",
+               "url": "https://www.travelchinaguide.com/cityguides/guangxi/yangshuo/dining.htm"
             }
          ],
-         "text" : "Si el dia sale muy cargado, prioriza Yulong River + Moon Hill y deja Ten-Mile Gallery como pieza flexible; el tramo natural suele ser lo mas especial."
+         "text": "Si el dia sale muy cargado, prioriza Yulong River + Moon Hill y deja Ten-Mile Gallery como pieza flexible; el tramo natural suele ser lo mas especial."
       },
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Tripadvisor - Meijie Lijiang Beer Fish",
-               "url" : "https://www.tripadvisor.co.uk/Restaurant_Review-g303712-d3682204-Reviews-Meijie_Lijiang_Beer_Fish-Yangshuo_County_Guangxi.html"
+               "label": "Tripadvisor - Meijie Lijiang Beer Fish",
+               "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g303712-d3682204-Reviews-Meijie_Lijiang_Beer_Fish-Yangshuo_County_Guangxi.html"
             }
          ],
-         "text" : "Para la cena, repite beer fish o prueba platos niang locales en torno a West Street en vez de cenar demasiado pronto dentro de la ruta en bici."
+         "text": "Para la cena, repite beer fish o prueba platos niang locales en torno a West Street en vez de cenar demasiado pronto dentro de la ruta en bici."
       }
    ],
-   "schemaVersion" : 1,
-   "segments" : [
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Empezar temprano o el calor puede arruinar el dia.",
+                  "Carreteras rurales con trafico mixto: motos, bicis y vans turisticas.",
+                  "Tormentas de tarde: dejar lo fotografico para la manana."
+               ],
+               "title": "Bici y ruta"
+            },
+            {
+               "bullets": [
+                  "Yulong bamboo raft puede verse afectado por lluvia, caudal o cupos.",
+                  "Moon Hill puede ser demasiado duro al mediodia."
+               ],
+               "title": "Yulong y Moon Hill"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Buen dia para comida local rural: pescado, verduras salteadas, arroz, noodles y mango o helados de fruta."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Yangshuo beer fish: pescado con cerveza.",
+                  "Bamboo rice: arroz cocinado en bambu.",
+                  "Guilin mifen: fideos de arroz de Guilin."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Home Cooking Place: cocina local/china, 4.9, $.",
+                  "NAMO NAMO Ganga Impression Indian Restaurant: West Street, 4.8, $$-$$$.",
+                  "The Garden @ The Bamboo Leaf Hotel: Yangshuo, 4.9, pizza/europeo, $$-$$$."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "Alquilar bici temprano.",
             "Hacer ruta por Yulong River.",
             "Valorar paseo en barca de bambu por el tramo entre Jinlong Bridge y Jiuxian."
          ],
-         "title" : "Manana"
+         "title": "Manana"
       },
       {
-         "bullets" : [
+         "bullets": [
             "Comer.",
             "Ten-Mile Gallery.",
             "Moon Hill."
          ],
-         "title" : "Tarde"
+         "title": "Tarde"
       },
       {
-         "bullets" : [
+         "bullets": [
             "West Street y cena."
          ],
-         "title" : "Noche"
+         "title": "Noche"
       }
    ],
-   "summary" : "Dia activo en bici por Yulong River, Ten-Mile Gallery y Moon Hill.",
-   "title" : "Yangshuo - Yulong River, bici y Moon Hill"
+   "summary": "Dia activo en bici por Yulong River, Ten-Mile Gallery y Moon Hill.",
+   "title": "Yangshuo - Yulong River, bici y Moon Hill"
 }

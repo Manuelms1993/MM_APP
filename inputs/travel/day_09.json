@@ -1,27 +1,76 @@
 {
-   "city" : "Fenghuang",
-   "dayNumber" : 9,
-   "id" : "day-09",
-   "notes" : [
+   "city": "Fenghuang",
+   "dayNumber": 9,
+   "foodSuggestions": [],
+   "id": "day-09",
+   "notes": [
       "Dia todavia incompleto a nivel logistico."
    ],
-   "overnightHotelId" : "hemu-house-fenghuang",
-   "schemaVersion" : 1,
-   "segments" : [
+   "overnightHotelId": "hemu-house-fenghuang",
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
-            "Falta cerrar el transporte Yangshuo -> Fenghuang."
-         ],
-         "title" : "Traslado"
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Opcion A es fragil por enlaces tempranos; alto riesgo de estres.",
+                  "Opcion B llega tarde: ese dia Fenghuang sera solo paseo nocturno.",
+                  "Confirmar trenes reales cuando abra venta."
+               ],
+               "title": "Opciones de traslado"
+            },
+            {
+               "bullets": [
+                  "Traslado estacion Fenghuanggucheng -> casco antiguo requiere taxi o shuttle.",
+                  "Llegar de noche con maletas en casco antiguo puede ser incomodo: confirmar acceso al hotel."
+               ],
+               "title": "Llegada a Fenghuang"
+            }
+         ]
       },
       {
-         "bullets" : [
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Fenghuang esta en Hunan/Xiangxi: cocina picante, ahumados, arroz glutinoso, tofu y platos de minorias Miao/Tujia."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Torta de ciruela y chile en puestos.",
+                  "Xiangxi cured pork: cerdo curado o ahumado de Xiangxi.",
+                  "Blood duck: pato con arroz glutinoso y sangre, plato local fuerte.",
+                  "Ginger candy: caramelo de jengibre tipico de Fenghuang."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "LaoZhai Fen Guan: Fenghuang Ancient Town, 4.5.",
+                  "WanMu Zhai: Fenghuang, 4.2, Hunan/chino, $$-$$$.",
+                  "Miss Yang Restaurant: Fenghuang Ancient Town, 3.6, $$-$$$."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
+            "Falta cerrar el transporte Yangshuo -> Fenghuang."
+         ],
+         "title": "Traslado"
+      },
+      {
+         "bullets": [
             "Repartir lo mas importante del casco antiguo en una sola noche.",
             "Priorizar paseo nocturno si la hora de llegada acompana."
          ],
-         "title" : "Llegada a Fenghuang"
+         "title": "Llegada a Fenghuang"
       }
    ],
-   "summary" : "Traslado pendiente de cerrar y primera noche en Fenghuang.",
-   "title" : "Yangshuo -> Fenghuang"
+   "summary": "Traslado pendiente de cerrar y primera noche en Fenghuang.",
+   "title": "Yangshuo -> Fenghuang"
 }

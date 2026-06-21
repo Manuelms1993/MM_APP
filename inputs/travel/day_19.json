@@ -1,0 +1,101 @@
+{
+   "city": "Pekin",
+   "dayNumber": 19,
+   "foodSuggestions": [],
+   "id": "day-19",
+   "notes": [
+      "Llevar comida o algo facil para la excursion.",
+      "Revisar transporte a Mutianyu antes del dia de visita.",
+      "Valorar teleferico y bajada en tobogan."
+   ],
+   "schemaVersion": 1,
+   "segments": [
+      {
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Transporte a Mutianyu: mejor cerrado; en publico consume bastante tiempo."
+               ],
+               "title": "Transporte"
+            },
+            {
+               "bullets": [
+                  "Calor fuerte y exposicion solar.",
+                  "Tormenta, lluvia o viento pueden afectar cable car, chairlift o tobogan.",
+                  "Tobogan: no contarlo como garantizado.",
+                  "Llevar agua y comida; arriba no conviene depender de compras."
+               ],
+               "title": "Muralla"
+            },
+            {
+               "bullets": [
+                  "Mutianyu advierte que horarios y operativa pueden variar.",
+                  "Horario de temporada alta 2026 indicado: 07:30-18:00 entre semana."
+               ],
+               "title": "Horario operativo"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Zona de muralla: comida rural del norte, trucha, dumplings, noodles y platos sencillos de pueblo."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Rainbow trout: trucha de la zona de Huairou/Mutianyu.",
+                  "Zhajiangmian: fideos con salsa de soja fermentada.",
+                  "Jiaozi: dumplings."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "The Schoolhouse at Mutianyu Great Wall: Mutianyu Village.",
+                  "Yu Jia Ao: cerca de Mutianyu.",
+                  "Xin Shuang QuanSheng Tai LvYuan Restaurant: cerca de Mutianyu."
+               ],
+               "title": "Sitios"
+            },
+            {
+               "bullets": [
+                  "Confirmar vigencia, horarios y sede exacta antes de ir.",
+                  "Liu Ma Ma Dumplings - Chaoyang / 798: Bib Gourmand / Guia Michelin, 7-12 EUR aprox., dumplings.",
+                  "Fortune Long Beijing Bean Sauce Noodles - East Xinglong Street: Guia Michelin, 5-10 EUR aprox., zhajiangmian.",
+                  "Bao Yuan Dumplings: Bib Gourmand / Guia Michelin, 10-18 EUR aprox., dumplings.",
+                  "Fangzhuanchang No. 69 Zhajiangmian: Bib Gourmand / Guia Michelin, 5-10 EUR aprox., zhajiangmian."
+               ],
+               "title": "Michelin / Guia Michelin barato"
+            }
+         ]
+      },
+      {
+         "bullets": [
+            "Excursion a la Gran Muralla en Mutianyu.",
+            "Llegar temprano para aprovechar la manana.",
+            "Teleferico y tobogan si encaja con tiempo y condiciones."
+         ],
+         "references": [
+            "Transporte a Mutianyu pendiente de revisar"
+         ],
+         "timeLabel": "Manana -> tarde",
+         "title": "Muralla china - Mutianyu"
+      },
+      {
+         "bullets": [
+            "Mercado de la Seda.",
+            "Alternativa: China World Mall.",
+            "Dejar la tarde flexible segun cansancio."
+         ],
+         "timeLabel": "Tarde",
+         "title": "Compras o paseo"
+      }
+   ],
+   "summary": "Excursion a Mutianyu y tarde flexible entre Mercado de la Seda o China World Mall.",
+   "title": "Pekin - Gran Muralla"
+}

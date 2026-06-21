@@ -60,7 +60,7 @@ import java.time.format.TextStyle
 import java.util.Locale
 import kotlinx.coroutines.launch
 
-private const val HistoryDayLimit = 30
+private const val HistoryDayLimit = 7
 
 @Composable
 fun HomeScreen(
@@ -90,16 +90,20 @@ fun HomeScreen(
     val visibleConversation = remember(maintainerConversation, showFullHistory) {
         filterConversation(maintainerConversation, showFullHistory)
     }
-    val groupedConversation = remember(visibleConversation) {
-        visibleConversation.groupBy { it.date }.toSortedMap()
+    val groupedConversation = remember(visibleConversation, isBusy) {
+        if (isBusy) {
+            emptyMap()
+        } else {
+            visibleConversation.groupBy { it.date }.toSortedMap()
+        }
     }
-    val hasHiddenHistory = remember(maintainerConversation, groupedConversation) {
-        maintainerConversation.groupBy { it.date }.size > groupedConversation.size
+    val hasHiddenHistory = remember(maintainerConversation, groupedConversation, isBusy) {
+        !isBusy && maintainerConversation.groupBy { it.date }.size > groupedConversation.size
     }
 
-    LaunchedEffect(selectedTab, groupedConversation.size) {
-        if (selectedTab == 0 && groupedConversation.isNotEmpty()) {
-            listState.animateScrollToItem(groupedConversation.size - 1)
+    LaunchedEffect(selectedTab, groupedConversation.size, isBusy) {
+        if (!isBusy && selectedTab == 0 && groupedConversation.isNotEmpty()) {
+            listState.scrollToItem(groupedConversation.size - 1)
         }
     }
 
@@ -190,6 +194,7 @@ fun HomeScreen(
                 onShowFullHistory = viewModel::showFullHistory,
                 statusMessage = statusMessage,
                 activeMaintainer = activeMaintainer,
+                isLoading = isBusy,
             )
 
             1 -> PlantingTab(
@@ -278,7 +283,16 @@ private fun CareTab(
     onShowFullHistory: () -> Unit,
     statusMessage: String?,
     activeMaintainer: String,
+    isLoading: Boolean,
 ) {
+    if (isLoading) {
+        LoadingState(
+            modifier = modifier,
+            message = "Cargando cuidados...",
+        )
+        return
+    }
+
     if (groupedConversation.isEmpty()) {
         EmptyState(
             modifier = modifier,
@@ -352,6 +366,29 @@ private fun CareTab(
                     fontWeight = FontWeight.SemiBold,
                 )
             }
+        }
+    }
+}
+
+@Composable
+private fun LoadingState(
+    modifier: Modifier,
+    message: String,
+) {
+    Box(
+        modifier = modifier,
+        contentAlignment = Alignment.Center,
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            CircularProgressIndicator()
+            Text(
+                text = message,
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
         }
     }
 }

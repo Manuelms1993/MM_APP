@@ -10,14 +10,15 @@
     "mesesRecoleccion": [],
     "riego": {
       "cadaDias": {
-        "primavera": 7,
-        "verano": 5,
-        "otono": 10,
-        "invierno": 14
+        "primavera": 5,
+        "verano": 4,
+        "otono": 8,
+        "invierno": 12
       },
       "notas": [
         "Riego medio",
-        "Solo humedecer"
+        "Solo humedecer",
+        "En Valencia no dejar secar del todo el cepellon en semanas de calor"
       ]
     },
     "abono": {

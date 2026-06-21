@@ -1,61 +1,114 @@
 {
-   "city" : "Guilin",
-   "dayNumber" : 6,
-   "id" : "day-06",
-   "overnightHotelId" : "guilin-flowers-inn",
-   "recommendations" : [
+   "city": "Guilin",
+   "dayNumber": 6,
+   "foodSuggestions": [],
+   "id": "day-06",
+   "overnightHotelId": "guilin-flowers-inn",
+   "recommendations": [
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Travel China Guide - Guilin rice noodles",
-               "url" : "https://www.travelchinaguide.com/cityguides/guangxi/guilin-rice-noodles.htm"
+               "label": "Travel China Guide - Guilin rice noodles",
+               "url": "https://www.travelchinaguide.com/cityguides/guangxi/guilin-rice-noodles.htm"
             }
          ],
-         "text" : "Nada mas dejar equipaje, intenta cenar un bol de Guilin rice noodles; es la comida local mas tipica y te encaja muy bien en un dia corto de llegada."
+         "text": "Nada mas dejar equipaje, intenta cenar un bol de Guilin rice noodles; es la comida local mas tipica y te encaja muy bien en un dia corto de llegada."
       },
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Tripadvisor - Sun and Moon Pagodas",
-               "url" : "https://www.tripadvisor.com/Attraction_Review-g298556-d12148927-Reviews-Sun_and_Moon_Pagodas-Guilin_Guangxi.html"
+               "label": "Tripadvisor - Sun and Moon Pagodas",
+               "url": "https://www.tripadvisor.com/Attraction_Review-g298556-d12148927-Reviews-Sun_and_Moon_Pagodas-Guilin_Guangxi.html"
             }
          ],
-         "text" : "Si aun tienes energia por la noche, prioriza el paseo junto a las Sun and Moon Pagodas iluminadas antes que meter otro parque."
+         "text": "Si aun tienes energia por la noche, prioriza el paseo junto a las Sun and Moon Pagodas iluminadas antes que meter otro parque."
       },
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Tripadvisor - Zhengyang Pedestrian Street",
-               "url" : "https://www.tripadvisor.com/Attraction_Review-g298556-d5117106-Reviews-Guilin_Zhengyang_Road_Pedestrian_Street-Guilin_Guangxi.html"
+               "label": "Tripadvisor - Zhengyang Pedestrian Street",
+               "url": "https://www.tripadvisor.com/Attraction_Review-g298556-d5117106-Reviews-Guilin_Zhengyang_Road_Pedestrian_Street-Guilin_Guangxi.html"
             }
          ],
-         "text" : "Para cenar o picar despues del paseo, Zhengyang Pedestrian Street es la zona mas practica para juntar ambiente, comida y paseo nocturno."
+         "text": "Para cenar o picar despues del paseo, Zhengyang Pedestrian Street es la zona mas practica para juntar ambiente, comida y paseo nocturno."
       }
    ],
-   "schemaVersion" : 1,
-   "segments" : [
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "No cerrar mentalmente horario hasta tener billetes.",
+                  "La estacion de llegada puede variar: Guilin West, East o North no son lo mismo."
+               ],
+               "title": "Tren"
+            },
+            {
+               "bullets": [
+                  "Llegada + check-in puede comerse mas tarde de lo previsto.",
+                  "Noche suave: pagodas si; no meter ruta larga."
+               ],
+               "title": "Llegada"
+            },
+            {
+               "bullets": [
+                  "Calor humedo y tormentas posibles."
+               ],
+               "title": "Clima"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Guilin es conocida por noodles de arroz, sabores de Guangxi, pescado de rio y platos con cerveza."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Guilin mifen: fideos de arroz de Guilin con caldo o salsa y toppings.",
+                  "Yangshuo beer fish: pescado cocinado con cerveza, tipico de Yangshuo/Guilin.",
+                  "Lipu taro pork: cerdo con taro de Lipu."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Neapolitan Pizza: cerca de Sun & Moon Pagodas, 4.9.",
+                  "Kali Mirch / Black Pepper Indian Cuisine: cerca de Sun & Moon Pagodas, 4.5.",
+                  "Oubilai Italian Restaurant: Guilin, italiano, 5.0."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "Salida prevista desde Hong Kong West Kowloon Railway Station.",
             "Llegada prevista a Guilin West Railway Station.",
             "Llegada estimada a Guilin entre las 13:00 y las 15:00.",
             "Conviene confirmar el numero exacto de tren y la estacion final al comprar, pero la referencia base para buscar es West Kowloon -> Guilin West."
          ],
-         "timeLabel" : "10:00-11:00 -> 13:00-15:00",
-         "title" : "Tren"
+         "timeLabel": "10:00-11:00 -> 13:00-15:00",
+         "title": "Tren"
       },
       {
-         "bullets" : [
+         "bullets": [
             "Ver las pagodas gigantes.",
             "Ir al mercado nocturno.",
             "Parque opcional si queda tiempo y energia."
          ],
-         "references" : [
+         "references": [
             "Ruta pendiente de sustituir por enlace real"
          ],
-         "title" : "Tarde en Guilin"
+         "title": "Tarde en Guilin"
       }
    ],
-   "summary" : "Traslado en tren y primera toma de contacto con Guilin.",
-   "title" : "Hong Kong -> Guilin"
+   "summary": "Traslado en tren y primera toma de contacto con Guilin.",
+   "title": "Hong Kong -> Guilin"
 }

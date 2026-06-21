@@ -23,13 +23,14 @@
     "riego": {
       "cadaDias": {
         "primavera": 5,
-        "verano": 4,
-        "otono": 7,
+        "verano": 3,
+        "otono": 6,
         "invierno": 12
       },
       "notas": [
         "Riego ligero",
-        "Poca agua"
+        "Poca agua",
+        "Maceta pequena en Valencia: revisar en calor, pero evitar encharcar"
       ]
     },
     "abono": {

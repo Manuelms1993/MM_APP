@@ -1,0 +1,85 @@
+{
+   "city": "Chengdu / Xian",
+   "dayNumber": 16,
+   "foodSuggestions": [],
+   "id": "day-16",
+   "notes": [
+      "Evitar cargar demasiado la tarde si hace mucho calor.",
+      "Si se alquila bicicleta en la muralla, mejor hacerlo desde la puerta sur."
+   ],
+   "schemaVersion": 1,
+   "segments": [
+      {
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Xian puede ser muy caluroso, mas seco y agresivo que Chengdu.",
+                  "Tren + check-in + calor: no meter demasiada ruta cultural ese dia."
+               ],
+               "title": "Calor y energia"
+            },
+            {
+               "bullets": [
+                  "Muralla en bici a mediodia o tarde temprana puede ser mala idea.",
+                  "Barrio musulman: mucha gente, calor, humo y caos.",
+                  "Ojo con comida callejera si el estomago viene tocado."
+               ],
+               "title": "Muralla y Barrio musulman"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Xian mezcla cocina Shaanxi y comida musulmana Hui: pan, cordero, noodles, dumplings y especias."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Roujiamo: pan relleno de carne guisada, tipo bocadillo de Xian.",
+                  "Biangbiang noodles: fideos anchos con salsa picante/aceite.",
+                  "Yangrou paomo: sopa de cordero con pan desmenuzado."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Comida callejera en Barrio musulman.",
+                  "Fan Ji La Zhi RouJiaMo - ZhuBaShi: local/barato, cerca Muslim Quarter.",
+                  "XiAn JiaSan Tangbao Zi Guan - HuiMin Jie: dumplings/tangbao, cerca Muslim Quarter.",
+                  "Three Sisters Dumplings - East Mutoushi: barato/popular en Xian."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
+            "Tren bala por la manana desde Chengdu hacia Xian.",
+            "Trayecto estimado: 3-4 horas.",
+            "Ir al hotel, dejar equipaje y comer."
+         ],
+         "timeLabel": "Manana -> comida",
+         "title": "Traslado"
+      },
+      {
+         "bullets": [
+            "Barrio musulman.",
+            "Muralla de Xian.",
+            "Small Wild Goose Pagoda.",
+            "Cena por la zona."
+         ],
+         "references": [
+            "Ruta pendiente de sustituir por enlace real"
+         ],
+         "timeLabel": "Tarde -> noche",
+         "title": "Centro de Xian"
+      }
+   ],
+   "summary": "Traslado a Xian, comida local y paseo por el Barrio musulman, muralla y Small Wild Goose Pagoda.",
+   "title": "Chengdu -> Xian"
+}

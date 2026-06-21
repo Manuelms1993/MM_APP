@@ -1,0 +1,84 @@
+{
+   "city": "Xian",
+   "dayNumber": 17,
+   "foodSuggestions": [],
+   "id": "day-17",
+   "notes": [
+      "Comprar o revisar entradas del Ejercito de Terracota con antelacion.",
+      "Horario de referencia del recinto: 08:30-17:00."
+   ],
+   "schemaVersion": 1,
+   "segments": [
+      {
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Ir temprano o se juntan colas y calor.",
+                  "Entrada anticipada y pasaporte.",
+                  "Sitio enorme, con mucho grupo organizado y circulacion lenta.",
+                  "Traslado desde Xian ciudad no es corto."
+               ],
+               "title": "Terracota"
+            },
+            {
+               "bullets": [
+                  "Giant Wild Goose / Datang Everbright City puede estar muy lleno."
+               ],
+               "title": "Tarde"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Cocina Shaanxi: noodles gruesos, cordero, pan plano, dumplings y snacks de calle."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Liangpi: fideos frios de almidon con salsa picante.",
+                  "Qishan saozi mian: noodles con caldo acido-picante y carne.",
+                  "Guantang baozi: dumplings con caldo dentro."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Old Xi'an Restaurant: opcion razonable dentro/zona Terracotta Warriors.",
+                  "Fan Ji La Zhi RouJiaMo - ZhuBaShi: si se vuelve al centro.",
+                  "First Noodle Under The Sun: si se vuelve hacia zona centro/pagoda."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
+            "Excursion al Ejercito de Terracota.",
+            "Dedicar la manana y parte de la comida al recinto.",
+            "Volver a Xian con margen para descansar antes de la tarde."
+         ],
+         "timeLabel": "Manana -> comida",
+         "title": "Ejercito de Terracota"
+      },
+      {
+         "bullets": [
+            "Giant Wild Goose Pagoda.",
+            "Zona de legado Tang/Han.",
+            "Cena con comida Shaanxi."
+         ],
+         "references": [
+            "Ruta pendiente de sustituir por enlace real",
+            "Web de entradas de los guerreros pendiente de sustituir por enlace real"
+         ],
+         "timeLabel": "Tarde -> noche",
+         "title": "Xian por la tarde"
+      }
+   ],
+   "summary": "Dia centrado en el Ejercito de Terracota y paseo por Giant Wild Goose Pagoda por la tarde.",
+   "title": "Xian - Terracota y Giant Wild Goose Pagoda"
+}

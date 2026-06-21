@@ -20,12 +20,13 @@
       "cadaDias": {
         "primavera": 3,
         "verano": 2,
-        "otono": 4,
+        "otono": 3,
         "invierno": 8
       },
       "notas": [
         "Riego medio",
-        "Regar y escurrir"
+        "Regar y escurrir",
+        "Frutal en maceta en Valencia: comprobar humedad a diario en verano"
       ]
     },
     "abono": {

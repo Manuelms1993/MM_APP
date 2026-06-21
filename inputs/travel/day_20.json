@@ -1,0 +1,101 @@
+{
+   "city": "Pekin",
+   "dayNumber": 20,
+   "foodSuggestions": [],
+   "id": "day-20",
+   "notes": [
+      "Revisar entradas y normas de acceso de Ciudad Prohibida con antelacion.",
+      "Dejar margen entre Ciudad Prohibida y la ruta de hutongs."
+   ],
+   "schemaVersion": 1,
+   "segments": [
+      {
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Ciudad Prohibida: reserva critica.",
+                  "Horario oficial indicado: 08:30-17:00; entrada de referencia: 60 CNY.",
+                  "Tiananmen: reserva y seguridad obligan a dejar margen; no improvisar."
+               ],
+               "title": "Reservas y accesos"
+            },
+            {
+               "bullets": [
+                  "Mucho sol y poca sombra en Tiananmen / Ciudad Prohibida.",
+                  "Jingshan implica subida: evitar horas de maximo calor."
+               ],
+               "title": "Calor"
+            },
+            {
+               "bullets": [
+                  "Lama Temple y Confucio no dejarlos tarde; cierran antes que las zonas de paseo."
+               ],
+               "title": "Cierres"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Dia de clasicos pekineses: pato, dumplings, noodles, snacks de hutong y cocina imperial/turistica."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Peking duck: pato laqueado.",
+                  "Ludagun: dulce de arroz glutinoso con soja tostada.",
+                  "Douzhi: bebida fermentada de judia mungo, muy local y fuerte."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Mr. Shi's Dumplings: Hutongs/Nanluoguxiang, EUR.",
+                  "Furongji: cerca Nanluoguxiang, 4.9, EUR-EUR EUR.",
+                  "Little Yunnan: zona Hutongs/Nanluoguxiang."
+               ],
+               "title": "Sitios"
+            },
+            {
+               "bullets": [
+                  "Confirmar vigencia, horarios y sede exacta antes de ir.",
+                  "Liu Ma Ma Dumplings - Chaoyang / 798: Bib Gourmand / Guia Michelin, 7-12 EUR aprox., dumplings.",
+                  "Fortune Long Beijing Bean Sauce Noodles - East Xinglong Street: Guia Michelin, 5-10 EUR aprox., zhajiangmian.",
+                  "Bao Yuan Dumplings: Bib Gourmand / Guia Michelin, 10-18 EUR aprox., dumplings.",
+                  "Fangzhuanchang No. 69 Zhajiangmian: Bib Gourmand / Guia Michelin, 5-10 EUR aprox., zhajiangmian."
+               ],
+               "title": "Michelin / Guia Michelin barato"
+            }
+         ]
+      },
+      {
+         "bullets": [
+            "Ciudad Prohibida.",
+            "Parque Jingshan / Colina del Carbon.",
+            "Mirador sobre la Ciudad Prohibida si el tiempo acompana."
+         ],
+         "timeLabel": "Manana",
+         "title": "Ciudad Prohibida"
+      },
+      {
+         "bullets": [
+            "Hutongs principales de Pekin.",
+            "Templo de los Lamas.",
+            "Templo de Confucio.",
+            "Torre del Tambor.",
+            "Torre de la Campana."
+         ],
+         "references": [
+            "Ruta pendiente de sustituir por enlace real"
+         ],
+         "timeLabel": "Tarde",
+         "title": "Hutongs y templos"
+      }
+   ],
+   "summary": "Ciudad Prohibida por la manana y ruta de hutongs, templos y torres por la tarde.",
+   "title": "Pekin - Ciudad Prohibida y hutongs"
+}

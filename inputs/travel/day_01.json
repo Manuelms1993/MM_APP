@@ -1,30 +1,76 @@
 {
-   "city" : "Valencia / Estambul",
-   "dayNumber" : 1,
-   "id" : "day-01",
-   "notes" : [
+   "city": "Valencia / Estambul",
+   "dayNumber": 1,
+   "foodSuggestions": [],
+   "id": "day-01",
+   "notes": [
       "Dia de transito.",
       "Conviene revisar con antelacion como resolver el traslado aeropuerto -> hotel."
    ],
-   "overnightHotelId" : "dem-premium-istanbul-airport",
-   "schemaVersion" : 1,
-   "segments" : [
+   "overnightHotelId": "dem-premium-istanbul-airport",
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Llegada nocturna: el margen real hasta el hotel puede irse a 01:00-02:00.",
+                  "Aeropuerto grande: controles, equipaje y salida pueden alargarse.",
+                  "No planificar nada esa noche salvo traslado y dormir."
+               ],
+               "title": "Llegada y descanso"
+            },
+            {
+               "bullets": [
+                  "Taxi nocturno: usar app o transfer si es posible.",
+                  "Si se usa taxi, controlar taximetro o condiciones antes de salir."
+               ],
+               "title": "Transporte nocturno"
+            },
+            {
+               "bullets": [
+                  "Riesgo de cansancio fuerte al dia siguiente."
+               ],
+               "title": "Ritmo del dia siguiente"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Estambul mezcla cocina otomana, kebabs, pescado del Bosforo, meze y dulces turcos."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Doner kebap: carne asada en vertical servida en pan o plato.",
+                  "Balik ekmek: bocadillo de pescado a la plancha.",
+                  "Baklava: dulce de hojaldre, pistacho o nuez y almibar."
+               ],
+               "title": "Platos clave"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "Salida desde Valencia a las 18:55.",
             "Llegada a Estambul a las 23:40."
          ],
-         "timeLabel" : "18:55 - 23:40",
-         "title" : "Vuelo"
+         "timeLabel": "18:55 - 23:40",
+         "title": "Vuelo"
       },
       {
-         "bullets" : [
+         "bullets": [
             "Ir al hotel directamente.",
             "Prioridad: descanso y dejar todo listo para el dia siguiente."
          ],
-         "title" : "Llegada"
+         "title": "Llegada"
       }
    ],
-   "summary" : "Vuelo por la tarde y llegada nocturna a Estambul.",
-   "title" : "Valencia -> Estambul"
+   "summary": "Vuelo por la tarde y llegada nocturna a Estambul.",
+   "title": "Valencia -> Estambul"
 }

@@ -1,0 +1,101 @@
+{
+   "city": "Pekin",
+   "dayNumber": 21,
+   "foodSuggestions": [],
+   "id": "day-21",
+   "notes": [
+      "El Mercado de Panjiayuan abre sobre las 09:00; conviene visitarlo temprano.",
+      "Los edificios del Templo del Cielo cierran sobre las 18:00.",
+      "El Mercado de las Perlas es prescindible si el dia va justo."
+   ],
+   "schemaVersion": 1,
+   "segments": [
+      {
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Dia demasiado cargado: hay que cortar visitas.",
+                  "Templo del Cielo + Palacio de Verano ya llenan gran parte del dia.",
+                  "Tiananmen / Qianmen requieren controles y tiempos muertos; no encajan bien con todo lo demas."
+               ],
+               "title": "Carga del dia"
+            },
+            {
+               "bullets": [
+                  "Panjiayuan entre semana no muestra su mejor version; el mercado fuerte suele ser fin de semana.",
+                  "Mercado de las Perlas es prescindible si el dia va justo."
+               ],
+               "title": "Mercados"
+            },
+            {
+               "bullets": [
+                  "Exige mucho caminar y tiene poca sombra en algunas zonas."
+               ],
+               "title": "Palacio de Verano"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Qianmen/Dashilan es buena zona para comida tradicional pekinesa, pato, shaomai, dulces y snacks antiguos."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Shaomai: dumpling abierto, a menudo con carne o arroz.",
+                  "Tanghulu: brocheta de fruta caramelizada.",
+                  "Menkuang luzhu: guiso pekines de visceras y tofu, intenso."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "Gong De Lin - Qianmen: vegetariano budista, barato.",
+                  "Bei Jing Dou Yi Chu Shao Mai Guan - Qianmen: dumplings/shao mai.",
+                  "Deyuan Roast Duck Restaurant - Dashilan/Qianmen: pato, zona Qianmen."
+               ],
+               "title": "Sitios"
+            },
+            {
+               "bullets": [
+                  "Confirmar vigencia, horarios y sede exacta antes de ir.",
+                  "Liu Ma Ma Dumplings - Chaoyang / 798: Bib Gourmand / Guia Michelin, 7-12 EUR aprox., dumplings.",
+                  "Fortune Long Beijing Bean Sauce Noodles - East Xinglong Street: Guia Michelin, 5-10 EUR aprox., zhajiangmian.",
+                  "Bao Yuan Dumplings: Bib Gourmand / Guia Michelin, 10-18 EUR aprox., dumplings.",
+                  "Fangzhuanchang No. 69 Zhajiangmian: Bib Gourmand / Guia Michelin, 5-10 EUR aprox., zhajiangmian."
+               ],
+               "title": "Michelin / Guia Michelin barato"
+            }
+         ]
+      },
+      {
+         "bullets": [
+            "Taxi al Mercado de Panjiayuan.",
+            "Qianmen.",
+            "Plaza Tiananmen.",
+            "Templo del Cielo.",
+            "Mercado de las Perlas solo si apetece comprar."
+         ],
+         "references": [
+            "Ruta 2 pendiente de sustituir por enlace real"
+         ],
+         "timeLabel": "Manana -> primera tarde",
+         "title": "Mercados y Templo del Cielo"
+      },
+      {
+         "bullets": [
+            "Palacio de Verano.",
+            "Paseo tranquilo para cerrar la etapa de Pekin."
+         ],
+         "timeLabel": "Tarde",
+         "title": "Palacio de Verano"
+      }
+   ],
+   "summary": "Mercado de Panjiayuan, Qianmen, Tiananmen, Templo del Cielo y Palacio de Verano.",
+   "title": "Pekin - mercados, templos y Palacio de Verano"
+}

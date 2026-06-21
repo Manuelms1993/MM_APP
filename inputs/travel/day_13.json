@@ -1,58 +1,103 @@
 {
-   "city" : "Chengdu",
-   "dayNumber" : 13,
-   "id" : "day-13",
-   "overnightHotelId" : "wenjun-courtyard-chengdu",
-   "recommendations" : [
+   "city": "Chengdu",
+   "dayNumber": 13,
+   "foodSuggestions": [],
+   "id": "day-13",
+   "overnightHotelId": "wenjun-courtyard-chengdu",
+   "recommendations": [
       {
-         "links" : [
+         "links": [
             {
-               "label" : "Travel China Guide - Jinli Street",
-               "url" : "https://www.travelchinaguide.com/attraction/sichuan/chengdu/jinli-street.htm"
+               "label": "Travel China Guide - Jinli Street",
+               "url": "https://www.travelchinaguide.com/attraction/sichuan/chengdu/jinli-street.htm"
             },
             {
-               "label" : "Travel China Guide - Wuhou Temple",
-               "url" : "https://www.travelchinaguide.com/attraction/sichuan/chengdu/wuhou_temple.htm"
+               "label": "Travel China Guide - Wuhou Temple",
+               "url": "https://www.travelchinaguide.com/attraction/sichuan/chengdu/wuhou_temple.htm"
             }
          ],
-         "text" : "Si te queda una franja al atardecer o despues de cenar, Jinli Street es una buena bala extra por ambiente y luces, sobre todo si la empalmas con Wuhou Temple."
+         "text": "Si te queda una franja al atardecer o despues de cenar, Jinli Street es una buena bala extra por ambiente y luces, sobre todo si la empalmas con Wuhou Temple."
       }
    ],
-   "schemaVersion" : 1,
-   "segments" : [
+   "schemaVersion": 1,
+   "segments": [
       {
-         "bullets" : [
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Confirmar estacion: Zhangjiajie West y estacion de llegada en Chengdu.",
+                  "Tren largo: no planificar una tarde demasiado ambiciosa."
+               ],
+               "title": "Tren"
+            },
+            {
+               "bullets": [
+                  "Calor humedo y bochorno.",
+                  "People's Park / Heming Tea House pueden estar llenos.",
+                  "Cena popular o Michelin: reservar si es importante."
+               ],
+               "title": "Chengdu"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Chengdu es capital de Sichuan: picante, mala, hotpot, noodles, dumplings y snacks."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Mapo tofu: tofu picante con carne y pimienta de Sichuan.",
+                  "Dandan noodles: fideos con salsa picante, carne y sesamo/cacahuete.",
+                  "Sichuan hotpot: olla picante para cocinar carnes, verduras y tofu."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "XiaoTan DouHua - Xi Main Street: local barato, 4.4.",
+                  "Longchaoshou: snacks/wontons de Chengdu, $.",
+                  "Fields Concord - Taikoo Li: zona Chunxi/Taikoo Li, opcion menos local."
+               ],
+               "title": "Sitios"
+            },
+            {
+               "bullets": [
+                  "Confirmar vigencia, horarios y sede exacta antes de ir.",
+                  "Ma's Kitchen / Ma Wang Zi - Jinjiang: 1 estrella Michelin, 13-20 EUR aprox., Sichuan clasico.",
+                  "Fu Rong Huang: 1 estrella Michelin, 15-20 EUR aprox., Sichuan tradicional.",
+                  "Wan San Mian Guan - Qinglongzheng Street: Bib Gourmand / Guia Michelin, 5-12 EUR aprox., noodles de Yibin."
+               ],
+               "title": "Michelin / Guia Michelin barato"
+            }
+         ]
+      },
+      {
+         "bullets": [
             "Tren bala temprano desde Zhangjiajie West Railway Station.",
             "Llegada prevista a Chengdu East Railway Station.",
             "Duracion aproximada: 5 horas.",
             "Llegada para comer."
          ],
-         "title" : "Traslado"
+         "title": "Traslado"
       },
       {
-         "bullets" : [
-            "Opcion recomendada: Long Sen Yuan."
-         ],
-         "links" : [
-            {
-               "label" : "Michelin - Long Sen Yuan",
-               "url" : "https://guide.michelin.com/en/chengdu-municipality/chengdu/restaurant/long-sen-yuan"
-            }
-         ],
-         "title" : "Comida"
-      },
-      {
-         "bullets" : [
+         "bullets": [
             "Ruta cerca del hotel.",
             "Tomar te por la tarde en Heming Tea House, en People's Park.",
             "Cenar en Chunxi Road o en la zona del hotel."
          ],
-         "references" : [
+         "references": [
             "RUTA cerca del hotel pendiente de sustituir por enlace real"
          ],
-         "title" : "Tarde en Chengdu"
+         "title": "Tarde en Chengdu"
       }
    ],
-   "summary" : "Tren bala a Chengdu, comida, parque y paseo por la zona del hotel.",
-   "title" : "Zhangjiajie -> Chengdu"
+   "summary": "Tren bala a Chengdu, comida, parque y paseo por la zona del hotel.",
+   "title": "Zhangjiajie -> Chengdu"
 }

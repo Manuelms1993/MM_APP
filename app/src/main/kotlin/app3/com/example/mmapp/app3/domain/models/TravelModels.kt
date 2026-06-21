@@ -24,7 +24,15 @@ data class DaySegment(
     val title: String,
     val timeLabel: String?,
     val bullets: List<String>,
+    val topics: List<TravelTopic>,
     val references: List<String>,
+    val links: List<TravelLink>,
+)
+
+data class TravelTopic(
+    val title: String,
+    val bullets: List<String>,
+    val topics: List<TravelTopic>,
     val links: List<TravelLink>,
 )
 

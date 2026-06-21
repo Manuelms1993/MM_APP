@@ -1,0 +1,76 @@
+{
+   "city": "Pekin / Casablanca",
+   "dayNumber": 22,
+   "foodSuggestions": [],
+   "id": "day-22",
+   "notes": [
+      "Dia de transito con escala y visita breve.",
+      "Mantener horarios flexibles por controles, equipaje y traslado.",
+      "No se guardan datos de alojamiento en este fichero."
+   ],
+   "schemaVersion": 1,
+   "segments": [
+      {
+         "title": "Advertencias",
+         "topics": [
+            {
+               "bullets": [
+                  "Dia de vuelo largo: no meter visitas exigentes antes.",
+                  "Llegada por la tarde-noche: la cena puede ir justa si hay retraso.",
+                  "Aeropuerto CMN -> ciudad puede ser lento de noche."
+               ],
+               "title": "Vuelo y llegada"
+            },
+            {
+               "bullets": [
+                  "Mejor taxi o transfer directo que combinaciones.",
+                  "Paseo nocturno cerca de Hassan II: corto y controlado."
+               ],
+               "title": "Traslado nocturno"
+            }
+         ]
+      },
+      {
+         "title": "Comida",
+         "topics": [
+            {
+               "bullets": [
+                  "Casablanca mezcla cocina marroqui urbana: tajines, cuscus, pastela, pescado y dulces."
+               ],
+               "title": "Comida tipica"
+            },
+            {
+               "bullets": [
+                  "Tajine: guiso marroqui cocinado en recipiente de barro.",
+                  "Couscous: semola con verduras, carne o pollo.",
+                  "Pastilla: pastel salado-dulce de hojaldre, pollo o marisco."
+               ],
+               "title": "Platos clave"
+            },
+            {
+               "bullets": [
+                  "La Sqala: marroqui, $$-$$$, buena opcion para la hora de llegada.",
+                  "Restaurant Dar El Kaid: marroqui, $$-$$$.",
+                  "Green Black: cerca de Hassan II, 4.8."
+               ],
+               "title": "Sitios"
+            }
+         ]
+      },
+      {
+         "bullets": [
+            "Llegada a Casablanca Mohammed V por la tarde-noche.",
+            "Salida estimada del aeropuerto tras controles y equipaje.",
+            "Taxi oficial o transfer hacia zona de cena.",
+            "Cena en La Sqala si el horario encaja.",
+            "Alternativa si va justo: Rick's Cafe.",
+            "Paseo corto y controlado por el exterior de la Mezquita Hassan II.",
+            "Descanso."
+         ],
+         "timeLabel": "Tarde-noche",
+         "title": "Llegada a Casablanca"
+      }
+   ],
+   "summary": "Vuelo largo y llegada a Casablanca con cena y descanso.",
+   "title": "Pekin -> Casablanca"
+}
