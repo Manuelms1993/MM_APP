@@ -26,6 +26,9 @@ data class ProcessSettingsUiState(
     val enabled: Boolean,
     val intervalDays: Int,
     val hourOfDay: Int,
+    val latitude: String? = null,
+    val longitude: String? = null,
+    val outputFileName: String? = null,
 )
 
 class SettingsViewModel(
@@ -182,6 +185,9 @@ class SettingsViewModel(
         enabled = enabled,
         intervalDays = intervalDays,
         hourOfDay = hourOfDay,
+        latitude = latitude,
+        longitude = longitude,
+        outputFileName = outputFileName,
     )
 
     private fun NotificationSettingsUiState.toDomain(): AppNotificationSettings = AppNotificationSettings(
@@ -198,6 +204,9 @@ class SettingsViewModel(
         enabled = enabled,
         intervalDays = intervalDays,
         hourOfDay = hourOfDay,
+        latitude = latitude,
+        longitude = longitude,
+        outputFileName = outputFileName,
     )
 
     companion object {
