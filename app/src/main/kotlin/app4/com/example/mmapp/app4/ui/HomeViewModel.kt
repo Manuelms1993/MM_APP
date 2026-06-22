@@ -54,7 +54,9 @@ class HomeViewModel(
         )
 
         viewModelScope.launch {
-            val result = script.execute()
+            val result = script.execute(
+                onLog = { entry -> appendLogs(entry) },
+            )
             updateScript(scriptId) {
                 it.copy(
                     isRunning = false,
@@ -62,7 +64,6 @@ class HomeViewModel(
                     lastResults = result.items,
                 )
             }
-            appendLogs(result.logs)
         }
     }
 

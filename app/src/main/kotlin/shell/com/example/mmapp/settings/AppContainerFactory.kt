@@ -17,6 +17,7 @@ class AppContainerFactory(
             AppSettingsDatabase.MIGRATION_1_2,
             AppSettingsDatabase.MIGRATION_2_3,
             AppSettingsDatabase.MIGRATION_3_4,
+            AppSettingsDatabase.MIGRATION_4_5,
         )
             .build()
 

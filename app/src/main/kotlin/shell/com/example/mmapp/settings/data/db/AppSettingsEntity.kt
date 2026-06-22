@@ -21,6 +21,12 @@ data class AppSettingsEntity(
     val lacuponeraProcessEnabled: Boolean = false,
     val lacuponeraProcessIntervalDays: Int = 3,
     val lacuponeraProcessHourOfDay: Int = 13,
+    val schoolDriveTimeProcessEnabled: Boolean = false,
+    val schoolDriveTimeProcessIntervalDays: Int = 7,
+    val schoolDriveTimeProcessHourOfDay: Int = 13,
+    val schoolDriveTimeOriginLatitude: String = "",
+    val schoolDriveTimeOriginLongitude: String = "",
+    val schoolDriveTimeOutputFileName: String = "centros_final.csv",
 ) {
     companion object {
         const val SINGLE_ROW_ID = 1

@@ -28,6 +28,9 @@ data class ProcessSettings(
     val enabled: Boolean,
     val intervalDays: Int,
     val hourOfDay: Int,
+    val latitude: String? = null,
+    val longitude: String? = null,
+    val outputFileName: String? = null,
 )
 
 class AppSettingsRepository(
@@ -139,6 +142,7 @@ class AppSettingsRepository(
         dao.upsert(
             when (processId) {
                 LACUPONERA_PROCESS_ID -> current.copy(lacuponeraProcessEnabled = enabled)
+                SCHOOL_DRIVE_TIME_PROCESS_ID -> current.copy(schoolDriveTimeProcessEnabled = enabled)
                 else -> current
             },
         )
@@ -150,6 +154,7 @@ class AppSettingsRepository(
         dao.upsert(
             when (processId) {
                 LACUPONERA_PROCESS_ID -> current.copy(lacuponeraProcessIntervalDays = normalized)
+                SCHOOL_DRIVE_TIME_PROCESS_ID -> current.copy(schoolDriveTimeProcessIntervalDays = normalized)
                 else -> current
             },
         )
@@ -161,6 +166,7 @@ class AppSettingsRepository(
         dao.upsert(
             when (processId) {
                 LACUPONERA_PROCESS_ID -> current.copy(lacuponeraProcessHourOfDay = normalized)
+                SCHOOL_DRIVE_TIME_PROCESS_ID -> current.copy(schoolDriveTimeProcessHourOfDay = normalized)
                 else -> current
             },
         )
@@ -176,6 +182,14 @@ class AppSettingsRepository(
                     lacuponeraProcessEnabled = setting.enabled,
                     lacuponeraProcessIntervalDays = intervalDays,
                     lacuponeraProcessHourOfDay = hourOfDay,
+                )
+                SCHOOL_DRIVE_TIME_PROCESS_ID -> entity.copy(
+                    schoolDriveTimeProcessEnabled = setting.enabled,
+                    schoolDriveTimeProcessIntervalDays = intervalDays,
+                    schoolDriveTimeProcessHourOfDay = hourOfDay,
+                    schoolDriveTimeOriginLatitude = setting.latitude?.trim().orEmpty(),
+                    schoolDriveTimeOriginLongitude = setting.longitude?.trim().orEmpty(),
+                    schoolDriveTimeOutputFileName = setting.outputFileName?.trim().orEmpty().ifBlank { "centros_final.csv" },
                 )
                 else -> entity
             }
@@ -243,6 +257,16 @@ class AppSettingsRepository(
             intervalDays = lacuponeraProcessIntervalDays.coerceIn(1, 30),
             hourOfDay = lacuponeraProcessHourOfDay.coerceIn(0, 23),
         ),
+        ProcessSettings(
+            processId = SCHOOL_DRIVE_TIME_PROCESS_ID,
+            title = "Centros por tiempo en coche",
+            enabled = schoolDriveTimeProcessEnabled,
+            intervalDays = schoolDriveTimeProcessIntervalDays.coerceIn(1, 30),
+            hourOfDay = schoolDriveTimeProcessHourOfDay.coerceIn(0, 23),
+            latitude = schoolDriveTimeOriginLatitude,
+            longitude = schoolDriveTimeOriginLongitude,
+            outputFileName = schoolDriveTimeOutputFileName,
+        ),
     )
 
     companion object {
@@ -250,5 +274,6 @@ class AppSettingsRepository(
         const val FOOD_LUNCH_NOTIFICATION_ID = "food_lunch_notifications"
         const val FOOD_DINNER_NOTIFICATION_ID = "food_dinner_notifications"
         const val LACUPONERA_PROCESS_ID = "lacuponera_free_products"
+        const val SCHOOL_DRIVE_TIME_PROCESS_ID = "school_drive_times"
     }
 }

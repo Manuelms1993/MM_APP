@@ -8,7 +8,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 
 @Database(
     entities = [AppSettingsEntity::class],
-    version = 4,
+    version = 5,
     exportSchema = false,
 )
 abstract class AppSettingsDatabase : RoomDatabase() {
@@ -115,6 +115,47 @@ abstract class AppSettingsDatabase : RoomDatabase() {
                         `dinnerNotificationsEnabled` = `foodNotificationsEnabled`,
                         `dinnerNotificationIntervalDays` = `foodNotificationIntervalDays`,
                         `dinnerNotificationHourOfDay` = ((`foodNotificationHourOfDay` + 8) % 24)
+                    """.trimIndent(),
+                )
+            }
+        }
+
+        val MIGRATION_4_5 = object : Migration(4, 5) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    """
+                    ALTER TABLE `app_settings`
+                    ADD COLUMN `schoolDriveTimeProcessEnabled` INTEGER NOT NULL DEFAULT 0
+                    """.trimIndent(),
+                )
+                db.execSQL(
+                    """
+                    ALTER TABLE `app_settings`
+                    ADD COLUMN `schoolDriveTimeProcessIntervalDays` INTEGER NOT NULL DEFAULT 7
+                    """.trimIndent(),
+                )
+                db.execSQL(
+                    """
+                    ALTER TABLE `app_settings`
+                    ADD COLUMN `schoolDriveTimeProcessHourOfDay` INTEGER NOT NULL DEFAULT 13
+                    """.trimIndent(),
+                )
+                db.execSQL(
+                    """
+                    ALTER TABLE `app_settings`
+                    ADD COLUMN `schoolDriveTimeOriginLatitude` TEXT NOT NULL DEFAULT ''
+                    """.trimIndent(),
+                )
+                db.execSQL(
+                    """
+                    ALTER TABLE `app_settings`
+                    ADD COLUMN `schoolDriveTimeOriginLongitude` TEXT NOT NULL DEFAULT ''
+                    """.trimIndent(),
+                )
+                db.execSQL(
+                    """
+                    ALTER TABLE `app_settings`
+                    ADD COLUMN `schoolDriveTimeOutputFileName` TEXT NOT NULL DEFAULT 'centros_final.csv'
                     """.trimIndent(),
                 )
             }

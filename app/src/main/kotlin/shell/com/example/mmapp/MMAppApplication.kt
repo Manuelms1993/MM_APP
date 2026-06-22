@@ -29,7 +29,9 @@ class MMAppApplication : Application() {
     }
 
     val scriptingContainer by lazy {
-        ScriptingAppContainerFactory(this).create()
+        ScriptingAppContainerFactory(this).create(
+            appSettingsRepository = settingsContainer.appSettingsRepository,
+        )
     }
 
     val settingsContainer by lazy {

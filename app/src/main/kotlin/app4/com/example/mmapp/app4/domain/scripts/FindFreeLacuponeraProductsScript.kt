@@ -19,7 +19,9 @@ class FindFreeLacuponeraProductsScript(
         description = "Revisa el listado público de promociones y detecta ofertas marcadas como gratis.",
     )
 
-    override suspend fun execute(): ScriptExecutionResult = withContext(Dispatchers.IO) {
+    override suspend fun execute(
+        onLog: (ScriptLogEntry) -> Unit,
+    ): ScriptExecutionResult = withContext(Dispatchers.IO) {
         val requestedUrl = "https://www.lacuponera.es/promociones/ofertas"
         val initialLogs = mutableListOf(
             ScriptLogEntry(
@@ -31,6 +33,7 @@ class FindFreeLacuponeraProductsScript(
                 level = ScriptLogLevel.INFO,
             ),
         )
+        initialLogs.forEach(onLog)
 
         runCatching { client.findFreeOffers(requestedUrl) }
             .fold(

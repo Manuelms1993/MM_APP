@@ -254,6 +254,32 @@ private fun ProcessesTab(
                     },
                     range = 0..23,
                 )
+                if (process.processId == AppSettingsRepository.SCHOOL_DRIVE_TIME_PROCESS_ID) {
+                    TextSettingField(
+                        label = "Latitud origen",
+                        value = process.latitude.orEmpty(),
+                        supportingText = "Ejemplo: 39.9375838",
+                        onValueChanged = { latitude ->
+                            updateDraft(process.processId) { it.copy(latitude = latitude) }
+                        },
+                    )
+                    TextSettingField(
+                        label = "Longitud origen",
+                        value = process.longitude.orEmpty(),
+                        supportingText = "Ejemplo: -0.1089513",
+                        onValueChanged = { longitude ->
+                            updateDraft(process.processId) { it.copy(longitude = longitude) }
+                        },
+                    )
+                    TextSettingField(
+                        label = "Nombre del CSV final",
+                        value = process.outputFileName.orEmpty(),
+                        supportingText = "Se guardará en Descargas",
+                        onValueChanged = { outputFileName ->
+                            updateDraft(process.processId) { it.copy(outputFileName = outputFileName) }
+                        },
+                    )
+                }
             }
         }
     }
@@ -449,6 +475,28 @@ private fun NumberSettingField(
         label = { Text(label) },
         singleLine = true,
         supportingText = { Text("Rango permitido: ${range.first}-${range.last}") },
+    )
+}
+
+@Composable
+private fun TextSettingField(
+    label: String,
+    value: String,
+    supportingText: String,
+    onValueChanged: (String) -> Unit,
+) {
+    var rawValue by remember(value) { mutableStateOf(value) }
+
+    OutlinedTextField(
+        value = rawValue,
+        onValueChange = { newValue ->
+            rawValue = newValue
+            onValueChanged(newValue)
+        },
+        modifier = Modifier.fillMaxWidth(),
+        label = { Text(label) },
+        singleLine = true,
+        supportingText = { Text(supportingText) },
     )
 }
 
