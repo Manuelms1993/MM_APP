@@ -14,14 +14,15 @@
     "mesesRecoleccion": [],
     "riego": {
       "cadaDias": {
-        "primavera": 2,
-        "verano": 1,
-        "otono": 2,
-        "invierno": 7
+        "primavera": 5,
+        "verano": 3,
+        "otono": 7,
+        "invierno": 14
       },
       "notas": [
-        "Riego medio",
-        "Solo humedecer"
+        "Comprobar que el sustrato se ha secado parcialmente antes de regar.",
+        "Riego moderado; priorizar sol y drenaje frente a humedad constante.",
+        "Evitar mojar follaje por la noche para reducir hongos."
       ]
     },
     "abono": {
@@ -29,9 +30,9 @@
       "verano": [
         {
           "tipo": "fertilizante_floracion",
-          "cadaDias": 21,
+          "cadaDias": 45,
           "dosis": "fabricante_dividido_2",
-          "recordatorio": ""
+          "recordatorio": "No sobrefertilizar; omitir si la planta florece bien."
         }
       ],
       "otono": [],
@@ -67,8 +68,8 @@
       ]
     },
     "mostrarEnSiembra": true,
-    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/105531/tagetes-patula-french-marigold-spreading-tagetes/details",
-    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/105531/tagetes-patula-french-marigold-spreading-tagetes/details",
+    "fuenteInformacionUrl": "https://plants.ces.ncsu.edu/plants/tagetes-patula/",
+    "fuenteSustratoUrl": "https://plants.ces.ncsu.edu/plants/tagetes-patula/",
     "responsable": "L"
   }
 }

@@ -28,30 +28,31 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 2,
-        "verano": 1,
-        "otono": 3,
-        "invierno": 5
+        "primavera": 3,
+        "verano": 2,
+        "otono": 5,
+        "invierno": 8
       },
       "notas": [
-        "Riego ligero",
-        "Mantener humedo"
+        "Comprobar humedad antes de regar; mantener fresco pero no empapado.",
+        "En maceta puede necesitar agua frecuente con calor, siempre evitando encharcar.",
+        "Pausar si la superficie sigue humeda o aparecen mosquitas."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "compost_suave_hierbas",
-          "cadaDias": 30,
+          "cadaDias": 45,
           "cantidad": "capa fina"
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_liquido_hierbas",
-          "cadaDias": 30,
+          "cadaDias": 45,
           "dosis": "fabricante_dividido_2",
-          "recordatorio": ""
+          "recordatorio": "Solo si sigue produciendo hojas."
         }
       ],
       "otono": [],

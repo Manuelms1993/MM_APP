@@ -19,32 +19,32 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 3,
-        "verano": 2,
-        "otono": 3,
-        "invierno": 8
+        "primavera": 5,
+        "verano": 3,
+        "otono": 7,
+        "invierno": 14
       },
       "notas": [
-        "Riego medio",
-        "Mantener humedo",
-        "Citrico en maceta en Valencia: evitar que se seque del todo en calor"
+        "Comprobar humedad antes de regar; mantener el compost apenas humedo en crecimiento.",
+        "Dejar secar parcialmente la superficie en invierno y no dejar agua en el plato.",
+        "En Valencia exterior, ajustar a calor real y viento antes que a calendario."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "fertilizante_citricos",
-          "cadaDias": 21,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 30,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Aplicar con sustrato ligeramente humedo."
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_citricos",
-          "cadaDias": 21,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 30,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "No abonar en ola de calor o si la planta esta estresada."
         }
       ],
       "otono": [],

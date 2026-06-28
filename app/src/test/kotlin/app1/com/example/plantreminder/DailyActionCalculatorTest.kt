@@ -238,6 +238,21 @@ class DailyActionCalculatorTest {
         assertThat(result.map { it.actionType }).containsExactly(PlantActionType.WATER)
     }
 
+    @Test
+    fun usesConservativeWateringTitleWhenRuleRequiresSubstrateCheck() {
+        val plant = plantDefinition(
+            nombre = "Ficus Microcarpa",
+            start = LocalDate.parse("2026-05-01"),
+            watering = mapOf(Season.PRIMAVERA to 5),
+            wateringNotes = listOf("Comprobar que los 3-5 cm superiores del sustrato estan secos antes de regar."),
+            interior = true,
+        )
+
+        val result = calculator.calculate(LocalDate.parse("2026-05-06"), listOf(plant))
+
+        assertThat(result.single().title).isEqualTo("comprobar sustrato y regar solo si procede")
+    }
+
 }
 
 private fun plantDefinition(
@@ -245,6 +260,7 @@ private fun plantDefinition(
     start: LocalDate,
     end: LocalDate? = null,
     watering: Map<Season, Int> = emptyMap(),
+    wateringNotes: List<String> = emptyList(),
     fertilizerBySeason: Map<Season, List<FertilizerRule>> = emptyMap(),
     interior: Boolean = false,
     metadata: Map<String, String> = emptyMap(),
@@ -259,7 +275,7 @@ private fun plantDefinition(
     mostrarEnSiembra = false,
     mesesSiembra = emptyList(),
     mesesRecoleccion = emptyList(),
-    riego = WateringRule(SeasonalFrequency(watering), emptyList()),
+    riego = WateringRule(SeasonalFrequency(watering), wateringNotes),
     abono = fertilizerBySeason,
     exposicionSolar = null,
     interior = interior,

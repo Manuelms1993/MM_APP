@@ -19,22 +19,22 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 3,
-        "verano": 2,
-        "otono": 4,
-        "invierno": 7
+        "primavera": 5,
+        "verano": 4,
+        "otono": 7,
+        "invierno": 14
       },
       "notas": [
-        "Riego ligero",
-        "Mantener sustrato apenas humedo sin encharcar",
-        "En maceta en Valencia revisar humedad a diario en verano"
+        "Comprobar que la capa superior empieza a secarse antes de regar.",
+        "Riego moderado; evitar encharcar y pausar si el sustrato sigue humedo.",
+        "Reducir riego cuando las hojas empiecen a amarillear antes de cosecha."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "humus_lombriz",
-          "cadaDias": 45,
+          "cadaDias": 60,
           "cantidad": "capa fina superficial"
         }
       ],
@@ -46,7 +46,7 @@
     "interior": false,
     "notas": [
       "Evitar mojar demasiado el follaje.",
-      "Dejar de regar cuando el bulbo ya esté formado y las hojas empiecen a amarillear."
+      "Dejar de regar cuando el bulbo ya est\u00e9 formado y las hojas empiecen a amarillear."
     ],
     "metadata": {
       "tamanoMaceta": "mediana",

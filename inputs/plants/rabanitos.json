@@ -26,21 +26,22 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 2,
-        "verano": 1,
-        "otono": 3,
-        "invierno": 5
+        "primavera": 3,
+        "verano": 2,
+        "otono": 4,
+        "invierno": 7
       },
       "notas": [
-        "Riego ligero",
-        "Evitar altibajos fuertes de humedad para que no piquen ni se ahuequen"
+        "Comprobar humedad antes de regar; mantener regular para evitar raices fibrosas.",
+        "No encharcar ni dejar secar completamente durante engorde.",
+        "En calor fuerte, sombrear ligeramente antes que aumentar riego sin control."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "compost_suave_huerto",
-          "cadaDias": 35,
+          "cadaDias": 45,
           "cantidad": "capa fina"
         }
       ],
