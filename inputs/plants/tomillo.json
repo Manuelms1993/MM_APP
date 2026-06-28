@@ -22,15 +22,15 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 5,
-        "verano": 3,
-        "otono": 6,
-        "invierno": 12
+        "primavera": 14,
+        "verano": 10,
+        "otono": 21,
+        "invierno": 35
       },
       "notas": [
-        "Riego ligero",
-        "Poca agua",
-        "Maceta pequena en Valencia: revisar en calor, pero evitar encharcar"
+        "Comprobar que el sustrato esta seco antes de regar.",
+        "Riego muy espaciado; el tomillo tolera sequedad y sufre con encharcamiento.",
+        "En invierno regar solo si la maceta esta seca y ligera."
       ]
     },
     "abono": {

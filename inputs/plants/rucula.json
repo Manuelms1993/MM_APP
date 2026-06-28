@@ -27,29 +27,31 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 2,
-        "verano": 1,
-        "otono": 2,
-        "invierno": 4
+        "primavera": 3,
+        "verano": 2,
+        "otono": 4,
+        "invierno": 7
       },
       "notas": [
-        "Riego ligero",
-        "Mantener humedad regular sin encharcar"
+        "Comprobar humedad antes de regar; mantener fresco para hojas tiernas.",
+        "No dejar secar completamente de forma prolongada, especialmente con calor.",
+        "Evitar encharcar; si la superficie sigue humeda, esperar."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "compost_suave_hierbas",
-          "cadaDias": 30,
+          "cadaDias": 45,
           "cantidad": "capa fina"
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_liquido_hierbas",
-          "cadaDias": 21,
-          "dosis": "fabricante_dividido_2"
+          "cadaDias": 45,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Solo si sigue produciendo hojas y no ha espigado."
         }
       ],
       "otono": [],

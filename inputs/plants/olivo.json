@@ -14,35 +14,29 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 4,
-        "verano": 2,
-        "otono": 6,
-        "invierno": 14
+        "primavera": 10,
+        "verano": 7,
+        "otono": 14,
+        "invierno": 28
       },
       "notas": [
-        "Riego profundo",
-        "Dejar secar parte del sustrato antes del siguiente riego",
-        "En Valencia y bajo techo regar profundo cuando la parte alta este seca"
+        "Comprobar que la parte superior del sustrato esta seca antes de regar.",
+        "Olivo techado: no cuenta la lluvia, pero tolera sequedad moderada.",
+        "Evitar encharcamiento; en Valencia es preferible riego profundo y espaciado."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "humus_lombriz",
-          "cadaDias": 45,
+          "cadaDias": 60,
           "cantidad": "capa fina superficial"
-        },
-        {
-          "tipo": "fertilizante_liquido_olivo_frutales",
-          "cadaDias": 30,
-          "dosis": "fabricante_dividido_2",
-          "recordatorio": "Aplicar con el sustrato ligeramente humedo."
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_liquido_olivo_frutales",
-          "cadaDias": 45,
+          "cadaDias": 60,
           "dosis": "fabricante_dividido_2",
           "recordatorio": "Evitar abonar en ola de calor intensa."
         }
@@ -82,8 +76,8 @@
       "techado": "true"
     },
     "mostrarEnSiembra": false,
-    "fuenteInformacionUrl": "https://www.rhs.org.uk/fruit/olives/grow-your-own",
-    "fuenteSustratoUrl": "https://www.rhs.org.uk/fruit/olives/grow-your-own",
+    "fuenteInformacionUrl": "https://plants.ces.ncsu.edu/plants/olea-europaea/",
+    "fuenteSustratoUrl": "https://plants.ces.ncsu.edu/plants/olea-europaea/",
     "responsable": "R"
   }
 }

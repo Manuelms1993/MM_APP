@@ -27,46 +27,33 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 4,
-        "verano": 3,
-        "otono": 6,
-        "invierno": 10
+        "primavera": 10,
+        "verano": 7,
+        "otono": 14,
+        "invierno": 28
       },
       "notas": [
-        "Riego ligero",
-        "Poca agua",
-        "En maceta en Valencia regar profundo y dejar secar antes del siguiente"
+        "Comprobar que el sustrato esta seco en superficie antes de regar.",
+        "Riego profundo y espaciado; el romero prefiere drenaje y algo de sequedad.",
+        "Pausar riego si hay humedad persistente o poca ventilacion."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "humus_lombriz",
-          "cadaDias": 45,
+          "cadaDias": 60,
           "cantidad": "superficie ligera"
-        },
-        {
-          "tipo": "fertilizante_liquido_mediterraneas",
-          "cadaDias": 30,
-          "dosis": "fabricante_dividido_2",
-          "recordatorio": ""
         }
       ],
-      "verano": [
-        {
-          "tipo": "fertilizante_liquido_mediterraneas",
-          "cadaDias": 45,
-          "dosis": "fabricante_dividido_2",
-          "recordatorio": ""
-        }
-      ],
+      "verano": [],
       "otono": [],
       "invierno": []
     },
     "exposicionSolar": "sol_directo",
     "interior": false,
     "notas": [
-      "Planta resistente a sequía",
+      "Planta resistente a sequ\u00eda",
       "Prefiere sustrato drenante",
       "No tolera encharcamiento"
     ],

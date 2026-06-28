@@ -36,4 +36,25 @@ class MessageBuilderTest {
 
         assertThat(result.text).isEqualTo("Sin acciones para este día.")
     }
+
+    @Test
+    fun buildsConditionalWateringMessageWhenActionTitleRequestsSubstrateCheck() {
+        val date = LocalDate.parse("2026-05-06")
+        val actions = listOf(
+            DailyPlantAction(
+                date = date,
+                plantId = "ficus",
+                plantName = "Ficus Microcarpa",
+                actionType = PlantActionType.WATER,
+                title = "comprobar sustrato y regar solo si procede",
+                details = listOf("Si hay moho o humedad persistente, pausar riego."),
+                rawPayload = "{}",
+            ),
+        )
+
+        val result = builder.build(date, actions)
+
+        assertThat(result.text).contains("  - Comprobar sustrato y regar solo si procede")
+        assertThat(result.text).doesNotContain("  - Regar")
+    }
 }

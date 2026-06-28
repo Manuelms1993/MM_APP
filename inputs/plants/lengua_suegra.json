@@ -10,40 +10,36 @@
     "mesesRecoleccion": [],
     "riego": {
       "cadaDias": {
-        "primavera": 14,
-        "verano": 10,
-        "otono": 21,
-        "invierno": 30
+        "primavera": 24,
+        "verano": 21,
+        "otono": 42,
+        "invierno": 56
       },
       "notas": [
-        "Muy poco riego",
-        "Solo humedecer"
+        "Regar solo cuando el sustrato este completamente seco hasta el fondo.",
+        "Comprobar con palillo o medidor; si hay duda, esperar varios dias mas.",
+        "Si hay mosquitas, moho o humedad persistente, pausar riego hasta secado completo.",
+        "Priorizar infra-riego moderado frente a pudricion por exceso de agua."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "fertilizante_cactus",
-          "cadaDias": 30,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 60,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Maximo dosis baja y solo con crecimiento activo; no abonar con mosquitas o humedad."
         }
       ],
-      "verano": [
-        {
-          "tipo": "fertilizante_cactus",
-          "cadaDias": 30,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
-        }
-      ],
+      "verano": [],
       "otono": [],
       "invierno": []
     },
     "exposicionSolar": "luz_indirecta_media",
     "interior": true,
     "notas": [
-      "Mejor quedarse corto con agua"
+      "Mejor quedarse corto con agua",
+      "Mosquitas pequenas suelen indicar exceso de humedad; secar superficie y revisar drenaje."
     ],
     "metadata": {
       "tamanoMaceta": "mediana",
@@ -70,8 +66,8 @@
       ]
     },
     "mostrarEnSiembra": false,
-    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/sansevieria/",
-    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/sansevieria/",
+    "fuenteInformacionUrl": "https://plants.ces.ncsu.edu/plants/dracaena-trifasciata/",
+    "fuenteSustratoUrl": "https://plants.ces.ncsu.edu/plants/dracaena-trifasciata/",
     "responsable": "R"
   }
 }

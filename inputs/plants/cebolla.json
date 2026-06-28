@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "planta": {
+    "id": "cebolla-001",
+    "nombre": "Cebolla",
+    "especie": "Allium cepa",
+    "fechaInicio": "2026-06-28",
+    "activada": true,
+    "mesesSiembra": [
+      1,
+      2,
+      3,
+      9,
+      10,
+      11
+    ],
+    "mesesRecoleccion": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "riego": {
+      "cadaDias": {
+        "primavera": 7,
+        "verano": 14,
+        "otono": 10,
+        "invierno": 21
+      },
+      "notas": [
+        "Comprobar humedad antes de regar; regar solo en sequia prolongada o primeras fases de crecimiento.",
+        "Evitar encharcamiento y no mojar el follaje para reducir hongos.",
+        "Cuando el bulbo este formado en verano, pausar riego para mejorar conservacion."
+      ]
+    },
+    "abono": {
+      "primavera": [
+        {
+          "tipo": "humus_lombriz",
+          "cadaDias": 60,
+          "cantidad": "capa fina antes de plantar"
+        }
+      ],
+      "verano": [],
+      "otono": [
+        {
+          "tipo": "humus_lombriz",
+          "cadaDias": 60,
+          "cantidad": "capa fina antes de plantar"
+        }
+      ],
+      "invierno": []
+    },
+    "exposicionSolar": "sol_directo",
+    "interior": false,
+    "notas": [
+      "Priorizar sustrato drenante y pleno sol.",
+      "Vigilar mildiu, roya, mosca de la cebolla y podredumbres en condiciones humedas.",
+      "Quitar tallos florales si aparecen para favorecer el bulbo."
+    ],
+    "metadata": {
+      "tamanoMaceta": "mediana",
+      "tipoSustrato": "huerto_drenante",
+      "prioridad": "normal"
+    },
+    "composicionMaceta": {
+      "componentes": [
+        {
+          "material": "sustrato_universal",
+          "porcentaje": 50
+        },
+        {
+          "material": "compost_maduro",
+          "porcentaje": 20
+        },
+        {
+          "material": "perlita",
+          "porcentaje": 15
+        },
+        {
+          "material": "arena_gruesa",
+          "porcentaje": 15
+        }
+      ],
+      "notas": [
+        "Mezcla fertil pero drenante; evitar exceso de nitrogeno durante engorde del bulbo."
+      ]
+    },
+    "mostrarEnSiembra": true,
+    "fuenteInformacionUrl": "https://www.rhs.org.uk/vegetables/onions/grow-your-own",
+    "fuenteSustratoUrl": "https://www.rhs.org.uk/vegetables/onions/grow-your-own",
+    "responsable": "L"
+  }
+}

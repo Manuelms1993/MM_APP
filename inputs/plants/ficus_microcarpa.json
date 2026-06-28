@@ -10,32 +10,33 @@
     "mesesRecoleccion": [],
     "riego": {
       "cadaDias": {
-        "primavera": 4,
-        "verano": 3,
-        "otono": 6,
-        "invierno": 10
+        "primavera": 12,
+        "verano": 10,
+        "otono": 21,
+        "invierno": 28
       },
       "notas": [
-        "Riego medio",
-        "Regar y escurrir",
-        "En interior calido de Valencia revisar cuando se sequen los primeros centimetros"
+        "Comprobar que los 3-5 cm superiores del sustrato estan secos antes de regar.",
+        "Regar a fondo solo si procede y dejar escurrir completamente.",
+        "Si hay moho blanco, olor a humedad o sustrato humedo persistente, pausar riego y airear.",
+        "En interior humedo de Valencia, priorizar quedarse corto frente a exceso de agua."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "fertilizante_plantas_verdes",
-          "cadaDias": 30,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 45,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Solo con brotes activos y sustrato sano."
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_plantas_verdes",
-          "cadaDias": 30,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 60,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "No abonar si hay moho, hojas caidas por estres o humedad persistente."
         }
       ],
       "otono": [],
@@ -44,7 +45,8 @@
     "exposicionSolar": "luz_indirecta_brilante",
     "interior": true,
     "notas": [
-      "No moverlo mucho"
+      "No moverlo mucho",
+      "Vigilar moho blanco como senal de exceso de humedad superficial."
     ],
     "metadata": {
       "tamanoMaceta": "mediana",
@@ -71,8 +73,8 @@
       ]
     },
     "mostrarEnSiembra": false,
-    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/32855/i-ficus-microcarpa-i/details",
-    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/32855/i-ficus-microcarpa-i/details",
+    "fuenteInformacionUrl": "https://plants.ces.ncsu.edu/plants/ficus-microcarpa/",
+    "fuenteSustratoUrl": "https://plants.ces.ncsu.edu/plants/ficus-microcarpa/",
     "responsable": "L"
   }
 }

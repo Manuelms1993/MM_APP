@@ -36,7 +36,7 @@ class DailyActionCalculator(
                                 plantId = plant.id,
                                 plantName = plant.nombre,
                                 actionType = PlantActionType.WATER,
-                                title = plantActionTextFactory.wateringTitle(),
+                                title = plantActionTextFactory.wateringTitle(plant.riego.notes),
                                 details = plant.riego.notes,
                                 rawPayload = plant.rawPayload,
                             ),

@@ -10,31 +10,33 @@
     "mesesRecoleccion": [],
     "riego": {
       "cadaDias": {
-        "primavera": 2,
-        "verano": 1,
-        "otono": 2,
-        "invierno": 4
+        "primavera": 7,
+        "verano": 6,
+        "otono": 12,
+        "invierno": 18
       },
       "notas": [
-        "Riego ligero",
-        "Humedecer todo"
+        "Comprobar que los 3-5 cm superiores del sustrato estan secos antes de regar.",
+        "En Valencia interior humedo, mejor retrasar el riego si hay duda.",
+        "Si hay moho blanco, olor a humedad o sustrato humedo persistente, pausar riego y airear.",
+        "La maceta pequena puede secar antes solo con luz alta y buena ventilacion."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "fertilizante_bonsai",
-          "cadaDias": 14,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 45,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Solo con crecimiento activo y sustrato sano; no abonar si hay moho o estres."
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_bonsai",
-          "cadaDias": 14,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 45,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Omitir con calor fuerte, moho o humedad persistente."
         }
       ],
       "otono": [],
@@ -43,7 +45,7 @@
     "exposicionSolar": "luz_indirecta_brilante",
     "interior": true,
     "notas": [
-      "Maceta pequena seca rapido"
+      "Vigilar moho blanco en superficie; priorizar ventilacion y drenaje antes de regar."
     ],
     "metadata": {
       "tamanoMaceta": "pequena",
@@ -74,7 +76,7 @@
       ]
     },
     "mostrarEnSiembra": false,
-    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/types/trees/bonsai",
+    "fuenteInformacionUrl": "https://plants.ces.ncsu.edu/plants/ficus-microcarpa/",
     "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/types/trees/bonsai",
     "responsable": "L"
   }
