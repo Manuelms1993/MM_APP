@@ -18,32 +18,32 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 3,
-        "verano": 2,
-        "otono": 3,
-        "invierno": 8
+        "primavera": 7,
+        "verano": 5,
+        "otono": 10,
+        "invierno": 21
       },
       "notas": [
-        "Riego profundo",
-        "Regar y escurrir",
-        "En maceta grande en Valencia puede pedir riego extra en olas de calor"
+        "Comprobar humedad antes de regar; tolera secarse algo entre riegos.",
+        "En maceta y con fruto necesita agua regular, pero sin encharcar.",
+        "Reducir mucho el riego en reposo o si el sustrato sigue humedo."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "fertilizante_frutales_potasico",
-          "cadaDias": 14,
+          "cadaDias": 45,
           "dosis": "fabricante_dividido_2",
-          "recordatorio": ""
+          "recordatorio": "Dosis baja; evitar exceso de nitrogeno."
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_frutales_potasico",
-          "cadaDias": 14,
+          "cadaDias": 45,
           "dosis": "fabricante_dividido_2",
-          "recordatorio": ""
+          "recordatorio": "No abonar con calor extremo o sustrato seco."
         }
       ],
       "otono": [],

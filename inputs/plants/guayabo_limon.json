@@ -18,32 +18,32 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 3,
-        "verano": 2,
-        "otono": 3,
-        "invierno": 8
+        "primavera": 5,
+        "verano": 3,
+        "otono": 7,
+        "invierno": 14
       },
       "notas": [
-        "Riego medio",
-        "Regar y escurrir",
-        "Frutal en maceta en Valencia: comprobar humedad a diario en verano"
+        "Comprobar humedad antes de regar; mantener ligeramente humedo en floracion y fruto.",
+        "Evitar encharcamiento y dejar escurrir bien la maceta.",
+        "En dias frescos o tras lluvia, retrasar riego."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "fertilizante_frutales",
-          "cadaDias": 30,
+          "cadaDias": 45,
           "dosis": "fabricante_dividido_2",
-          "recordatorio": ""
+          "recordatorio": "Aplicar solo con sustrato sano y planta activa."
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_frutales",
-          "cadaDias": 30,
+          "cadaDias": 45,
           "dosis": "fabricante_dividido_2",
-          "recordatorio": ""
+          "recordatorio": "Evitar abonar en ola de calor o estres hidrico."
         }
       ],
       "otono": [],

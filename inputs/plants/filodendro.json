@@ -10,32 +10,33 @@
     "mesesRecoleccion": [],
     "riego": {
       "cadaDias": {
-        "primavera": 5,
-        "verano": 4,
-        "otono": 8,
-        "invierno": 12
+        "primavera": 8,
+        "verano": 7,
+        "otono": 14,
+        "invierno": 21
       },
       "notas": [
-        "Riego medio",
-        "Solo humedecer",
-        "En Valencia no dejar secar del todo el cepellon en semanas de calor"
+        "Comprobar que los 3-5 cm superiores del sustrato estan secos antes de regar.",
+        "Mantener humedad moderada, sin dejar agua retenida en el plato.",
+        "Si hay moho, mosquitas o sustrato humedo persistente, pausar riego y mejorar ventilacion.",
+        "En Valencia interior humedo no regar por calendario si la superficie sigue fresca."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "fertilizante_plantas_verdes",
-          "cadaDias": 30,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 45,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Solo con crecimiento activo y sustrato sano."
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_plantas_verdes",
-          "cadaDias": 30,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 60,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "No abonar con humedad persistente, mosquitas o estres."
         }
       ],
       "otono": [],
@@ -44,7 +45,7 @@
     "exposicionSolar": "luz_indirecta_brilante",
     "interior": true,
     "notas": [
-      "Agradece algo de humedad ambiental"
+      "Agradece humedad ambiental, pero no sustrato encharcado."
     ],
     "metadata": {
       "tamanoMaceta": "mediana",
@@ -71,8 +72,8 @@
       ]
     },
     "mostrarEnSiembra": false,
-    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/philodendron/growing-guide",
-    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/philodendron/growing-guide",
+    "fuenteInformacionUrl": "https://plants.ces.ncsu.edu/plants/philodendron-hederaceum/",
+    "fuenteSustratoUrl": "https://plants.ces.ncsu.edu/plants/philodendron-hederaceum/",
     "responsable": "R"
   }
 }

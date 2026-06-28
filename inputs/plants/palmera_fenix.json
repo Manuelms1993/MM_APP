@@ -10,32 +10,32 @@
     "mesesRecoleccion": [],
     "riego": {
       "cadaDias": {
-        "primavera": 3,
-        "verano": 2,
-        "otono": 5,
-        "invierno": 10
+        "primavera": 7,
+        "verano": 5,
+        "otono": 10,
+        "invierno": 18
       },
       "notas": [
-        "Riego medio",
-        "Regar y escurrir",
-        "En interior luminoso de Valencia revisar mas a menudo en verano"
+        "Comprobar que los primeros centimetros del sustrato empiezan a secarse antes de regar.",
+        "Mantener humedad moderada en crecimiento, pero nunca encharcar.",
+        "Puntas negras pueden indicar exceso de agua; retrasar riego si el sustrato sigue humedo."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "fertilizante_palmeras",
-          "cadaDias": 30,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 45,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Solo con crecimiento activo."
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_palmeras",
-          "cadaDias": 30,
-          "dosis": "normal",
-          "recordatorio": "dosis normal"
+          "cadaDias": 60,
+          "dosis": "fabricante_dividido_2",
+          "recordatorio": "Omitir con calor extremo o estres."
         }
       ],
       "otono": [],
@@ -71,8 +71,8 @@
       ]
     },
     "mostrarEnSiembra": false,
-    "fuenteInformacionUrl": "https://www.rhs.org.uk/plants/12771/phoenix-roebelenii/details",
-    "fuenteSustratoUrl": "https://www.rhs.org.uk/plants/12771/phoenix-roebelenii/details",
+    "fuenteInformacionUrl": "https://plants.ces.ncsu.edu/plants/phoenix-canariensis/",
+    "fuenteSustratoUrl": "https://plants.ces.ncsu.edu/plants/phoenix-canariensis/",
     "responsable": "R"
   }
 }

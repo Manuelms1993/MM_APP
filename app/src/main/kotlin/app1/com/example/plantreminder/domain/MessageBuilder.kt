@@ -23,7 +23,9 @@ class MessageBuilder {
                 add("• $plantName")
                 val wateringActions = plantActions.filter { it.actionType == PlantActionType.WATER }
                 if (wateringActions.isNotEmpty()) {
-                    add("  - Regar")
+                    val wateringTitle = wateringActions.first().title
+                        .replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
+                    add("  - $wateringTitle")
                     wateringActions.flatMap { it.details }.forEach { detail ->
                         add("    · $detail")
                     }

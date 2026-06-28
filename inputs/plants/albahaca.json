@@ -21,30 +21,31 @@
     ],
     "riego": {
       "cadaDias": {
-        "primavera": 2,
-        "verano": 1,
-        "otono": 3,
+        "primavera": 3,
+        "verano": 2,
+        "otono": 4,
         "invierno": 7
       },
       "notas": [
-        "Riego medio",
-        "Solo humedecer"
+        "Mantener el sustrato ligeramente humedo, nunca empapado.",
+        "Comprobar con el dedo antes de regar; no dejar secar completamente durante calor.",
+        "Si hay moho, mosquitas o humedad persistente, airear y pausar riego hasta que se seque la superficie."
       ]
     },
     "abono": {
       "primavera": [
         {
           "tipo": "compost_suave_hierbas",
-          "cadaDias": 30,
+          "cadaDias": 45,
           "cantidad": "capa fina"
         }
       ],
       "verano": [
         {
           "tipo": "fertilizante_liquido_hierbas",
-          "cadaDias": 21,
+          "cadaDias": 30,
           "dosis": "fabricante_dividido_2",
-          "recordatorio": ""
+          "recordatorio": "No abonar si hay sustrato humedo persistente o estres."
         }
       ],
       "otono": [],
@@ -54,7 +55,8 @@
     "interior": true,
     "notas": [
       "Pinzar flores",
-      "Sensibles al fr\u00edo"
+      "Sensible al frio y al exceso de humedad nocturna.",
+      "Albahaca morada: mismos cuidados de riego, abono y siembra; no se duplica como planta independiente."
     ],
     "metadata": {
       "tamanoMaceta": "pequena",
