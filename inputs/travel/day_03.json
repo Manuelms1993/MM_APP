@@ -4,7 +4,8 @@
    "foodSuggestions": [],
    "id": "day-03",
    "notes": [
-      "No sobrecargar el dia por el viaje."
+      "No sobrecargar el dia por el viaje.",
+      "Si queda energia, adelantar alguna visita cercana del dia siguiente."
    ],
    "overnightHotelId": "dorsett-mongkok",
    "schemaVersion": 1,
@@ -60,6 +61,8 @@
          "bullets": [
             "Dar una vuelta cerca del hotel.",
             "Cenar por la zona.",
+            "Opcion recomendada si encaja: local barato con estrella en Hennessy Rd 226, Wan Chai.",
+            "Horario orientativo del local de Wan Chai: 11:30-21:30.",
             "Descansar."
          ],
          "title": "Tarde-noche"

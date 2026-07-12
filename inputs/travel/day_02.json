@@ -4,7 +4,9 @@
    "foodSuggestions": [],
    "id": "day-02",
    "notes": [
-      "Cuando tengas los enlaces reales del documento, sustituir las referencias pendientes."
+      "Los horarios se retrasan para descansar en el hotel.",
+      "Solo se paga la entrada a la Cisterna Basilica. Santa Sofia queda como opcion de pago solo si interesa especialmente.",
+      "Llevar ropa para tapar hombros y rodillas."
    ],
    "schemaVersion": 1,
    "segments": [
@@ -22,7 +24,8 @@
                "bullets": [
                   "Sultanahmet concentra colas: Santa Sofia, Mezquita Azul, Cisterna y Topkapi pueden saturarse.",
                   "Topkapi puede comerse media jornada; si se entra, reducir el resto.",
-                  "Mezquitas: cierres parciales durante oraciones."
+                  "Mezquitas: cierres parciales durante oraciones.",
+                  "Llevar ropa que tape hombros y rodillas para las visitas religiosas."
                ],
                "title": "Colas y tiempos"
             },
@@ -55,58 +58,96 @@
                "bullets": [
                   "Istanbul Kebab Cafe & Restaurant: Sultanahmet, turco/mediterraneo, $$-$$$.",
                   "Green Hill Cafe Restaurant: Sultanahmet, cerca de la zona monumental, $$-$$$.",
-                  "Garden 1897 Restaurant: Sultanahmet, turco/mediterraneo, $$-$$$."
+                  "Garden 1897 Restaurant: Sultanahmet, turco/mediterraneo, $$-$$$.",
+                  "Comer: Tarihi Sultanahmet Koftecisi.",
+                  "Cenar: Bitlisli Sirkeci."
                ],
                "title": "Sitios"
             }
          ]
       },
       {
+         "timeLabel": "08:30 - 09:30",
          "bullets": [
-            "Recorrido previsto por Estambul."
+            "Santa Sofia, pagando solo si interesa especialmente."
          ],
-         "references": [
-            "ruta_parte1 (enlace pendiente en el documento origen)"
-         ],
-         "title": "Ruta parte 1"
+         "title": "Santa Sofia"
       },
       {
+         "timeLabel": "09:45 - 10:30",
          "bullets": [
-            "Segunda parte del recorrido previsto."
+            "Mezquita Azul, gratis.",
+            "Horario orientativo: abierta de 9:00 a 19:00."
          ],
-         "references": [
-            "ruta_parte2 (enlace pendiente en el documento origen)"
+         "title": "Mezquita Azul"
+      },
+      {
+         "timeLabel": "10:45 - 11:30",
+         "bullets": [
+            "Cisterna Basilica.",
+            "Esta es la entrada prioritaria de pago del dia.",
+            "Comprar entrada en taquilla.",
+            "Entrada diurna de 9:00 a 18:30: aprox. 36,5 EUR.",
+            "Cierra de 18:30 a 19:30.",
+            "Entrada nocturna de 19:30 a 22:00: aprox. 56 EUR.",
+            "Visita estimada: 45-75 minutos.",
+            "Mejores franjas: 09:00-10:00 o 16:30-17:30."
          ],
-         "title": "Ruta parte 2"
+         "title": "Cisterna Basilica"
+      },
+      {
+         "timeLabel": "12:00 - 14:30",
+         "bullets": [
+            "Paseo por Hipodromo y Gran Bazar.",
+            "Comida en Tarihi Sultanahmet Koftecisi."
+         ],
+         "title": "Hipodromo, Gran Bazar y comida"
+      },
+      {
+         "timeLabel": "15:00 - 17:00",
+         "bullets": [
+            "Eminonu, puente de Galata y ferry publico por el Bosforo."
+         ],
+         "title": "Eminonu, Galata y Bosforo"
+      },
+      {
+         "timeLabel": "Atardecer",
+         "bullets": [
+            "Karakoy o zona de Galata.",
+            "No hace falta subir necesariamente a la torre."
+         ],
+         "title": "Karakoy / Galata"
       },
       {
          "bullets": [],
-         "references": [
-            "TIPS (enlace pendiente en el documento origen)"
-         ],
          "title": "Tips logistica",
          "topics": [
             {
                "bullets": [
-                  "Recoger aqui el transporte definitivo desde aeropuerto hasta alojamiento."
+                  "Resolver con antelacion como ir desde el aeropuerto al hotel.",
+                  "Al llegar tarde, priorizar traslado directo y descanso."
                ],
                "title": "Aeropuerto -> ciudad"
             },
             {
                "bullets": [
-                  "Guardar aqui notas de transporte publico, taxis y zonas a evitar."
+                  "Para el dia en Estambul, concentrar Sultanahmet por la manana y dejar Bosforo/Galata para la tarde.",
+                  "Usar ferry publico por el Bosforo en vez de crucero privado si encaja con horarios.",
+                  "Ruta alternativa: si la Cisterna se ve mas tarde, moverla a la franja 16:30-17:30 y hacer la ruta al reves."
                ],
                "title": "Moverse por Estambul"
             },
             {
                "bullets": [
-                  "Guardar aqui reservas, horarios y prioridades de visitas."
+                  "Prioridad de pago: Cisterna Basilica.",
+                  "Santa Sofia queda como pago opcional.",
+                  "Mezquita Azul es gratis."
                ],
-               "title": "Entradas y colas"
+               "title": "Entradas y prioridades"
             }
          ]
       }
    ],
-   "summary": "Ruta por Estambul pendiente de rematar con mapas y tips de aeropuerto.",
+   "summary": "Dia en Estambul con Sultanahmet por la manana, Cisterna Basilica como entrada principal de pago, Bosforo por la tarde y Galata al atardecer.",
    "title": "Estambul"
 }

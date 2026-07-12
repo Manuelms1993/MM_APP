@@ -3,6 +3,10 @@
    "dayNumber": 15,
    "foodSuggestions": [],
    "id": "day-15",
+   "notes": [
+      "Pendiente de comprar si se mantiene este dia para Leshan.",
+      "Se puede intercambiar con el dia de pandas si conviene por entradas o clima."
+   ],
    "overnightHotelId": "wenjun-courtyard-chengdu",
    "recommendations": [
       {
@@ -78,13 +82,17 @@
             "Salir por la manana. El recinto abre de 07:30 a 18:30.",
             "Tren bala Chengdu East Railway Station -> Leshan Railway Station.",
             "Duracion: 50-60 minutos.",
+            "Precio orientativo 2a clase: 54 CNY por trayecto.",
             "Llegada a Leshan Railway Station.",
-            "Taxi o Didi hasta el Gran Buda.",
-            "Entrada al recinto del Gran Buda.",
-            "Vuelta en taxi a la estacion y tren de regreso a Chengdu East Railway Station."
+            "No seleccionar Leshan North: queda peor situada.",
+            "Didi desde Leshan Railway Station hasta Leshan Giant Buddha Tourist Center.",
+            "Trayecto Didi estacion -> recinto: 25-35 minutos.",
+            "Precio orientativo Didi por trayecto: 25-35 CNY.",
+            "Entrada al recinto del Gran Buda: 80 CNY.",
+            "Vuelta en Didi a Leshan Railway Station y tren de regreso a Chengdu East Railway Station."
          ],
          "references": [
-            "Ruta interna del recinto del Gran Buda pendiente de sustituir por enlace real"
+            "Lugares de la ruta interna: Leshan Giant Buddha Tourist Center, acceso al recinto, miradores, bajada a los pies del Gran Buda si la cola lo permite y salida hacia la estacion."
          ],
          "timeLabel": "Manana -> tarde",
          "title": "Excursion a Leshan"

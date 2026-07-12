@@ -64,15 +64,20 @@
       {
          "bullets": [
             "Desayuno y check-out.",
+            "Dejar maleta en recepcion si es posible.",
+            "Ir andando a la Mezquita Hassan II.",
             "Visita interior de la Mezquita Hassan II.",
             "Taxi a Plaza Mohammed V.",
+            "Visita breve a Plaza Mohammed V.",
             "Paseo breve por zona art deco / centro colonial.",
             "Taxi al Quartier Habous.",
             "Visita a Habous / Nueva Medina.",
+            "Ver zocos ordenados, arquitectura tradicional, pastelerias y tiendas locales.",
             "Comida rapida o cafe en Habous.",
-            "Recoger equipaje y salir hacia el aeropuerto con margen."
+            "Taxi de vuelta al alojamiento, recoger equipaje y salir hacia el aeropuerto con margen.",
+            "Llegar a Casablanca Mohammed V con margen para el vuelo."
          ],
-         "timeLabel": "Manana -> aeropuerto",
+         "timeLabel": "08:00 -> aeropuerto",
          "title": "Visita breve antes del vuelo"
       }
    ],

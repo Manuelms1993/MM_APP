@@ -5,7 +5,7 @@
    "id": "day-19",
    "notes": [
       "Llevar comida o algo facil para la excursion.",
-      "Revisar transporte a Mutianyu antes del dia de visita.",
+      "Cerrar transporte a Mutianyu el dia anterior: transfer/DiDi ida y vuelta o conductor privado.",
       "Valorar teleferico y bajada en tobogan."
    ],
    "schemaVersion": 1,
@@ -78,10 +78,11 @@
          "bullets": [
             "Excursion a la Gran Muralla en Mutianyu.",
             "Llegar temprano para aprovechar la manana.",
-            "Teleferico y tobogan si encaja con tiempo y condiciones."
+            "Teleferico y tobogan si encaja con tiempo y condiciones.",
+            "Acordar punto y hora de recogida para la vuelta antes de entrar."
          ],
          "references": [
-            "Transporte a Mutianyu pendiente de revisar"
+            "Transporte a Mutianyu pendiente de cerrar: evitar depender de combinaciones de bus si se quiere ganar tiempo."
          ],
          "timeLabel": "Manana -> tarde",
          "title": "Muralla china - Mutianyu"

@@ -4,7 +4,8 @@
    "foodSuggestions": [],
    "id": "day-09",
    "notes": [
-      "Dia todavia incompleto a nivel logistico."
+      "Traslado largo con dos trenes y cambio de estacion en Guilin.",
+      "Llegada nocturna: Fenghuang sera paseo breve por el casco antiguo y descanso."
    ],
    "overnightHotelId": "hemu-house-fenghuang",
    "schemaVersion": 1,
@@ -14,11 +15,13 @@
          "topics": [
             {
                "bullets": [
-                  "Opcion A es fragil por enlaces tempranos; alto riesgo de estres.",
-                  "Opcion B llega tarde: ese dia Fenghuang sera solo paseo nocturno.",
-                  "Confirmar trenes reales cuando abra venta."
+                  "Salir del hotel entre 10:30 y 11:00.",
+                  "Primer tren desde Yangshuo hasta Guilin West: 11:56-12:20.",
+                  "Despues hay que cambiar de Guilin West a Guilin North para el tren largo.",
+                  "Segundo tren desde Guilin North hasta Fenghuang Gucheng: 14:55-21:02.",
+                  "Llegada tarde: ese dia Fenghuang sera solo paseo nocturno."
                ],
-               "title": "Opciones de traslado"
+               "title": "Traslado confirmado"
             },
             {
                "bullets": [
@@ -59,8 +62,16 @@
       },
       {
          "bullets": [
-            "Falta cerrar el transporte Yangshuo -> Fenghuang."
+            "Salir del hotel entre 10:30 y 11:00.",
+            "Llegar con margen a Yangshuo Railway Station.",
+            "Tren Yangshuo Railway Station -> Guilin West Railway Station: 11:56-12:20.",
+            "Cambio de estacion en Guilin: Guilin West -> Guilin North.",
+            "Tren Guilin North Railway Station -> Fenghuang Gucheng Railway Station: 14:55-21:02.",
+            "Billetes para 2 pasajeros.",
+            "Llegada prevista a Fenghuang Gucheng Railway Station a las 21:02.",
+            "Traslado final al casco antiguo sobre 21:30-21:45."
          ],
+         "timeLabel": "10:30 - 21:45",
          "title": "Traslado"
       },
       {
@@ -71,6 +82,6 @@
          "title": "Llegada a Fenghuang"
       }
    ],
-   "summary": "Traslado pendiente de cerrar y primera noche en Fenghuang.",
+   "summary": "Traslado largo Yangshuo -> Guilin West, cambio a Guilin North y tren hasta Fenghuang Gucheng, con llegada nocturna al casco antiguo.",
    "title": "Yangshuo -> Fenghuang"
 }

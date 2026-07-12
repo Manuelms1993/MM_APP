@@ -5,7 +5,8 @@
    "id": "day-20",
    "notes": [
       "Revisar entradas y normas de acceso de Ciudad Prohibida con antelacion.",
-      "Dejar margen entre Ciudad Prohibida y la ruta de hutongs."
+      "Dejar margen entre Ciudad Prohibida y la ruta de hutongs.",
+      "Llevar pasaporte original y capturas offline de reservas."
    ],
    "schemaVersion": 1,
    "segments": [
@@ -84,13 +85,16 @@
       {
          "bullets": [
             "Hutongs principales de Pekin.",
-            "Templo de los Lamas.",
-            "Templo de Confucio.",
-            "Torre del Tambor.",
-            "Torre de la Campana."
+            "Lama Temple / Yonghe Temple.",
+            "Temple of Confucius.",
+            "Guozijian / Imperial College.",
+            "Drum Tower.",
+            "Wudaoying Hutong.",
+            "Bell Tower.",
+            "Shichahai."
          ],
          "references": [
-            "Ruta pendiente de sustituir por enlace real"
+            "Lugares de la ruta: Lama Temple, Temple of Confucius, Guozijian, Drum Tower, Wudaoying Hutong, Bell Tower y Shichahai."
          ],
          "timeLabel": "Tarde",
          "title": "Hutongs y templos"
