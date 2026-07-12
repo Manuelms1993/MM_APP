@@ -26,7 +26,7 @@
          "topics": [
             {
                "bullets": [
-                  "Confirmar estacion: Zhangjiajie West y estacion de llegada en Chengdu.",
+                  "Tren reservado desde Zhangjiajie West hasta Chengdu East.",
                   "Tren largo: no planificar una tarde demasiado ambiciosa."
                ],
                "title": "Tren"
@@ -60,6 +60,7 @@
             },
             {
                "bullets": [
+                  "Long Sen Yuan: opcion Michelin para comer si encaja con llegada y horario.",
                   "XiaoTan DouHua - Xi Main Street: local barato, 4.4.",
                   "Longchaoshou: snacks/wontons de Chengdu, $.",
                   "Fields Concord - Taikoo Li: zona Chunxi/Taikoo Li, opcion menos local."
@@ -79,21 +80,28 @@
       },
       {
          "bullets": [
-            "Tren bala temprano desde Zhangjiajie West Railway Station.",
-            "Llegada prevista a Chengdu East Railway Station.",
-            "Duracion aproximada: 5 horas.",
+            "Tren temprano desde Zhangjiajie West Railway Station.",
+            "Llegada a Chengdu East Railway Station.",
+            "Billetes para 2 pasajeros.",
+            "Reservar DiDi o taxi temprano para llegar al tren con margen.",
             "Llegada para comer."
          ],
+         "timeLabel": "07:30 - 12:35",
          "title": "Traslado"
       },
       {
          "bullets": [
-            "Ruta cerca del hotel.",
+            "180 Qin Tai Lu: zona historica dedicada a la cultura Shu.",
+            "Jinli Folk-custom Memory Wall: muro con historia y tradiciones de Sichuan.",
             "Tomar te por la tarde en Heming Tea House, en People's Park.",
+            "People's Park: parque urbano con casas de te tradicionales.",
+            "Tianfu Square: plaza central de Chengdu.",
+            "Chunxi Road: principal calle comercial y de compras.",
+            "IFS International Finance Center: centro comercial famoso por el panda gigante.",
             "Cenar en Chunxi Road o en la zona del hotel."
          ],
          "references": [
-            "RUTA cerca del hotel pendiente de sustituir por enlace real"
+            "Lugares de la ruta: 180 Qin Tai Lu, Jinli Folk-custom Memory Wall, People's Park, Tianfu Square, Chunxi Road e IFS."
          ],
          "title": "Tarde en Chengdu"
       }

@@ -6,7 +6,7 @@
    "notes": [
       "Salida desde Xi'an North Railway Station.",
       "Llegada prevista a Beijing West Railway Station.",
-      "Trayecto estimado: 4-6 horas."
+      "Billetes para 2 pasajeros."
    ],
    "schemaVersion": 1,
    "segments": [
@@ -15,7 +15,8 @@
          "topics": [
             {
                "bullets": [
-                  "Confirmar estacion: Xian North -> Beijing West."
+                  "Tren reservado desde Xian North hacia Beijing West.",
+                  "Revisar que el taxi o metro vaya a Beijing West, no a Beijing South."
                ],
                "title": "Tren"
             },
@@ -69,22 +70,24 @@
       },
       {
          "bullets": [
-            "Tren bala desde Xian a Pekin por la manana.",
+            "Tren desde Xian North Railway Station a Beijing West Railway Station por la manana.",
+            "Billetes para 2 pasajeros.",
             "Ir al hotel y dejar equipaje.",
             "Comer o descansar antes de la ruta de tarde."
          ],
-         "timeLabel": "Manana -> comida",
+         "timeLabel": "09:10 - 13:30",
          "title": "Traslado"
       },
       {
          "bullets": [
             "Qianhai Lake.",
             "Nanluogu Hutong.",
+            "Lishi Hutong Courtyard House.",
             "Suoyi Hutong.",
             "Wangfujing para zona de comida callejera."
          ],
          "references": [
-            "Ruta en Pekin pendiente de sustituir por enlace real"
+            "Lugares de la ruta: Qianhai, Nanluoguxiang, Lishi Hutong Courtyard House, Suoyi Hutong y Wangfujing."
          ],
          "timeLabel": "Tarde -> noche",
          "title": "Primer paseo por Pekin"

@@ -5,7 +5,8 @@
    "id": "day-17",
    "notes": [
       "Comprar o revisar entradas del Ejercito de Terracota con antelacion.",
-      "Horario de referencia del recinto: 08:30-17:00."
+      "Horario de referencia del recinto: 08:30-17:00.",
+      "Llevar pasaporte original y entrada reservada."
    ],
    "schemaVersion": 1,
    "segments": [
@@ -15,9 +16,9 @@
             {
                "bullets": [
                   "Ir temprano o se juntan colas y calor.",
-                  "Entrada anticipada y pasaporte.",
+                  "Entrada anticipada y pasaporte original.",
                   "Sitio enorme, con mucho grupo organizado y circulacion lenta.",
-                  "Traslado desde Xian ciudad no es corto."
+                  "Traslado desde Xian ciudad no es corto: calcula 50-70 minutos por trayecto."
                ],
                "title": "Terracota"
             },
@@ -58,22 +59,28 @@
       },
       {
          "bullets": [
-            "Excursion al Ejercito de Terracota.",
-            "Dedicar la manana y parte de la comida al recinto.",
+            "Desde Holiday Inn Express Xi'an Bell Tower, pedir un DiDi sobre las 07:15-07:30.",
+            "Destino para DiDi: 秦始皇帝陵博物院（兵马俑）.",
+            "Trayecto estimado: 50-70 minutos.",
+            "Precio aproximado: CNY 110-160 por trayecto.",
+            "Llevar pasaporte original y entrada reservada.",
+            "Para volver, pedir otro DiDi desde la zona oficial de recogida del museo.",
             "Volver a Xian con margen para descansar antes de la tarde."
          ],
-         "timeLabel": "Manana -> comida",
+         "timeLabel": "07:15 - comida",
          "title": "Ejercito de Terracota"
       },
       {
          "bullets": [
             "Giant Wild Goose Pagoda.",
+            "Tang Paradise.",
+            "Datang Everbright City.",
             "Zona de legado Tang/Han.",
             "Cena con comida Shaanxi."
          ],
          "references": [
-            "Ruta pendiente de sustituir por enlace real",
-            "Web de entradas de los guerreros pendiente de sustituir por enlace real"
+            "Lugares de la ruta: Giant Wild Goose Pagoda, Tang Paradise y Datang Everbright City.",
+            "Entrada del Ejercito de Terracota pendiente de enlazar si se quiere guardar la web."
          ],
          "timeLabel": "Tarde -> noche",
          "title": "Xian por la tarde"

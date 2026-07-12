@@ -3,6 +3,10 @@
    "dayNumber": 6,
    "foodSuggestions": [],
    "id": "day-06",
+   "notes": [
+      "En estaciones chinas, llegar con margen y llevar pasaporte original.",
+      "Guardar billetes, hoteles y nombres de estaciones offline."
+   ],
    "overnightHotelId": "guilin-flowers-inn",
    "recommendations": [
       {
@@ -40,8 +44,8 @@
          "topics": [
             {
                "bullets": [
-                  "No cerrar mentalmente horario hasta tener billetes.",
-                  "La estacion de llegada puede variar: Guilin West, East o North no son lo mismo."
+                  "Billete reservado para Hong Kong West Kowloon -> Guilin West.",
+                  "Guilin West no es Guilin North ni Guilin East; revisar bien la estacion antes de pedir transporte."
                ],
                "title": "Tren"
             },
@@ -89,22 +93,22 @@
       },
       {
          "bullets": [
-            "Salida prevista desde Hong Kong West Kowloon Railway Station.",
-            "Llegada prevista a Guilin West Railway Station.",
-            "Llegada estimada a Guilin entre las 13:00 y las 15:00.",
-            "Conviene confirmar el numero exacto de tren y la estacion final al comprar, pero la referencia base para buscar es West Kowloon -> Guilin West."
+            "Salida desde Hong Kong West Kowloon Railway Station.",
+            "Llegada a Guilin West Railway Station.",
+            "Billetes para 2 pasajeros.",
+            "Al llegar, traslado al alojamiento y check-in antes de la ruta suave de tarde."
          ],
-         "timeLabel": "10:00-11:00 -> 13:00-15:00",
+         "timeLabel": "10:02 - 13:18",
          "title": "Tren"
       },
       {
          "bullets": [
-            "Ver las pagodas gigantes.",
-            "Ir al mercado nocturno.",
-            "Parque opcional si queda tiempo y energia."
+            "Sun and Moon Twin Pagodas: pagodas gemelas iluminadas sobre un lago.",
+            "Guilin Zhengyang Road Pedestrian Street: calle peatonal con tiendas y gastronomia local.",
+            "Seven Star Park: parque paisajistico con cuevas y montanas karsticas, solo si queda tiempo y energia."
          ],
          "references": [
-            "Ruta pendiente de sustituir por enlace real"
+            "Lugares de la ruta: Zhengyang Road Pedestrian Street, Seven Star Park y Sun and Moon Twin Pagodas."
          ],
          "title": "Tarde en Guilin"
       }

@@ -76,13 +76,16 @@
       {
          "bullets": [
             "Taxi al Mercado de Panjiayuan.",
+            "El mercado abre sobre las 09:00; intentar visitarlo antes de las 10:00.",
+            "Taxi hacia Qianmen.",
             "Qianmen.",
             "Plaza Tiananmen.",
             "Templo del Cielo.",
+            "Los edificios del Templo del Cielo cierran sobre las 18:00.",
             "Mercado de las Perlas solo si apetece comprar."
          ],
          "references": [
-            "Ruta 2 pendiente de sustituir por enlace real"
+            "Lugares de la ruta: Mercado de Panjiayuan, Qianmen, Plaza Tiananmen, Templo del Cielo, Mercado de las Perlas y Palacio de Verano."
          ],
          "timeLabel": "Manana -> primera tarde",
          "title": "Mercados y Templo del Cielo"

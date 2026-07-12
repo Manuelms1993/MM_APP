@@ -4,7 +4,9 @@
    "foodSuggestions": [],
    "id": "day-05",
    "notes": [
-      "Pendiente de detallar transporte exacto, horario de llegada y prioridades dentro del parque."
+      "Llevar entradas y app del parque listas antes de salir.",
+      "Usar MTR hasta Disneyland Resort si no se va en taxi.",
+      "Hacer pausas de sombra/aire acondicionado para no llegar fundidos al tren del dia siguiente."
    ],
    "overnightHotelId": "dorsett-mongkok",
    "schemaVersion": 1,
@@ -59,7 +61,9 @@
       {
          "bullets": [
             "Dia completo en Disneyland Hong Kong.",
-            "Ir con margen para entrada, colas y vuelta."
+            "Ir con margen para entrada, colas y vuelta.",
+            "Priorizar atracciones clave al llegar y dejar shows/tiendas para horas de mas calor.",
+            "Revisar alertas de lluvia o tormenta antes de salir."
          ],
          "title": "Parque"
       }

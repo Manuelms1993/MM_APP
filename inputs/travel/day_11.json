@@ -69,11 +69,13 @@
       },
       {
          "bullets": [
-            "Salir temprano en tren bala desde Furongzhen Railway Station hacia Zhangjiajie West Railway Station.",
+            "Tren temprano desde Furongzhen Railway Station hacia Zhangjiajie West Railway Station.",
+            "Billetes para 2 pasajeros.",
             "Ir al hotel y dejar equipaje.",
             "Desde Zhangjiajie West tocar ir por carretera hasta la zona de Wulingyuan y el hotel.",
             "Pedir mapa antes de entrar al parque."
          ],
+         "timeLabel": "09:39 - 10:02",
          "title": "Traslado"
       },
       {

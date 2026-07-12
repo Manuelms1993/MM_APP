@@ -60,14 +60,15 @@
       {
          "bullets": [
             "Llegada a Casablanca Mohammed V por la tarde-noche.",
-            "Salida estimada del aeropuerto tras controles y equipaje.",
-            "Taxi oficial o transfer hacia zona de cena.",
-            "Cena en La Sqala si el horario encaja.",
+            "Salida estimada del aeropuerto tras controles y equipaje: 20:15-20:45.",
+            "Taxi oficial o transfer directo hacia La Sqala o zona cercana para cenar.",
+            "Cena en La Sqala si el horario encaja, aproximadamente 21:30-22:45.",
             "Alternativa si va justo: Rick's Cafe.",
+            "Taxi desde La Sqala o Rick's Cafe hacia la zona del alojamiento.",
             "Paseo corto y controlado por el exterior de la Mezquita Hassan II.",
-            "Descanso."
+            "Check-in y descanso."
          ],
-         "timeLabel": "Tarde-noche",
+         "timeLabel": "19:30 -> descanso",
          "title": "Llegada a Casablanca"
       }
    ],

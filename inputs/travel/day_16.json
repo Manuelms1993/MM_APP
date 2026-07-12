@@ -59,22 +59,25 @@
       },
       {
          "bullets": [
-            "Tren bala por la manana desde Chengdu hacia Xian.",
-            "Trayecto estimado: 3-4 horas.",
+            "Tren por la manana desde Chengdu East Railway Station hacia Xian North Railway Station.",
+            "Billetes para 2 pasajeros.",
             "Ir al hotel, dejar equipaje y comer."
          ],
-         "timeLabel": "Manana -> comida",
+         "timeLabel": "08:08 - 12:04",
          "title": "Traslado"
       },
       {
          "bullets": [
+            "Holiday Inn Express Xi'an Bell Tower: hotel centrico junto a la Torre de la Campana.",
+            "Great Mosque of Xi'an: mezquita historica con arquitectura tradicional china.",
+            "South Gate / Yongning Gate: puerta principal de la muralla de Xian.",
             "Barrio musulman.",
             "Muralla de Xian.",
             "Small Wild Goose Pagoda.",
             "Cena por la zona."
          ],
          "references": [
-            "Ruta pendiente de sustituir por enlace real"
+            "Lugares de la ruta: Holiday Inn Express Xi'an Bell Tower, Great Mosque of Xi'an, South Gate / Yongning Gate y Small Wild Goose Pagoda."
          ],
          "timeLabel": "Tarde -> noche",
          "title": "Centro de Xian"
